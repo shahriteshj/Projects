@@ -13,25 +13,25 @@ public class Main {
         Dog g1 = new Dog("Maltese", "small", 5, "white");
         System.out.println(g1.getInfo());
 
-        Student s1 = new Student(38,48,50);
-        Student s2 = new Student(48,58,68);
-        Student s3 = new Student(58,68,78);
+        Student s1 = new Student(38, 48, 50);
+        Student s2 = new Student(48, 58, 68);
+        Student s3 = new Student(58, 68, 78);
 
-        System.out.println("Result for student 1: "+s1.checkResult());
-        System.out.println("Result for student 2: "+s2.checkResult());
-        System.out.println("Result for student 3: "+s3.checkResult());
+        System.out.println("Result for student 1: " + s1.checkResult());
+        System.out.println("Result for student 2: " + s2.checkResult());
+        System.out.println("Result for student 3: " + s3.checkResult());
 
         Student.setPassing(40);
 
-        System.out.println("Result for student 1: "+s1.checkResult());
-        System.out.println("Result for student 2: "+s2.checkResult());
-        System.out.println("Result for student 3: "+s3.checkResult());
+        System.out.println("Result for student 1: " + s1.checkResult());
+        System.out.println("Result for student 2: " + s2.checkResult());
+        System.out.println("Result for student 3: " + s3.checkResult());
 
         Student.setPassing(50);
 
-        System.out.println("Result for student 1: "+s1.checkResult());
-        System.out.println("Result for student 2: "+s2.checkResult());
-        System.out.println("Result for student 3: "+s3.checkResult());
+        System.out.println("Result for student 1: " + s1.checkResult());
+        System.out.println("Result for student 2: " + s2.checkResult());
+        System.out.println("Result for student 3: " + s3.checkResult());
 
     }
 }

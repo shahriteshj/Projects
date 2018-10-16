@@ -7,7 +7,6 @@
       <change afterPath="$PROJECT_DIR$/Java_Test/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Java_Test/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Java_Test/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java_Test/Java_Test.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Java_Test/out/production/Java_Test/com/codingacademy/test/Dog.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Java_Test/out/production/Java_Test/com/codingacademy/test/Execute.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Java_Test/out/production/Java_Test/com/codingacademy/test/Greet.class" afterDir="false" />
@@ -19,7 +18,18 @@
       <change afterPath="$PROJECT_DIR$/Java_Test/src/com/codingacademy/test/Main3.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Java_Test/src/com/codingacademy/test/Test.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/PackageDemo/src/com/ca/logic/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_Test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Java_Test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageDemo/.idea/PackageDemo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageDemo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PackageDemo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageDemo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageDemo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PackageDemo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PackageDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageDemo/PackageDemo.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PackageDemo/src/com/ca/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/PackageDemo/src/com/ca/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageDemo/src/com/ca/logic/CalcUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/PackageDemo/src/com/ca/logic/CalcUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageDemo/src/com/ca/logic/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/PackageDemo/src/com/ca/logic/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageDemo/src/com/ca/logic/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/PackageDemo/src/com/ca/logic/Student.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,10 +42,11 @@
     <session id="272361470">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -50,18 +61,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="11" />
+          <entry key="java" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="11" />
+          <entry key="JAVA" value="12" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PackageDemo/src/com/ca/logic/Student.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/PackageDemo" />
@@ -90,6 +111,12 @@
               <item name="Projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projects" type="462c0819:PsiDirectoryNode" />
               <item name="Java_Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projects" type="462c0819:PsiDirectoryNode" />
+              <item name="Java_Test" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Projects" type="b2602c69:ProjectViewProjectNode" />
@@ -173,8 +200,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539664820860" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/CodingAcademy" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539674891005" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -204,7 +234,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25377643" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2613293" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -309,5 +339,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PackageDemo/src/com/ca/logic/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Projects</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
