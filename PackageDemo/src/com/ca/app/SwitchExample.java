@@ -5,7 +5,7 @@ public class SwitchExample {
     public static void main(String[] args) {
         int numOfAngles = 3;
 
-        switch(numOfAngles){
+        switch (numOfAngles) {
             case 3:
                 System.out.println("triangle");
 
