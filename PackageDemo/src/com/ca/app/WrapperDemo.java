@@ -11,7 +11,7 @@ public class WrapperDemo {
         Long n = 10000000L;
 
         Object o = n; //Upward casting
-        Long k =(Long)o; //Downward casting
+        Long k = (Long) o; //Downward casting
 
     }
 }

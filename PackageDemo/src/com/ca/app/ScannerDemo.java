@@ -12,6 +12,6 @@ public class ScannerDemo {
         System.out.println("Enter your age: ");
         int age = scanner.nextInt();
 
-        System.out.println("Hello "+ name+ " you are "+age);
+        System.out.println("Hello " + name + " you are " + age);
     }
 }
