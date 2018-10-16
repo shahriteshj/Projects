@@ -1,4 +1,4 @@
-package com.codingacademy.test;
+package com.ca.test;
 
 public class Dog {
     String breed;
