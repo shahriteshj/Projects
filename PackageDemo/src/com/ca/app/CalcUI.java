@@ -30,5 +30,6 @@ public class CalcUI {
         CI.setRate(rate);
 
         System.out.println(CI.calculate());
+
     }
 }
