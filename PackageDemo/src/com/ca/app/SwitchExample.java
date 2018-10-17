@@ -12,12 +12,11 @@ public class SwitchExample {
             case 4:
                 System.out.println("rectangle");
                 break;
+            default:
+                System.out.println("Unknown shape");
             case 5:
                 System.out.println("pentagon");
                 break;
-            default:
-                System.out.println("Unknown shape");
-
         }
     }
 }
