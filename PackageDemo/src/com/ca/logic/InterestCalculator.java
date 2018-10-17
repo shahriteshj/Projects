@@ -1,6 +1,6 @@
 package com.ca.logic;
 
-public class InterestCalculator {
+public abstract class InterestCalculator {
 
     protected Float principal;
     protected Float rate;
@@ -40,9 +40,6 @@ public class InterestCalculator {
         this.noOfDays = noOfDays;
     }
 
-    public Double calculate() {
-        return (double) (principal * (rate / 100) * (float) (noOfDays / 365));
-
-    }
+    public abstract Double calculate();
 
 }
