@@ -4,7 +4,7 @@ import com.ca.logic.Account;
 
 public class ObjectDemo {
     public static void main(String[] args) {
-        Account a1 = new Account();
+        /*Account a1 = new Account();
         Account a2 = new Account();
         Account a3 = a1;
 
@@ -29,6 +29,6 @@ public class ObjectDemo {
         System.out.println("Is " + name1 + " and " + name2 + " same?: " + (name1 == name2));
         name2.toUpperCase();
         System.out.println(name2);
-
+*/
     }
 }

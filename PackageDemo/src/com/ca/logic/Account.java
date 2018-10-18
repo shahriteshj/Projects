@@ -2,8 +2,8 @@ package com.ca.logic;
 
 public abstract class Account {
     protected String accountNo;
-    String customerName;
-    Double balance;
+    protected String customerName;
+    protected Double balance;
 
 
     public abstract void depositAmount(Double amount);
