@@ -1,6 +1,6 @@
 package com.ca.logic;
 
-public class CurrentAccount extends Account{
+public class CurrentAccount extends Account {
 
     public CurrentAccount(String accountNo, String customerName, Double balance) {
         this.accountNo = accountNo;
@@ -15,8 +15,8 @@ public class CurrentAccount extends Account{
 
     @Override
     public void withdrawAmount(Double amount) {
-        if(this.balance>amount ){
-            this.balance-=amount;
+        if ( this.balance > amount ) {
+            this.balance -= amount;
         }
     }
 
@@ -24,8 +24,8 @@ public class CurrentAccount extends Account{
         System.out.println(customerName + " with Account No. " + accountNo + " has balance of " + balance);
     }
 
-    public Boolean checkSufficientBalance(Double amount){
-        return this.balance> amount;
+    public Boolean checkSufficientBalance(Double amount) {
+        return this.balance > amount;
     }
 
 }

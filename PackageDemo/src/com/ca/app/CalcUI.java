@@ -26,7 +26,6 @@ public class CalcUI {
         System.out.println(SI.calculate());
 
 
-
         InterestCalculator CI = new CompoundInterestCalculator();
         CI.setNoOfDays(noOfDays);
         CI.setPrincipal(principal);

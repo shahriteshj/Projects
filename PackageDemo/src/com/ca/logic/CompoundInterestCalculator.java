@@ -10,7 +10,7 @@ public class CompoundInterestCalculator extends InterestCalculator {
 
     }
 
-    public void display(){
+    public void display() {
         System.out.println("Compound Interest Calculator");
     }
 

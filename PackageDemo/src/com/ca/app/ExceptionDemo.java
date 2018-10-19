@@ -27,7 +27,7 @@ public class ExceptionDemo {
         }
     }
 
-    static void calc(double p, double r, int d) throws InvalidDDurationException,InvalidPrincipalException,InvalidRateException {
+    static void calc(double p, double r, int d) throws InvalidDDurationException, InvalidPrincipalException, InvalidRateException {
         if ( p < InvalidPrincipalException.MIN_PRINCIPAL || p > InvalidPrincipalException.MAX_PRINCIPAL )
             throw new InvalidPrincipalException();
         if ( r < InvalidRateException.MIN_RATE || r > InvalidRateException.MAX_RATE )

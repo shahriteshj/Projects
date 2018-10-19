@@ -2,7 +2,7 @@ package com.ca.logic;
 
 public class Airplane implements Flyable {
 
-    public void fly(){
+    public void fly() {
         System.out.println("Airplane fly");
     }
 

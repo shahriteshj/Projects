@@ -14,7 +14,7 @@ public class SavingsAccount extends Account {
 
     @Override
     public void withdrawAmount(Double amount) {
-        if (this.balance > amount) {
+        if ( this.balance > amount ) {
             this.balance -= amount;
         }
     }
@@ -23,8 +23,8 @@ public class SavingsAccount extends Account {
         System.out.println(customerName + " with Account No. " + accountNo + " has balance of " + balance);
     }
 
-    public Boolean checkSufficientBalance(Double amount){
-        return this.balance> amount;
+    public Boolean checkSufficientBalance(Double amount) {
+        return this.balance > amount;
     }
 
 }

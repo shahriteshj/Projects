@@ -5,6 +5,6 @@ public class InvalidDDurationException extends Exception {
     public static final double MAX_DURATION = 240;
 
     public InvalidDDurationException() {
-        super("Duration must be in range 12 to 240 months");
+        super("Duration must be in range" + MIN_DURATION + " to " + MAX_DURATION + " months");
     }
 }
