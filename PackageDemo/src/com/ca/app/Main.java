@@ -1,13 +1,35 @@
 package com.ca.app;
 
-import com.ca.logic.*;
+import com.ca.logic.Student;
+import com.ca.logic.Dog;
 
 public class Main {
     public static void main(String[] args) {
 
-        String names[] = new String[10];
+        int[][] arr = new int[4][3];
+        arr[0] = new int[]{55, 58, 65};
+        arr[1] = new int[]{76, 88, 91};
+        arr[2] = new int[]{67, 77, 73};
+        arr[3] = new int[]{79, 55, 87};
 
-        Calculator c = new Calculator();
+        for (int row = 0; row < arr.length; row++) {
+            int sum = 0;
+            for (int col = 0; col < arr[row].length; col++) {
+                sum += arr[row][col];
+            }
+            System.out.println("Sum: " + sum);
+        }
+
+        for(int row[]: arr) {
+            int sum = 0;
+            for (int col: row) {
+                sum += col;
+            }
+            System.out.println("Sum: " + sum);
+        }
+
+
+        //Calculator c = new Calculator();
         //System.out.println(c.doSum(12.2,14.4));
 
         Dog g = new Dog();

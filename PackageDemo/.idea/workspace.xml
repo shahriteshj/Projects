@@ -3,23 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f791869b-37f1-46e5-bfc4-5c12bf6ccdfd" name="Default Changelist" comment="Commit">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ca/app/CollectionDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ca/app/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ca/app/StudentMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ca/app/VarArgDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/app/CalcUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/app/CalcUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/app/DateTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/app/DateTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/app/ExceptionDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/app/ExceptionDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/app/InterfaceMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/app/InterfaceMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/app/TransactionMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/app/TransactionMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/logic/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/logic/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/logic/Airplane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/logic/Airplane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/logic/CompoundInterestCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/logic/CompoundInterestCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/logic/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/logic/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/logic/CurrentAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/logic/CurrentAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/logic/Flyable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/logic/Flyable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/logic/SavingsAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/logic/SavingsAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/logic/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/logic/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidDDurationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidDDurationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidPrincipalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidPrincipalException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidRateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidRateException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ca/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/app/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,26 +44,26 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="67" />
+          <entry key="java" value="73" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="67" />
+          <entry key="JAVA" value="73" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7112" />
+          <entry key="java" value="8942" />
           <entry key="txt" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7112" />
+          <entry key="JAVA" value="8942" />
           <entry key="PLAIN_TEXT" value="15" />
         </counts>
       </usages-collector>
@@ -111,10 +100,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ca/app/ExceptionDemo.java">
+        <entry file="file://$PROJECT_DIR$/src/com/ca/app/VarArgDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-23">
-              <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+            <state relative-caret-position="153">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+              <folding>
+                <element signature="e#90#91#0" expanded="true" />
+                <element signature="e#143#144#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ca/app/CollectionDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,32 +125,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidPrincipalException.java">
+        <entry file="file://$PROJECT_DIR$/src/com/ca/app/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="94" selection-start-line="7" selection-start-column="94" selection-end-line="7" selection-end-column="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidRateException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
+            <state relative-caret-position="111">
+              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
               <folding>
-                <element signature="e#214#215#0" expanded="true" />
-                <element signature="e#280#281#0" expanded="true" />
+                <element signature="e#182#183#0" expanded="true" />
+                <element signature="e#253#254#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidDDurationException.java">
+        <entry file="file://$PROJECT_DIR$/src/com/ca/app/StudentMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+            <state relative-caret-position="306">
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/com/ca/logic/Student.java" />
         <option value="$PROJECT_DIR$/src/com/ca/logic/Dog.java" />
         <option value="$PROJECT_DIR$/src/com/ca/app/ForLoop.java" />
-        <option value="$PROJECT_DIR$/src/com/ca/app/Main.java" />
         <option value="$PROJECT_DIR$/src/com/ca/app/ScannerDemo.java" />
         <option value="$PROJECT_DIR$/src/com/ca/app/WrapperDemo.java" />
         <option value="$PROJECT_DIR$/src/com/ca/app/SwitchExample.java" />
@@ -205,12 +200,17 @@
         <option value="$PROJECT_DIR$/src/com/ca/logic/Computer.java" />
         <option value="$PROJECT_DIR$/src/com/ca/logic/Display.java" />
         <option value="$PROJECT_DIR$/src/com/ca/logic/Storage.java" />
-        <option value="$PROJECT_DIR$/src/com/ca/logic/Flyable.java" />
         <option value="$PROJECT_DIR$/src/com/ca/logic/InvalidPrincipalException.java" />
         <option value="$PROJECT_DIR$/src/com/ca/app/ExceptionDemo.java" />
         <option value="$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidPrincipalException.java" />
         <option value="$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidRateException.java" />
         <option value="$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidDDurationException.java" />
+        <option value="$PROJECT_DIR$/src/com/ca/logic/Flyable.java" />
+        <option value="$PROJECT_DIR$/src/com/ca/app/VarArgDemo.java" />
+        <option value="$PROJECT_DIR$/src/com/ca/app/CollectionDemo.java" />
+        <option value="$PROJECT_DIR$/src/com/ca/app/Student.java" />
+        <option value="$PROJECT_DIR$/src/com/ca/app/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/ca/app/StudentMain.java" />
       </list>
     </option>
   </component>
@@ -273,21 +273,6 @@
               <item name="ca" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="PackageDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PackageDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ca" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PackageDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PackageDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ca" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -295,7 +280,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539933055901" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539948969655" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -314,22 +299,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ExceptionDemo">
-    <configuration name="Airplane" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ca.logic.Airplane" />
-      <module name="PackageDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ca.logic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalcUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ca.app.CalcUI" />
+  <component name="RunManager" selected="Application.StudentMain">
+    <configuration name="CollectionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ca.app.CollectionDemo" />
       <module name="PackageDemo" />
       <extension name="coverage">
         <pattern>
@@ -354,12 +326,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InterfaceMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ca.app.InterfaceMain" />
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ca.app.Main" />
       <module name="PackageDemo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ca.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="com.ca.logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -367,8 +343,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ca.app.Main" />
+    <configuration name="StudentMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ca.app.StudentMain" />
       <module name="PackageDemo" />
       <extension name="coverage">
         <pattern>
@@ -393,21 +369,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VarArgDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ca.app.VarArgDemo" />
+      <module name="PackageDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ca.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.CalcUI" />
-      <item itemvalue="Application.Airplane" />
-      <item itemvalue="Application.InterfaceMain" />
       <item itemvalue="Application.TransactionMain" />
       <item itemvalue="Application.ExceptionDemo" />
+      <item itemvalue="Application.VarArgDemo" />
+      <item itemvalue="Application.CollectionDemo" />
+      <item itemvalue="Application.StudentMain" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StudentMain" />
+        <item itemvalue="Application.CollectionDemo" />
+        <item itemvalue="Application.VarArgDemo" />
         <item itemvalue="Application.ExceptionDemo" />
         <item itemvalue="Application.TransactionMain" />
-        <item itemvalue="Application.InterfaceMain" />
-        <item itemvalue="Application.Airplane" />
-        <item itemvalue="Application.CalcUI" />
       </list>
     </recent_temporary>
   </component>
@@ -527,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539932810097</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Commit">
+      <created>1539933061435</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1539933061435</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -552,15 +548,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48716012" visible="true" weight="0.32899022" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48640484" visible="true" weight="0.30944625" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848944" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49773413" weight="0.32899022" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49320242" weight="0.32899022" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.51283985" side_tool="true" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.51359516" side_tool="true" visible="true" weight="0.30944625" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48640484" weight="0.32736155" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48564956" weight="0.32736155" />
       <window_info anchor="bottom" id="Inspection Results" order="11" sideWeight="0.49848944" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -750,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ca/app/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ca/logic/interface/Storage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -827,13 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ca/logic/Flyable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ca/logic/Computer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -859,13 +841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ca/app/ExceptionDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ca/logic/Flyable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -873,6 +852,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="94" selection-start-line="7" selection-start-column="94" selection-end-line="7" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/ExceptionDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -889,8 +878,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ca/logic/exceptions/InvalidDDurationException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+        <state relative-caret-position="136">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/CollectionDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+          <folding>
+            <element signature="e#182#183#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/VarArgDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="e#90#91#0" expanded="true" />
+            <element signature="e#143#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/StudentMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
