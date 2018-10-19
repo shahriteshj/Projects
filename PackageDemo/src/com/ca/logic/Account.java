@@ -8,4 +8,5 @@ public abstract class Account {
 
     public abstract void depositAmount(Double amount);
     public abstract void withdrawAmount(Double amount);
+    public abstract Boolean checkSufficientBalance(Double amount);
 }

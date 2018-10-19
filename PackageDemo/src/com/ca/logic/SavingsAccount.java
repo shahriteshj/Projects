@@ -23,5 +23,8 @@ public class SavingsAccount extends Account {
         System.out.println(customerName + " with Account No. " + accountNo + " has balance of " + balance);
     }
 
+    public Boolean checkSufficientBalance(Double amount){
+        return this.balance> amount;
+    }
 
 }
