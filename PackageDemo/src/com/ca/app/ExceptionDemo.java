@@ -1,12 +1,12 @@
 package com.ca.app;
 
+import com.ca.logic.exceptions.InvalidDDurationException;
+import com.ca.logic.exceptions.InvalidPrincipalException;
+import com.ca.logic.exceptions.InvalidRateException;
+
 public class ExceptionDemo {
     public static void main(String[] args) {
         try {
-            
-            Thread.sleep(100000);
-            System.out.println("hello world");
-
             int k = 100 / 2;
             int data[] = new int[1];
             data[1] = k;
@@ -22,18 +22,18 @@ public class ExceptionDemo {
 
         try {
             calc(230, 13.5, 36);
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println("Something went wrong: " + ex.getMessage());
         }
     }
 
-    static void calc(double p, double r, int d) throws Exception{
-        if ( p < 10000 || p > 10000000 )
-            throw new Exception("Principal amount must be in range of 10000 to 10000000");
-        if ( r < 4 || r > 25 )
-            throw new Exception("Rate of interest must be in range 4 to 25");
-        if ( d < 12 || d > 240 )
-            throw new Exception("Duration must be in range 12 to 240 months");
+    static void calc(double p, double r, int d) throws InvalidDDurationException,InvalidPrincipalException,InvalidRateException {
+        if ( p < InvalidPrincipalException.MIN_PRINCIPAL || p > InvalidPrincipalException.MAX_PRINCIPAL )
+            throw new InvalidPrincipalException();
+        if ( r < InvalidRateException.MIN_RATE || r > InvalidRateException.MAX_RATE )
+            throw new InvalidRateException();
+        if ( d < InvalidDDurationException.MIN_DURATION || d > InvalidDDurationException.MAX_DURATION )
+            throw new InvalidDDurationException();
 
         double interest = p * r / 100 * d / 12;
         System.out.println("Interest: " + interest);
