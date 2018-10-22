@@ -12,13 +12,11 @@ public class StreamDemo {
             //Buffered Stream
             System.out.println("Enter your name: ");
             InputStreamReader reader = new InputStreamReader(System.in);
-            char c = (char)reader.read();
-            while((int)c!=0){
-                System.out.println(c);
-                c= (char)reader.read();
-            }
-
-
+//            char c = (char)reader.read();
+//            while((int)c!=0){
+//                System.out.println(c);
+//                c= (char)reader.read();
+//            }
             br = new BufferedReader(reader);
             System.err.println(br.readLine());
 
