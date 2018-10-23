@@ -4,17 +4,13 @@
     <list default="true" id="f791869b-37f1-46e5-bfc4-5c12bf6ccdfd" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_17.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/log4j2.properties.abc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_Test/.idea/Java_Test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_Test/.idea/Java_Test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Java_Test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_Test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java_Test/src/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_Test/src/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PackageDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PackageDemo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/apache_log4j_2_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PackageDemo/log4j2.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PackageDemo/resources/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ca/app/LoggerDemo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/log4j.properties" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,6 +21,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/PackageDemo$LoggerDemo1.ic" NAME="LoggerDemo1 Coverage Results" MODIFIED="1540269475688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ca.app.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/PackageDemo$Main.ic" NAME="Main Coverage Results" MODIFIED="1539673940639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.ca.app.*</FILTER>
     </SUITE>
@@ -72,7 +71,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="13720" />
-          <entry key="properties" value="852" />
+          <entry key="properties" value="864" />
           <entry key="txt" value="15" />
         </counts>
       </usages-collector>
@@ -80,7 +79,7 @@
         <counts>
           <entry key="JAVA" value="13720" />
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Properties" value="852" />
+          <entry key="Properties" value="864" />
         </counts>
       </usages-collector>
     </session>
@@ -115,29 +114,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/ca/app/LoggerDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="16" lean-forward="true" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ca/app/LoggerDemo1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="200">
+              <caret line="10" column="18" selection-start-line="8" selection-end-line="10" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/log4j.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="55" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="55" />
+            <state relative-caret-position="200">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -161,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/ca/test/Animal.java" />
         <option value="$PROJECT_DIR$/src/com/ca/logic/Cat.java" />
         <option value="$PROJECT_DIR$/src/com/ca/logic/InterestCaculator.java" />
         <option value="$PROJECT_DIR$/src/com/ca/logic/Calc.java" />
@@ -212,6 +201,7 @@
         <option value="$PROJECT_DIR$/src/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/com/ca/app/LoggerDemo.java" />
         <option value="$PROJECT_DIR$/src/log4j2.properties" />
+        <option value="$PROJECT_DIR$/src/log4j.properties" />
       </list>
     </option>
   </component>
@@ -285,7 +275,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540268869532" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540269872968" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java_Test" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -980,24 +970,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/log4j.properties">
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/LoggerDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="55" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="55" />
+        <state relative-caret-position="240">
+          <caret line="12" column="16" lean-forward="true" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ca/app/LoggerDemo1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="10" selection-end-column="27" />
+        <state relative-caret-position="200">
+          <caret line="10" column="18" selection-start-line="8" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ca/app/LoggerDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="16" lean-forward="true" selection-end-line="22" />
+        <state relative-caret-position="200">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
         </state>
       </provider>
     </entry>
