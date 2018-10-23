@@ -1,8 +1,7 @@
 # Compiled source #
 ###################
 *.class
-PackageDemo/out/production/PackageDemo/log4j.properties
-Java_Test/out/production/Java_Test/log4j2.xml
-Java_Test/out/production/Java_Test/log4j2.properties.abc
-logs/app.log
-logs/app1.log
+PackageDemo/out/*
+Java_Test/out/*
+logs/*
+libraries/*
