@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="STDOUT" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+	  <ThresholdFilter level="error"/>
+    </Console>
+	<File name="File" fileName="D:\\Projects\\logs\\app.log">
+        <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+		<ThresholdFilter level="debug"/>
+	</File>
+  </Appenders>
+  <Loggers>
+      <logger name="com" level="error" additivity="false">
+          <AppenderRef ref="File" />
+      </logger>
+    <Root level="info">
+      <AppenderRef ref="STDOUT"/>
+    </Root>
+  </Loggers>
+</Configuration>
