@@ -20,11 +20,12 @@ public class DBDemo {
             p.load(ClassLoaderRepository.class.getResourceAsStream("/resources/db.properties"));
             Class.forName("oracle.jdbc.OracleDriver");
 
-            conn = DriverManager.getConnection(p.getProperty("url"), p);
+            conn = DriverManager.getConnection(p.getProperty("db.url"),p.getProperty("db.user"),p.getProperty("db.password") );
 
             s = conn.createStatement();
-            rs = s.executeQuery("Select * from Employee");
+            rs = s.executeQuery("Select * from Employees");
             while (rs.next()) {
+                System.out.println(rs.getInt(1) + " " + rs.getString(2));
                 Log.info(rs.getInt(1) + " " + rs.getString(2));
             }
         } catch (ClassNotFoundException | SQLException | IOException cnfEx) {
