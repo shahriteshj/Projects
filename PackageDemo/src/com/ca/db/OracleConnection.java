@@ -22,28 +22,24 @@ public class OracleConnection {
         Properties p = new Properties();
         try {
             p.load(ClassLoaderRepository.class.getResourceAsStream("/resources/db.properties"));
-            driver = p.getProperty("driver");
-            url = p.getProperty("url");
-            user = p.getProperty("user");
-            password = p.getProperty("password");
+            driver = p.getProperty("db.driver");
+            url = p.getProperty("db.url");
+            user = p.getProperty("db.user");
+            password = p.getProperty("db.password");
+
+            Class.forName(driver);
 
         } catch (IOException ioEx) {
             log.error("Database property file not found");
             ioEx.printStackTrace();
-        }
-    }
-
-    private static void RegisterDriver() {
-        try {
-            Class.forName(driver);
-        } catch (ClassNotFoundException cnfEx) {
+        }catch (ClassNotFoundException cnfEx) {
             log.error("Driver Class Not found");
             cnfEx.printStackTrace();
         }
     }
 
-    public Connection getConnection() {
-        Connection con=null;
+    public static Connection getConnection() {
+        Connection con = null;
         try {
             con = DriverManager.getConnection(url, user, password);
         } catch (SQLException sqlEx) {
@@ -52,7 +48,6 @@ public class OracleConnection {
         }
         return con;
     }
-
 
 
 }

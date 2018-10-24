@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed7ec232-f392-42db-88e1-14681ed73733" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Assesment2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assesment2/src/com/ca/app/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assesment2/src/com/ca/dao/UserManagerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assesment2/src/com/ca/dao/UserManagerDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assesment2/src/com/ca/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assesment2/src/com/ca/exception/IllegalCredentialsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assesment2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assesment2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PackageDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PackageDemo/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,7 +16,7 @@
     <session id="-2050955929">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.opened" value="2" />
@@ -179,7 +173,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540375899265" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540378478118" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -233,6 +227,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25377643" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -243,7 +238,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
