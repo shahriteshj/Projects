@@ -5,7 +5,6 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_17.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PackageDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PackageDemo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/app/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/app/DBConnection.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,7 +28,7 @@
     <session id="1362742314">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="1" />
@@ -360,7 +359,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540383942140" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540383947472" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../libraries/OJDBC-Full/ojdbc6.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -708,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540382426520</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Commit">
+      <created>1540383945978</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1540383945978</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView">
@@ -732,7 +738,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.58912385" visible="true" weight="0.30944625" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.58912385" weight="0.30944625" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4811178" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
