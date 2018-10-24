@@ -4,14 +4,8 @@
     <list default="true" id="f791869b-37f1-46e5-bfc4-5c12bf6ccdfd" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_17.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assesment2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assesment2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HRMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HRMS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PackageDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PackageDemo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ca/app/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/app/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/app/DBDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/app/DBDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/app/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/app/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ca/db/OracleConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/db/OracleConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/db.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,14 +64,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="15761" />
+          <entry key="java" value="15924" />
           <entry key="properties" value="875" />
           <entry key="txt" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15761" />
+          <entry key="JAVA" value="15924" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="Properties" value="875" />
         </counts>
@@ -160,7 +154,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/ca/app/DBConnection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="237">
-              <caret line="33" column="97" selection-start-line="33" selection-start-column="97" selection-end-line="33" selection-end-column="97" />
+              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -366,7 +360,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540382420648" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540383942140" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../libraries/OJDBC-Full/ojdbc6.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -707,7 +701,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540284567790</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Commit">
+      <created>1540382426520</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1540382426520</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView">
@@ -721,7 +722,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18277946" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -963,6 +963,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-100">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1100,7 +1103,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/ca/app/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
-          <caret line="33" column="97" selection-start-line="33" selection-start-column="97" selection-end-line="33" selection-end-column="97" />
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

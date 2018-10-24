@@ -8,9 +8,12 @@ import java.sql.*;
 public class DBConnection {
     public static void main(String[] args) {
         Connection conn = OracleConnection.getConnection();
+
         Statement s = null;
+        PreparedStatement st=null;
         ResultSet rs = null;
         try {
+            conn.setAutoCommit(false);
             s = conn.createStatement();
 
             //test Select
@@ -37,6 +40,12 @@ public class DBConnection {
 
             //test Delete
 //            System.out.println(s.executeUpdate("DELETE FROM REGIONS WHERE REGION_ID = 5"));
+
+            //Prepared Statement
+            st=conn.prepareStatement("INSERT INTO REGIONS VALUES(?,?");
+            st.setInt(1,6);
+            st.setString(2,"Antartica");
+            int r = st.executeUpdate();
 
 
         } catch (SQLException ex) {
