@@ -4,7 +4,6 @@ import com.ca.dao.EmployeeDAO;
 import com.ca.entity.Employee;
 
 import java.io.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -13,10 +12,10 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
     private static final String FILENAME = "EMP.DAT";
     private static final String FILEPATH = "D:\\Projects\\";
-    private static LinkedList<Employee> employeeList = new LinkedList<>();
+    private LinkedList<Employee> employeeList = new LinkedList<>();
 
 
-    public EmployeeDAOImpl(){
+    public EmployeeDAOImpl() {
         readFile();
     }
 
@@ -51,11 +50,11 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         return employeeList;
     }
 
-    public void saveFile(){
+    public void saveFile() {
         writeFile();
     }
 
-    static void writeFile() {
+    public void writeFile() {
         try {
             File file = new File(FILEPATH + FILENAME);
             if ( !file.exists() ) {
@@ -73,28 +72,23 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
 
 
-    static void readFile() {
+    public void readFile() {
         try {
             File file = new File(FILEPATH + FILENAME);
-            if (file.exists() ) {
-                if(file.length()!=0) {
+            if ( file.exists() ) {
+                if ( file.length() != 0 ) {
                     FileInputStream in = new FileInputStream(FILEPATH + FILENAME);
                     ObjectInputStream oin = new ObjectInputStream(in);
 
-
                     Object obj = oin.readObject();
-                    if ( obj != null && obj instanceof LinkedList ) {
+                    if ( obj instanceof LinkedList ) {
                         employeeList = (LinkedList) obj;
-                        //System.out.println(obj.toString());
                     }
                 }
             }
-        } catch (IOException ioEx) {
-            System.out.println(ioEx.getMessage());
-            ioEx.printStackTrace();
-        } catch (ClassNotFoundException cnfEx) {
-            System.out.println(cnfEx.getMessage());
-            cnfEx.printStackTrace();
+        } catch (ClassNotFoundException | IOException fnfEx) {
+            System.out.println(fnfEx.getMessage());
+            fnfEx.printStackTrace();
         }
     }
 

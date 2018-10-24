@@ -1,12 +1,14 @@
 package com.ca.entity;
 
-import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.Date;
 
 
 public class Employee implements java.io.Serializable {
     private Integer empId;
+    private String firstName;
+    private String lastName;
+    private Date joiningDate;
+    private String designation;
 
     public Employee(Integer empId, String firstName, String lastName, Date joiningDate, String designation) {
         this.empId = empId;
@@ -16,31 +18,11 @@ public class Employee implements java.io.Serializable {
         this.designation = designation;
     }
 
-    private String firstName;
-    private String lastName;
-    private Date joiningDate;
-    private String designation;
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "empId=" + empId +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", joiningDate=" + joiningDate +
-                ", designation='" + designation + '\'' +
-                '}';
-    }
-
-
-
     public Integer getEmpId() {
         return empId;
     }
 
-    public void setEmpId(Integer empId) {
-        empId = empId;
-    }
+    public void setEmpId(Integer empId) { this.empId = empId;  }
 
     public String getFirstName() {
         return firstName;
@@ -75,6 +57,17 @@ public class Employee implements java.io.Serializable {
     }
 
 
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", joiningDate=" + joiningDate +
+                ", designation='" + designation + '\'' +
+                '}';
+    }
 
 
 }
