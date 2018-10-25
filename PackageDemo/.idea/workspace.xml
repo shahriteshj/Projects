@@ -5,7 +5,12 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_17.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc6.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/ca/app/ThreadDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NonSynThreads/src/com/ca/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NonSynThreads/src/com/ca/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NonSynThreads/src/com/ca/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NonSynThreads/src/com/ca/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NonSynThreads/src/com/ca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NonSynThreads/src/com/ca/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NonSynThreads/src/com/ca/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NonSynThreads/src/com/ca/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PackageDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PackageDemo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -250,10 +255,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="x" value="-15" />
+    <option name="y" value="-15" />
+    <option name="width" value="885" />
+    <option name="height" value="915" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -306,8 +311,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540454805106" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../libraries/OJDBC-Full/ojdbc6.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540457888189" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NonSynThreads" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
