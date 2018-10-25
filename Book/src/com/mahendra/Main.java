@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        BookDAO bookImpl = new BookDAOImpl();
+        BookDAOImpl bookImpl = new BookDAOImpl();
         String author;
         int bookId ;
         Book b;
