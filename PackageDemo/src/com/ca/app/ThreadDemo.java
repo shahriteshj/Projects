@@ -9,10 +9,14 @@ public class ThreadDemo implements Runnable{
 
     @Override
     public void run() {
-        for(int i=0;i<statement.length();i++){
-            System.out.println(Thread.currentThread().getName());
-            System.out.println(" "+ statement.charAt(i));
-            Thread.yield();
+        try {
+            for (int i = 0; i < statement.length(); i++) {
+                //System.out.println(Thread.currentThread().getName());
+                System.out.print(" " + statement.charAt(i));
+                Thread.sleep(500);
+            }
+        }catch (InterruptedException ex){
+
         }
     }
 
@@ -31,6 +35,7 @@ public class ThreadDemo implements Runnable{
         t2.start();
 
         try {
+            t1.join();
             t2.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
