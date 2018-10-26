@@ -5,7 +5,7 @@ package com.mahendra.models;
  * @author <u>Mahendra Shinde</u>
  *
  */
-public class SilverCreditCard implements CreditCard {
+public class SilverCreditCard extends CreditCard {
 
 	@Override
 	public void addPoints() {

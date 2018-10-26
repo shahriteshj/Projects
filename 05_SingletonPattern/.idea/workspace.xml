@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ebcbf25-ee8c-4826-9a54-6e63fd6316f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../06_AdapterPattern/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02_AbstractFactoryPattern/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03_PrototypePattern/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_FactoryMethodPattern/.idea/01_FactoryMethodPattern.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../01_FactoryMethodPattern/.idea/01_FactoryMethodPattern.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_FactoryMethodPattern/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01_FactoryMethodPattern/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_FactoryMethodPattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01_FactoryMethodPattern/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_FactoryMethodPattern/src/com/mahendra/models/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01_FactoryMethodPattern/src/com/mahendra/models/CreditCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_FactoryMethodPattern/src/com/mahendra/models/GoldCreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01_FactoryMethodPattern/src/com/mahendra/models/GoldCreditCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_FactoryMethodPattern/src/com/mahendra/models/SilverCreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01_FactoryMethodPattern/src/com/mahendra/models/SilverCreditCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_AbstractFactoryPattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02_AbstractFactoryPattern/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_PrototypePattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03_PrototypePattern/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04_BuilderPattern/.idea/04_BuilderPattern.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../04_BuilderPattern/.idea/04_BuilderPattern.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04_BuilderPattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04_BuilderPattern/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_AdapterPattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../06_AdapterPattern/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,6 +28,7 @@
     <session id="127470323">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -29,7 +43,20 @@
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="2" />
+        </counts>
+      </usages-collector>
     </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -66,6 +93,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="mahendra" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="05_SingletonPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="05_SingletonPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mahendra" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="05_SingletonPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="05_SingletonPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mahendra" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -73,8 +114,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540545704865" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../07_BridgePattern" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540552108850" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../14_CommandPattern" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -145,6 +186,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/mahendra/models/MachineBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mahendra/demo/DemoApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="21" column="53" lean-forward="true" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
