@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ebcbf25-ee8c-4826-9a54-6e63fd6316f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../06_AdapterPattern/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="73f3fffd-13fe-4dc0-a412-59fb6d40617c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,9 +10,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="127470323">
+    <session id="-174114455">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -46,23 +45,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="05_SingletonPattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="05_SingletonPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="06_AdapterPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_AdapterPattern" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="05_SingletonPattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="05_SingletonPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="06_AdapterPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_AdapterPattern" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="05_SingletonPattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="05_SingletonPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="06_AdapterPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_AdapterPattern" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="mahendra" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -73,8 +72,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540545704865" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../07_BridgePattern" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540545511598" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -93,20 +92,27 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6ebcbf25-ee8c-4826-9a54-6e63fd6316f1" name="Default Changelist" comment="" />
-      <created>1540545389042</created>
+      <changelist id="73f3fffd-13fe-4dc0-a412-59fb6d40617c" name="Default Changelist" comment="" />
+      <created>1540545437222</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1540545389042</updated>
+      <updated>1540545437222</updated>
     </task>
     <task id="LOCAL-00001" summary="Commit">
-      <created>1540545428860</created>
+      <created>1540545497040</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1540545428860</updated>
+      <updated>1540545497040</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit">
+      <created>1540545518962</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540545518962</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
