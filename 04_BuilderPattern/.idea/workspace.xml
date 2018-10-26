@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e0c562b-d917-49cd-bc75-112438e142da" name="Default Changelist" comment="" />
+    <list default="true" id="6e15de3e-6385-4ffc-97d1-941fa0a150eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../03_PrototypePattern/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_FactoryMethodPattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01_FactoryMethodPattern/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_AbstractFactoryPattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02_AbstractFactoryPattern/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,22 +13,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="672448956">
+    <session id="-356873213">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="txt" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
     </session>
@@ -45,49 +38,16 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="02_AbstractFactoryPattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02_AbstractFactoryPattern" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="02_AbstractFactoryPattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02_AbstractFactoryPattern" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="02_AbstractFactoryPattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02_AbstractFactoryPattern" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="02_AbstractFactoryPattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02_AbstractFactoryPattern" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="mahendra" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="02_AbstractFactoryPattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02_AbstractFactoryPattern" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="mahendra" type="462c0819:PsiDirectoryNode" />
-              <item name="demos" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540545125657" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540545344335" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -106,20 +66,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1e0c562b-d917-49cd-bc75-112438e142da" name="Default Changelist" comment="" />
-      <created>1540545070802</created>
+      <changelist id="6e15de3e-6385-4ffc-97d1-941fa0a150eb" name="Default Changelist" comment="" />
+      <created>1540545307529</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1540545070802</updated>
+      <updated>1540545307529</updated>
     </task>
-    <task id="LOCAL-00001" summary="Commit">
-      <created>1540545121263</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1540545121263</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -154,10 +106,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
   <component name="masterDetails">
     <states>
