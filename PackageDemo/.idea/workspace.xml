@@ -4,8 +4,8 @@
     <list default="true" id="f791869b-37f1-46e5-bfc4-5c12bf6ccdfd" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_17.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ComparatorDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ComparatorDemo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HRMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HRMS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JUnitDemos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JUnitDemos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JUnitDemos/JUnitDemos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../JUnitDemos/JUnitDemos.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PackageDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PackageDemo.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,7 +32,7 @@
         <counts>
           <entry key="project.closed" value="21" />
           <entry key="project.open.time.0" value="5" />
-          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.3" value="1" />
@@ -44,14 +44,14 @@
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="7" />
           <entry key="iml" value="1" />
-          <entry key="java" value="129" />
+          <entry key="java" value="132" />
           <entry key="properties" value="9" />
           <entry key="xml" value="1" />
         </counts>
@@ -60,7 +60,7 @@
         <counts>
           <entry key="CLASS" value="7" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="129" />
+          <entry key="JAVA" value="132" />
           <entry key="Properties" value="9" />
           <entry key="XML" value="1" />
         </counts>
@@ -111,59 +111,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ca/app/DBDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/ca/app/DBConnection.java">
+        <entry file="file://$PROJECT_DIR$/src/com/ca/app/PropertyDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1340">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ca/app/ThreadDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ca/db/OracleConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ca/db/JDBCConnectionPooling.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="420">
+              <caret line="56" column="86" selection-start-line="12" selection-start-column="13" selection-end-line="56" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -273,6 +225,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -306,13 +260,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540465195976" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HRMS" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540896507539" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -696,7 +648,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18957704" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1918429" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -768,13 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ca/app/FileDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="48" lean-forward="true" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -917,24 +862,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ca/db/Connection.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/ca/app/PropertyDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ca/app/LoggerDemo1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="60" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -1050,6 +981,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/DBDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/ThreadDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ca/db/OracleConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1070,30 +1018,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ca/app/ThreadDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/FileDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ca/app/DBDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="820">
+          <caret line="44" column="48" lean-forward="true" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ca/app/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1340">
+        <state relative-caret-position="527">
           <caret line="97" selection-start-line="97" selection-end-line="97" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/LoggerDemo1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/PropertyDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="56" column="86" selection-start-line="12" selection-start-column="13" selection-end-line="56" selection-end-column="86" />
         </state>
       </provider>
     </entry>
