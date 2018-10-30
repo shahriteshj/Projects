@@ -3,12 +3,11 @@ package test.com.ca.logic;
 import com.ca.entity.Account;
 import com.ca.exception.NoSufficientFundException;
 import com.ca.logic.AccountService;
+import java.util.HashMap;
+import java.util.Map;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
-import org.junit.Assert;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
