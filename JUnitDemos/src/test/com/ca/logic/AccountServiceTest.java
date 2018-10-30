@@ -6,9 +6,11 @@ import com.ca.logic.AccountService;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
-
+import org.junit.Assert;
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * AccountService Tester.
@@ -49,5 +51,24 @@ public class AccountServiceTest {
     @Test(expected = NoSufficientFundException.class)
     public void testWithdraw() {
         service.withdraw(1001, 100000);
+    }
+
+    /**
+     * Method: deposit(int accountNo, double amount)
+     */
+    @Test(expected = RuntimeException.class)
+    public void testDepositInvalidAccount(){
+        service.deposit(1,1000);
+    }
+
+    /**
+     * Method: deposit(int accountNo, double amount)
+     */
+    @Test
+    public void testDeposit(){
+        double beforeAmt = service.findAccount(1001).getAmount();
+        service.deposit(1001,1000);
+        assertEquals(beforeAmt+1000,service.findAccount(1001).getAmount(),0);
+
     }
 }

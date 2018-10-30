@@ -31,4 +31,9 @@ public class AccountService {
         else
             acc.setAmount( acc.getAmount()-amount );
     }
+
+    public void deposit(int accountNo, double amount){
+        Account acc = findAccount(accountNo);
+        acc.setAmount(acc.getAmount()+amount);
+    }
 }
