@@ -8,7 +8,8 @@ public class TestCase1 {
 
     @Test
     public void testEquals1() {
-        assertEquals(12, 13);
+        assertEquals(12, 12);
+        assertEquals(12.2,12.3,0.101);
     }
 
     @Test
