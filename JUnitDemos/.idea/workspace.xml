@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62da4fbf-1c86-42e9-a861-5807bd7e2fb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/ca/logic/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ca/logic/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/com/ca/logic/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/ca/logic/AccountServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,23 +34,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="9" />
+          <entry key="java" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1292" />
+          <entry key="java" value="2202" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1292" />
+          <entry key="JAVA" value="2202" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -62,10 +61,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ca/app/TestCase1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="8" selection-start-column="8" selection-end-column="8" />
+            <state relative-caret-position="440">
+              <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#358#359#0" expanded="true" />
+                <element signature="e#387#388#0" expanded="true" />
+                <element signature="e#455#456#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ca/entity/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="500">
               <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="e#285#286#0" expanded="true" />
@@ -117,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/com/ca/logic/AccountServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+            <state relative-caret-position="400">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#860#861#0" expanded="true" />
@@ -135,14 +137,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ca/exception/NoSufficientFundException.java">
+        <entry file="file://$PROJECT_DIR$/src/test/com/ca/logic/MySuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+            <state relative-caret-position="200">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
-                <element signature="e#131#132#0" expanded="true" />
-                <element signature="e#151#152#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/com/ca/logic/AccountServiceParameterizedTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/com/ca/logic/CalculatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="63" column="20" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ca/entity/MyDate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-335">
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ca/logic/MyDateServices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -163,7 +206,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/ca/app/TestApp1.java" />
-        <option value="$PROJECT_DIR$/src/com/ca/app/TestCase1.java" />
         <option value="$PROJECT_DIR$/src/com/ca/app/com/ca/logic/Calculator.java" />
         <option value="$PROJECT_DIR$/src/com/ca/logic/Calculator.java" />
         <option value="$PROJECT_DIR$/src/test/com/ca/TestCalculator.java" />
@@ -172,14 +214,37 @@
         <option value="$PROJECT_DIR$/src/com/ca/exception/NoSufficientFundException.java" />
         <option value="$PROJECT_DIR$/src/com/ca/logic/AccountService.java" />
         <option value="$PROJECT_DIR$/src/test/com/ca/logic/AccountServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/com/ca/app/Test.java" />
+        <option value="$PROJECT_DIR$/src/test/com/ca/logic/AccountServiceParameterizedTest.java" />
+        <option value="$PROJECT_DIR$/src/test/com/ca/logic/MySuite.java" />
+        <option value="$PROJECT_DIR$/src/com/ca/app/TestCase1.java" />
+        <option value="$PROJECT_DIR$/src/com/ca/entity/MyDate.java" />
+        <option value="$PROJECT_DIR$/src/com/ca/logic/MyDateServices.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Java</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>JUnitJava</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -211,7 +276,28 @@
               <item name="JUnitDemos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ca" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JUnitDemos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JUnitDemos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ca" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JUnitDemos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JUnitDemos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ca" type="462c0819:PsiDirectoryNode" />
               <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JUnitDemos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JUnitDemos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ca" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JUnitDemos" type="b2602c69:ProjectViewProjectNode" />
@@ -231,7 +317,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540883619467" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540894476984" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../libraries/junit-4.12.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -255,7 +341,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AccountServiceTest">
+  <component name="RunManager" selected="JUnit.TestCase1.testSum">
+    <configuration name="AccountServiceParameterizedTest.testWithdraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JUnitDemos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.com.ca.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.com.ca.logic" />
+      <option name="MAIN_CLASS_NAME" value="test.com.ca.logic.AccountServiceParameterizedTest" />
+      <option name="METHOD_NAME" value="testWithdraw" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AccountServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JUnitDemos" />
       <extension name="coverage">
@@ -270,7 +372,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountServiceTest.testDeposit1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MySuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JUnitDemos" />
       <extension name="coverage">
         <pattern>
@@ -279,73 +381,57 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test.com.ca.logic" />
-      <option name="MAIN_CLASS_NAME" value="test.com.ca.logic.AccountServiceTest" />
-      <option name="METHOD_NAME" value="testDeposit1" />
+      <option name="MAIN_CLASS_NAME" value="test.com.ca.logic.MySuite" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCase1.testSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JUnitDemos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ca.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ca.app" />
+      <option name="MAIN_CLASS_NAME" value="com.ca.app.TestCase1" />
+      <option name="METHOD_NAME" value="testSum" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountServiceTest.testDeposit2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test.abc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JUnitDemos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.com.ca.logic.*" />
+          <option name="PATTERN" value="com.ca.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.com.ca.logic" />
-      <option name="MAIN_CLASS_NAME" value="test.com.ca.logic.AccountServiceTest" />
-      <option name="METHOD_NAME" value="testDeposit2" />
+      <option name="PACKAGE_NAME" value="com.ca.app" />
+      <option name="MAIN_CLASS_NAME" value="com.ca.app.Test" />
+      <option name="METHOD_NAME" value="abc" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountServiceTest.testWithdraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JUnitDemos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.com.ca.logic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.com.ca.logic" />
-      <option name="MAIN_CLASS_NAME" value="test.com.ca.logic.AccountServiceTest" />
-      <option name="METHOD_NAME" value="testWithdraw" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestCalculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JUnitDemos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.com.ca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.com.ca" />
-      <option name="MAIN_CLASS_NAME" value="test.com.ca.TestCalculator" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestCalculator" />
       <item itemvalue="JUnit.AccountServiceTest" />
-      <item itemvalue="JUnit.AccountServiceTest.testWithdraw" />
-      <item itemvalue="JUnit.AccountServiceTest.testDeposit2" />
-      <item itemvalue="JUnit.AccountServiceTest.testDeposit1" />
+      <item itemvalue="JUnit.AccountServiceParameterizedTest.testWithdraw" />
+      <item itemvalue="JUnit.Test.abc" />
+      <item itemvalue="JUnit.MySuite" />
+      <item itemvalue="JUnit.TestCase1.testSum" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestCase1.testSum" />
+        <item itemvalue="JUnit.MySuite" />
         <item itemvalue="JUnit.AccountServiceTest" />
-        <item itemvalue="JUnit.AccountServiceTest.testDeposit1" />
-        <item itemvalue="JUnit.AccountServiceTest.testDeposit2" />
-        <item itemvalue="JUnit.AccountServiceTest.testWithdraw" />
-        <item itemvalue="JUnit.TestCalculator" />
+        <item itemvalue="JUnit.AccountServiceParameterizedTest.testWithdraw" />
+        <item itemvalue="JUnit.Test.abc" />
       </list>
     </recent_temporary>
   </component>
@@ -367,39 +453,46 @@
       <option name="project" value="LOCAL" />
       <updated>1540880801284</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit">
+      <created>1540893714195</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540893714195</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AccountServiceTest_testWithdraw - 2018.10.30 at 11h 44m 59s.xml">
-      <configuration name="AccountServiceTest.testWithdraw" configurationId="JUnit" />
+    <history-entry file="AccountServiceParameterizedTest_testWithdraw - 2018.10.30 at 14h 36m 07s.xml">
+      <configuration name="AccountServiceParameterizedTest.testWithdraw" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest_testWithdraw - 2018.10.30 at 11h 45m 05s.xml">
-      <configuration name="AccountServiceTest.testWithdraw" configurationId="JUnit" />
+    <history-entry file="Test_abc - 2018.10.30 at 14h 38m 52s.xml">
+      <configuration name="Test.abc" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest_testWithdraw - 2018.10.30 at 11h 51m 40s.xml">
-      <configuration name="AccountServiceTest.testWithdraw" configurationId="JUnit" />
+    <history-entry file="AccountServiceParameterizedTest_testWithdraw - 2018.10.30 at 14h 39m 45s.xml">
+      <configuration name="AccountServiceParameterizedTest.testWithdraw" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest_testWithdraw - 2018.10.30 at 11h 51m 47s.xml">
-      <configuration name="AccountServiceTest.testWithdraw" configurationId="JUnit" />
+    <history-entry file="AccountServiceParameterizedTest_testWithdraw - 2018.10.30 at 14h 40m 40s.xml">
+      <configuration name="AccountServiceParameterizedTest.testWithdraw" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest - 2018.10.30 at 11h 52m 53s.xml">
+    <history-entry file="AccountServiceParameterizedTest_testWithdraw - 2018.10.30 at 14h 41m 01s.xml">
+      <configuration name="AccountServiceParameterizedTest.testWithdraw" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MySuite - 2018.10.30 at 15h 16m 45s.xml">
+      <configuration name="MySuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountServiceTest - 2018.10.30 at 15h 17m 31s.xml">
       <configuration name="AccountServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest_testDeposit2 - 2018.10.30 at 12h 21m 23s.xml">
-      <configuration name="AccountServiceTest.testDeposit2" configurationId="JUnit" />
+    <history-entry file="MySuite - 2018.10.30 at 15h 17m 42s.xml">
+      <configuration name="MySuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest_testDeposit2 - 2018.10.30 at 12h 21m 46s.xml">
-      <configuration name="AccountServiceTest.testDeposit2" configurationId="JUnit" />
+    <history-entry file="MySuite - 2018.10.30 at 15h 17m 54s.xml">
+      <configuration name="MySuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest_testDeposit1 - 2018.10.30 at 12h 21m 56s.xml">
-      <configuration name="AccountServiceTest.testDeposit1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AccountServiceTest_testDeposit1 - 2018.10.30 at 12h 22m 12s.xml">
-      <configuration name="AccountServiceTest.testDeposit1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AccountServiceTest - 2018.10.30 at 12h 23m 28s.xml">
-      <configuration name="AccountServiceTest" configurationId="JUnit" />
+    <history-entry file="TestCase1_testSum - 2018.10.30 at 15h 28m 04s.xml">
+      <configuration name="TestCase1.testSum" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -411,15 +504,15 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25377643" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25377643" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Find" order="5" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -472,16 +565,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/ca/app/TestCase1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ca/logic/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -510,10 +593,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/ca/logic/CalculatorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ca/entity/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="63" column="20" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="20" />
+        <state relative-caret-position="500">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/ca/logic/AccountServiceParameterizedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -533,10 +633,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/ca/logic/MySuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/ca/logic/AccountServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+        <state relative-caret-position="400">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#860#861#0" expanded="true" />
@@ -551,20 +661,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ca/entity/Account.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/TestCase1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="440">
+          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
           <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/app/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/ca/logic/CalculatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="63" column="20" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/entity/MyDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-335">
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ca/logic/MyDateServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
         </state>
       </provider>
     </entry>
