@@ -66,7 +66,7 @@ public class AccountServiceTest {
     @Test
     public void testDeposit(){
         double beforeAmt = service.findAccount(1001).getAmount();
-        service.deposit(1001,1000);
+        service.deposit(1001,10000);
         assertEquals(beforeAmt+1000,service.findAccount(1001).getAmount(),0);
 
     }
