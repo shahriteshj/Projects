@@ -4,7 +4,6 @@ import com.ca.logic.SalaryCalculator;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -12,8 +11,9 @@ import static org.junit.Assert.assertEquals;
  *
  * @author Ritesh Shah
  * @version 1.0
- * @since <pre>Oct 31, 2018</pre>
+ * Date 10/31/2018
  */
+
 public class SalaryCalculatorTest {
     private SalaryCalculator sc = null;
 

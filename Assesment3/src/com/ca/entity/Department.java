@@ -1,13 +1,13 @@
+package com.ca.entity;
+
 /**
  * Department
  *
  * @author Ritesh Shah
  * @version 1.0
- * @since <pre>10/31/2018</pre>
+ * Date 10/31/2018
  * Entity class Department
  */
-
-package com.ca.entity;
 
 public class Department {
     private Integer department_id;

@@ -1,12 +1,12 @@
+package com.ca.logic;
+
 /**
  * SalaryCalculator
  *
  * @author Ritesh Shah
  * @version 1.0
- * @since <pre>10/31/2018</pre>
+ * Date 10/31/2018
  */
-
-package com.ca.logic;
 
 public class SalaryCalculator {
     private static final double TAX_FREE = 0;

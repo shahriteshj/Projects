@@ -1,16 +1,16 @@
+package com.ca.app;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  * ThreadApp
  *
  * @author Ritesh Shah
  * @version 1.0
- * @since <pre>10/31/2018</pre>
+ * Date 10/31/2018
  * Thread using “Runnable” Interface to display Current Date & Time with interval of 1 second.
  */
-
-package com.ca.app;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class ThreadApp implements Runnable {
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");

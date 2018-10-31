@@ -1,20 +1,25 @@
 package com.ca.dao;
 
 import com.ca.entity.Department;
+
 import javax.sql.rowset.JdbcRowSet;
 import javax.sql.rowset.RowSetProvider;
 import java.sql.*;
 
 /**
- * DepartmentDAO class
+ * DepartmentDAO
+ *
+ * @author Ritesh Shah
+ * @version 1.0
+ * Date 10/31/2018
  */
+
 public class DepartmentDAO {
 
     private static final String SQLDEPARTMENT = "SELECT DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, " +
             "LOCATION_ID FROM DEPARTMENTS WHERE DEPARTMENT_ID = ?";
 
     /**
-     *
      * Method to connect to database and get department details of department 30
      */
     public static void main(String[] args) {
