@@ -1,0 +1,40 @@
+body{
+    margin:0px;
+    padding:10px;
+    border:2pt solid black;
+}
+
+.button{
+    border-radius: 10px;
+    border: 1pt solid black;
+    background-color: lightblue;
+    padding: 5px;
+}
+
+.mandatoryText{
+    border-radius: 10px;
+    border: 1pt solid black;
+    background-color: rgb(230, 226, 39);
+    padding: 5px;
+}
+
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: brown;
+}
+
+td{
+    border: 1pt dashed darksalmon;
+    padding: 5px;
+    
+}
+
+table{
+    width:400px;
+}
+
+.width{
+    width:200px;
+}
+
