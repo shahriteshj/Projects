@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Demo</title>
+    <style>
+        canvas {
+            border: 1pt solid black;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <canvas id="can1" width="500px" height="450px">
+
+    </canvas>
+</body>
+<script type="text/javascript">
+    var myCanvas=document.getElementById("can1");
+    var ctx = myCanvas.getContext("2d");
+    for(i=0,j=10;i<400;i+=10,j--){
+        ctx.fillStyle = "#ff0000"+i;
+        ctx.fillRect(i,i,50,50);
+        ctx.lineWidth=1;
+        ctx.strokeStyle="blue";
+        ctx.rect(i,i,50,50);
+        ctx.stroke();
+    }
+    
+
+</script>
+</html>
