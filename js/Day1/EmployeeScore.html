@@ -5,63 +5,63 @@
     <meta charset="UTF-8">
     <title>Employee Score</title>
     <script type="text/javascript">
-        var validationFailed=false;
-        function validateEmpNum(){
+        var validationFailed = false;
+        function validateEmpNum() {
             var empNum = document.getElementById("emp_num").value;
-            
-            if(empNum.length<6 || empNum.length >6){
+
+            if (empNum.length < 6 || empNum.length > 6) {
                 //alert("Employee Number should be of 6 length ");
-                document.getElementById("emp_num_err").innerHTML="Employee Number should be of 6 length ";
-                validationFailed= true;
+                document.getElementById("emp_num_err").innerHTML = "* Employee Number should be of 6 length ";
+                validationFailed = true;
 
-            }else{
-                document.getElementById("emp_num_err").innerHTML="";
+            } else {
+                document.getElementById("emp_num_err").innerHTML = "";
                 //validationFailed= false;
             }
         }
 
-        function validateEmpName(){
+        function validateEmpName() {
             var empName = document.getElementById("emp_name").value;
-            
-            if(empName.length >30 || empName.length <1){
+
+            if (empName.length > 30 || empName.length < 1) {
                 //alert("Employee Name should be less than 30 characters");
-                document.getElementById("emp_name_err").innerHTML="Employee Name should be less than 30 characters";
-                validationFailed= true;
-                
-            }else{
-                document.getElementById("emp_name_err").innerHTML="";
+                document.getElementById("emp_name_err").innerHTML = "* Employee Name should be less than 30 characters";
+                validationFailed = true;
+
+            } else {
+                document.getElementById("emp_name_err").innerHTML = "";
                 //validationFailed= false;
             }
         }
 
-        function validateMarks(){
+        function validateMarks() {
             var marks = document.getElementById("mpt_marks").value;
-            if(marks<0 || marks > 100 || marks.length==0){
+            if (marks < 0 || marks > 100 || marks.length == 0) {
                 //alert("MPT Marks should be between 0 and 100");
-                document.getElementById("mpt_marks_err").innerHTML="MPT Marks should be between 0 and 100";
-                validationFailed= true;
-            }else{
-                document.getElementById("mpt_marks_err").innerHTML="";
+                document.getElementById("mpt_marks_err").innerHTML = "* MPT Marks should be between 0 and 100";
+                validationFailed = true;
+            } else {
+                document.getElementById("mpt_marks_err").innerHTML = "";
                 //validationFailed= false;
             }
 
             var marks = document.getElementById("mtt_marks").value;
-            if(marks<0 || marks > 100 || marks.length==0){
+            if (marks < 0 || marks > 100 || marks.length == 0) {
                 //alert("MTT Marks should be between 0 and 100");
-                document.getElementById("mtt_marks_err").innerHTML="MTT Marks should be between 0 and 100";
-                validationFailed= true;
-            }else{
-                document.getElementById("mtt_marks_err").innerHTML="";
+                document.getElementById("mtt_marks_err").innerHTML = "* MTT Marks should be between 0 and 100";
+                validationFailed = true;
+            } else {
+                document.getElementById("mtt_marks_err").innerHTML = "";
                 //validationFailed= false;
             }
 
             var marks = document.getElementById("assign_marks").value;
-            if(marks<0 || marks > 100 ||  marks.length==0){
+            if (marks < 0 || marks > 100 || marks.length == 0) {
                 //alert("Assignment Marks should be between 0 and 100");
-                document.getElementById("assign_marks_err").innerHTML="Assignment Marks should be between 0 and 100";
-                validationFailed= true;
-            }else{
-                document.getElementById("assign_marks_err").innerHTML="";
+                document.getElementById("assign_marks_err").innerHTML = "* Assignment Marks should be between 0 and 100";
+                validationFailed = true;
+            } else {
+                document.getElementById("assign_marks_err").innerHTML = "";
                 //validationFailed= false;
             }
         }
@@ -105,7 +105,7 @@
                 while (module.length > 1) {
                     module.remove(module.length - 1);
                 }
-                
+
                 var opt_mod = document.createElement("option");
                 opt_mod.id = "opt_module";
                 opt_mod.name = "opt_module";
@@ -132,45 +132,45 @@
             var module = document.getElementById("sel_module").value;
             if (module === "default") {
                 //alert("Plese select valid module");
-                document.getElementById("module_err").innerHTML="Plese select valid module";
-                validationFailed= true;
-            }else{
-                document.getElementById("module_err").innerHTML="";
+                document.getElementById("module_err").innerHTML = "* Plese select valid module";
+                validationFailed = true;
+            } else {
+                document.getElementById("module_err").innerHTML = "";
                 //validationFailed= false;
             }
         }
 
         function validateDomain() {
             var domain = document.getElementById("sel_domain").value;
-            if (domain ==="default") {
+            if (domain === "default") {
                 //alert("Plese select valid Domain");
-                document.getElementById("domain_err").innerHTML="Plese select valid Domain";
-                validationFailed= true;
-            }else{
-                document.getElementById("domain_err").innerHTML="";
+                document.getElementById("domain_err").innerHTML = "* Plese select valid Domain";
+                validationFailed = true;
+            } else {
+                document.getElementById("domain_err").innerHTML = "";
                 //validationFailed= false;
             }
         }
 
-        function validateForm(){
-            validationFailed=false;
+        function validateForm() {
+            validationFailed = false;
             validateEmpNum();
             validateEmpName();
-            validateDomain() ;
+            validateDomain();
             validateModule();
             validateMarks();
         }
 
-        function calculateScore(){
+        function calculateScore() {
             validateForm();
             var mpt_marks = parseInt(document.getElementById("mpt_marks").value);
             var mtt_marks = parseInt(document.getElementById("mtt_marks").value);
             var assign_marks = parseInt(document.getElementById("assign_marks").value);
-            if(!validationFailed){
-                score = ((mpt_marks*0.15 )+(mtt_marks*0.15)+(assign_marks*0.7) );
+            if (!validationFailed) {
+                score = ((mpt_marks * 0.15) + (mtt_marks * 0.15) + (assign_marks * 0.7));
                 //alert("Score: " + score); 
-                document.getElementById("score").innerHTML=score;
-                
+                document.getElementById("score").innerHTML = score;
+
             }
         }
 
@@ -240,13 +240,17 @@
         <table>
             <tr>
                 <td width="200px" class="td_1">Enter Employee Number</td>
-                <td class="td_2"><input type="text" id="emp_num" name="emp_num" class="text" onblur="validateEmpNum();"/></td>
-                <td class="td_3"><p id="emp_num_err" name="emp_num_err" class="td_err"></p></td>
+                <td class="td_2"><input type="text" id="emp_num" name="emp_num" class="text" onblur="validateEmpNum();" /></td>
+                <td class="td_3">
+                    <p id="emp_num_err" name="emp_num_err" class="td_err"></p>
+                </td>
             </tr>
             <tr>
-                <td width="200px"class="td_1">Enter Employee Name</td>
-                <td class="td_2"><input type="text" id="emp_name" name="emp_name" class="text"/></td>
-                <td class="td_3"><p id="emp_name_err" name="emp_name_err" class="td_err"></p></td>
+                <td width="200px" class="td_1">Enter Employee Name</td>
+                <td class="td_2"><input type="text" id="emp_name" name="emp_name" class="text" /></td>
+                <td class="td_3">
+                    <p id="emp_name_err" name="emp_name_err" class="td_err"></p>
+                </td>
             </tr>
             <tr>
                 <td width="200px" class="td_1">Choose Domain</td>
@@ -257,37 +261,51 @@
                         <option id="opt_domain" name="opt_domain" value="net">.NET</option>
                     </select>
                 </td>
-                <td class="td_3"><p id="domain_err" name="domain_err" class="td_err"></p></td>
+                <td class="td_3">
+                    <p id="domain_err" name="domain_err" class="td_err"></p>
+                </td>
             </tr>
             <tr>
                 <td width="200px" class="td_1">Choose Module</td>
                 <td class="td_2">
                     <select id="sel_module" name="sel_module" class="select" onchange="validateModule();">
                         <option id="
-                        opt_module" name="opt_module" value="default">-----Select Module-----</option>
+                        opt_module" name="opt_module" value="default">-----Select
+                            Module-----</option>
                     </select>
 
                 </td>
-                <td class="td_3"><p id="module_err" name="module_err" class="td_err"></p></td>
+                <td class="td_3">
+                    <p id="module_err" name="module_err" class="td_err"></p>
+                </td>
             </tr>
             <tr>
                 <td width="200px" class="td_1">Enter MPT Marks</td>
-                <td class="td_2"><input type="number" id="mpt_marks" name="mpt_marks" class="text"/></td>
-                <td class="td_3"><p id="mpt_marks_err" name="mpt_marks_err" class="td_err"></p></td>
+                <td class="td_2"><input type="number" id="mpt_marks" name="mpt_marks" class="text" /></td>
+                <td class="td_3">
+                    <p id="mpt_marks_err" name="mpt_marks_err" class="td_err"></p>
+                </td>
             </tr>
             <tr>
                 <td width="200px" class="td_1">Enter MTT Marks</td>
-                <td class="td_2"><input type="number" id="mtt_marks" name="mtt_marks" class="text"/></td>
-                <td class="td_3"><p id="mtt_marks_err" name="mtt_marks_err" class="td_err"></p></td>
+                <td class="td_2"><input type="number" id="mtt_marks" name="mtt_marks" class="text" /></td>
+                <td class="td_3">
+                    <p id="mtt_marks_err" name="mtt_marks_err" class="td_err"></p>
+                </td>
             </tr>
             <tr>
                 <td width="200px" class="td_1">Enter Asignment Marks</td>
-                <td class="td_2"><input type="number" id="assign_marks" name="assign_marks" class="text"/></td>
-                <td class="td_3"><p id="assign_marks_err" name="assign_marks_err" class="td_err"></p></td>
+                <td class="td_2"><input type="number" id="assign_marks" name="assign_marks" class="text" /></td>
+                <td class="td_3">
+                    <p id="assign_marks_err" name="assign_marks_err" class="td_err"></p>
+                </td>
             </tr>
             <tr>
-                <td><input type="button" id="calculate" name="calculate" class="button" value="Calculate Module Score" onClick="calculateScore();"/></td>
-                <td colspan="2"><p id="score" name="score"></p></td>
+                <td><input type="button" id="calculate" name="calculate" class="button" value="Calculate Module Score"
+                        onClick="calculateScore();" /></td>
+                <td colspan="2">
+                    <p id="score" name="score"></p>
+                </td>
             </tr>
         </table>
     </form>
