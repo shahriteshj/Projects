@@ -168,7 +168,9 @@
             var assign_marks = parseInt(document.getElementById("assign_marks").value);
             if(!validationFailed){
                 score = ((mpt_marks*0.15 )+(mtt_marks*0.15)+(assign_marks*0.7) );
-                alert("Score: " + score); 
+                //alert("Score: " + score); 
+                document.getElementById("score").innerHTML=score;
+                
             }
         }
 
@@ -284,7 +286,8 @@
                 <td class="td_3"><p id="assign_marks_err" name="assign_marks_err" class="td_err"></p></td>
             </tr>
             <tr>
-                <td colspan="3"><input type="button" id="calculate" name="calculate" class="button" value="Calculate Module Score" onClick="calculateScore();"/></td>
+                <td><input type="button" id="calculate" name="calculate" class="button" value="Calculate Module Score" onClick="calculateScore();"/></td>
+                <td colspan="2"><p id="score" name="score"></p></td>
             </tr>
         </table>
     </form>
