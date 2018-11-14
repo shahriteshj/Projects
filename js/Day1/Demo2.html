@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<SCRIPT src="script/common.js">
+		</SCRIPT>
+		<TITLE>External JS File</TITLE>
+	</HEAD>	
+	<BODY>
+		<h1>This is an HTML page</h1>
+		
+		<h1><script type="text/javascript">
+			document.write(msg);
+			//alert("Alert sample");
+			var a = prompt("Please enter any number",3);
+			alert(a);
+			if(a>0){
+				alert(a + " is Positive");
+			}else if (a<0){
+				alert(a + " is Negative");
+			}else if(a==0) {
+				alert(a + " is Zero");
+			} else {
+				alert(a+ " is Not a Number");
+			}
+		</script>
+		</h1>
+	</BODY>	
+</HTML>

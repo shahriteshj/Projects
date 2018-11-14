@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Score</title>
+    <script type="text/javascript">
+        var validationFailed=false;
+        function validateEmpNum(){
+            var empNum = document.getElementById("emp_num").value;
+            
+            if(empNum.length<6 || empNum.length >6){
+                alert("Employee Number should be of 6 length ");
+                validationFailed= true;
+            }
+        }
+
+        function validateEmpName(){
+            var empName = document.getElementById("emp_name").value;
+            
+            if(empName.length >30){
+                alert("Employee Name should be less than 30 characters");
+                validationFailed= true;
+            }
+        }
+
+        function validateMarks(){
+            var marks = document.getElementById("mpt_marks").value;
+            if(marks<0 || marks > 100){
+                alert("MPT Marks should be between 0 and 100");
+                validationFailed= true;
+            }
+
+            var marks = document.getElementById("mtt_marks").value;
+            if(marks<0 || marks > 100){
+                alert("MTT Marks should be between 0 and 100");
+                validationFailed= true;
+            }
+
+            var marks = document.getElementById("assign_marks").value;
+            if(marks<0 || marks > 100){
+                alert("Assignment Marks should be between 0 and 100");
+                validationFailed= true;
+            }
+        }
+
+        function populateModule() {
+            var domain = document.getElementById("sel_domain").value;
+            validateDomain();
+            if (domain === "jee") {
+
+                var module = document.getElementById("sel_module");
+
+                while (module.length > 1) {
+                    //alert(module.length);
+                    module.remove(module.length - 1);
+                }
+
+                var opt_mod = document.createElement("option");
+                opt_mod.id = "opt_module";
+                opt_mod.name = "opt_module";
+                opt_mod.value = "java";
+                opt_mod.text = "Core Java"
+                module.appendChild(opt_mod);
+
+                var opt_mod = document.createElement("option");
+                opt_mod.id = "opt_module";
+                opt_mod.name = "opt_module";
+                opt_mod.value = "servletjsp";
+                opt_mod.text = "Servlet-JSP"
+                module.appendChild(opt_mod);
+
+                var opt_mod = document.createElement("option");
+                opt_mod.id = "opt_module";
+                opt_mod.name = "opt_module";
+                opt_mod.value = "spring";
+                opt_mod.text = "Spring"
+                module.appendChild(opt_mod);
+
+
+            } else if (domain === "net") {
+                var module = document.getElementById("sel_module");
+                while (module.length > 1) {
+                    module.remove(module.length - 1);
+                }
+                
+                var opt_mod = document.createElement("option");
+                opt_mod.id = "opt_module";
+                opt_mod.name = "opt_module";
+                opt_mod.value = "c";
+                opt_mod.text = "C#"
+                module.appendChild(opt_mod);
+                var opt_mod = document.createElement("option");
+                opt_mod.id = "opt_module";
+                opt_mod.name = "opt_module";
+                opt_mod.value = "adonet";
+                opt_mod.text = "ADO.NET"
+                module.appendChild(opt_mod);
+                var opt_mod = document.createElement("option");
+                opt_mod.id = "opt_module";
+                opt_mod.name = "opt_module";
+                opt_mod.value = "aspnet";
+                opt_mod.text = "ASP.NET"
+                module.appendChild(opt_mod);
+            }
+        }
+
+
+        function validateModule() {
+            var domain = document.getElementById("sel_module").value;
+            if (domain === "default") {
+                alert("Plese select valid module");
+                validationFailed= true;
+            }
+        }
+
+        function validateDomain() {
+            var domain = document.getElementById("sel_domain").value;
+            if (domain === "default") {
+                alert("Plese select valid Domain");
+                validationFailed= true;
+            }
+        }
+
+        function validateForm(){
+            validateEmpNum();
+            validateEmpName();
+            validateDomain() 
+            validateModule();
+            validateMarks();
+        }
+
+        function calculateScore(){
+            validateForm();
+            var mpt_marks = parseInt(document.getElementById("mpt_marks").value);
+            var mtt_marks = parseInt(document.getElementById("mtt_marks").value);
+            var assign_marks = parseInt(document.getElementById("assign_marks").value);
+            if(!validationFailed){
+                score = ((mpt_marks*0.15 )+(mtt_marks*0.15)+(assign_marks*0.7) );
+                alert("Score: " + score); 
+            }
+        }
+
+    </script>
+    <style>
+        body{
+            width:100%;
+            padding-top:35px;
+        }
+
+        table{
+            width:50%;
+            height:80%;
+            margin:auto;
+            padding:25px;
+            border:10px solid black;
+            background-color: gray;
+        }
+
+        tr{
+            height:60px;
+        }
+
+        .text{
+            background-color: khaki;
+            width:250px;
+            
+        }
+
+        .button{
+            background-color: lightgreen;
+            height:50px;
+            border-radius: 10px;
+        }
+
+        .width{
+            width:250px;
+        }
+
+        .select{
+            background-color: khaki;
+            width:250px;
+        }
+
+
+    </style>
+</head>
+
+<body style="background-color: lightblue">
+    <form id="frm" name="frm">
+        <table>
+            <tr>
+                <td>Enter Employee Number</td>
+                <td><input type="text" id="emp_num" name="emp_num" class="text" onblur="validateEmpNum();"/></td>
+            </tr>
+            <tr>
+                <td>Enter Employee Name</td>
+                <td><input type="text" id="emp_name" name="emp_name" class="text"/></td>
+            </tr>
+            <tr>
+                <td>Choose Domain</td>
+                <td>
+                    <select id="sel_domain" name="sel_domain" class="select" onchange="populateModule();">
+                        <option id="opt_domain" name="opt_domain" value="default">-----Select Domain-----</option>
+                        <option id="opt_domain" name="opt_domain" value="jee">JEE</option>
+                        <option id="opt_domain" name="opt_domain" value="net">.NET</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Choose Module</td>
+                <td>
+                    <select id="sel_module" name="sel_module" class="select" onchange="validateModule();">
+                        <option id="
+                        opt_module" name="opt_module" value="default">-----Select Module-----</option>
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>Enter MPT Marks</td>
+                <td><input type="number" id="mpt_marks" name="mpt_marks" class="text"/></td>
+            </tr>
+            <tr>
+                <td>Enter MTT Marks</td>
+                <td><input type="number" id="mtt_marks" name="mtt_marks" class="text"/></td>
+            </tr>
+            <tr>
+                <td>Enter Asignment Marks</td>
+                <td><input type="number" id="assign_marks" name="assign_marks" class="text"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" id="calculate" name="calculate" class="button" value="Calculate Module Score" onClick="calculateScore();"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

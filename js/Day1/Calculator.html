@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+	<TITLE>Calculator Example</TITLE>
+	<SCRIPT type="text/javascript">
+
+		function calculate() {
+			var a1 = document.getElementById("operand1").value;
+			var a2 = document.getElementById("operand2").value;
+			var a3 = document.getElementById("select1");
+			var a4 = a3.options[a3.selectedIndex].value
+			para1 = document.getElementById("result");
+			//alert(a4);
+			alert(document.getElementById("select1").value)
+
+			switch (a4) {
+				case "add":
+					result = parseInt(a1) + parseInt(a2);
+					break;
+				case "subtract":
+					result = parseInt(a1) - parseInt(a2);
+					break;
+				case "multiply":
+					result = parseInt(a1) * parseInt(a2);
+					break;
+				case "divide":
+					if(parseInt(a2)==0){
+						result="Cannot divide by 0";
+					}else{
+						result = parseInt(a1) / parseInt(a2);
+					}
+					break;
+			}
+			para1.textContent = "";
+			para1.innerHTML = "<h4>Result: " + result + "</h4>";
+		}
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+	<FORM name="frm1">
+		<h3>Calculator </h3>
+		Enter the First Number:
+		<INPUT id="operand1" type="text" name="operand1" /><br /><br />
+		Select Operator:
+		<SELECT id="select1">
+			<option id="operator" name="operator" value="add">+</option>
+			<option id="operator" name="operator" value="subtract">-</option>
+			<option id="operator" name="operator" value="multiply">*</option>
+			<option id="operator" name="operator" value="divide">/</option>
+		</SELECT><br /><br />
+		Enter the Second Number:
+		<INPUT id="operand2" type="text" name="operand2" /><br /><br />
+		<input type="button" name="Calculate" value="Calculate" onClick="calculate();">
+	</FORM>
+	<p id="result">Result:</p>
+</BODY>
+
+</HTML>

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>Confirm Example</TITLE>
+	</HEAD>	
+	<BODY>
+		<SCRIPT type="text/javascript">
+				
+				function displayPrompt(){
+					var a = confirm("Press a button");
+					if(a){
+						document.write("You have pressed OK");
+					}else {
+						document.write("You have pressed Cancel");
+					}
+				}
+		</SCRIPT>
+		<input type="button" name="confirmBox" value="Display a confirm box" onClick="displayPrompt();"/>
+	</BODY>	
+</HTML>
