@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>JQuery Demo</title>
+    <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" 
+            type="text/javascript"-->
+    <script type="text/javascript" src="scripts/jquery-1.4.4.min.js">
+    </script>
+
+
+</head>
+
+<body>
+    <h1 id="para1" style="position:relative" align="center">This heading can be applied JQuery effects</h1>
+    <p id="para2">Click the buttons and see the effects</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="showhide">Toggle Show/Hide</button>
+    <button id="slideup">Slide Up</button>
+    <button id="slidedown">Slide Down</button>
+    <button id="slidetoggle">Slide Toggle</button>
+    <button id="fadein">Fade In</button>
+    <button id="fadeout">Fade Out</button>
+    <button id="fadetoggle">Fade Toggle</button>
+    <button id="animate">Animate</button>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("#para1").hide();
+            });
+            $("#show").click(function () {
+                $("#para1").show();
+            });
+            $("#showhide").click(function () {
+                $("#para1").toggle();
+            });
+            $("#slideup").click(function () {
+                $("#para1").slideUp();
+            });
+            $("#slidedown").click(function () {
+                $("#para1").slideDown();
+            });
+            $("#slidetoggle").click(function () {
+                $("#para1").slideToggle();
+            });
+            $("#fadein").click(function () {
+                $("#para1").fadeIn();
+            });
+            $("#fadeout").click(function () {
+                $("#para1").fadeOut();
+            });
+            $("#fadetoggle").click(function () {
+                $("#para1").fadeToggle();
+            });
+            $("#animate").click(function () {
+                $("#para1").animate({ right: "15px", opacity: "0.2", fontSize: "30px", width: "5px" }, 4000);
+            });
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
