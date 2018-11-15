@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <script>
+
+        function createEmployee(empId, empName, empSalary, empDep) {
+            this.empId = empId;
+            this.empName = empName;
+            this.empDep = empDep;
+            this.empSalary = empSalary;
+            this.totalSalary;
+
+
+            this.getTakeHomeSalary = function () {
+                this.totalSalary = this.empSalary - (this.empSalary * 0.12);
+                console.log("Employee Take Home Salary" + this.totalSalary)
+            }
+        }
+
+        var empone = new createEmployee(1001, 'John', 2000.12, 'Java');
+
+        console.log("id: " + empone.empId);
+        console.log("Name: " + empone.empName);
+        console.log("Dep: " + empone.empDep);
+        console.log("Sal: " + empone.empSalary);
+        empone.getTakeHomeSalary();
+
+        var emptwo = createEmployee(1002, 'Smith', 3000, 'Java');
+
+        console.log("id: " + emptwo.empId);
+        console.log("Name: " + emptwo.empName);
+        console.log("Dep: " + emptwo.empDep);
+        console.log("Sal: " + emptwo.empSalary);
+        empone.getTakeHomeSalary();
+
+
+    </script>
+</head>
+
+</html>
