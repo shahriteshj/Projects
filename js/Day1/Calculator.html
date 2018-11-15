@@ -5,32 +5,46 @@
 	<TITLE>Calculator Example</TITLE>
 	<SCRIPT type="text/javascript">
 
+		function validateNumber(a) {
+			if (!isNaN(a)) {
+				alert("NaN")
+				return false;
+			} else {
+				return true;
+				alert("Number");
+			}
+		}
+
 		function calculate() {
 			var a1 = document.getElementById("operand1").value;
 			var a2 = document.getElementById("operand2").value;
 			var a3 = document.getElementById("select1");
 			var a4 = a3.options[a3.selectedIndex].value
 			para1 = document.getElementById("result");
+
 			//alert(a4);
 			alert(document.getElementById("select1").value)
-
-			switch (a4) {
-				case "add":
-					result = parseInt(a1) + parseInt(a2);
-					break;
-				case "subtract":
-					result = parseInt(a1) - parseInt(a2);
-					break;
-				case "multiply":
-					result = parseInt(a1) * parseInt(a2);
-					break;
-				case "divide":
-					if(parseInt(a2)==0){
-						result="Cannot divide by 0";
-					}else{
-						result = parseInt(a1) / parseInt(a2);
-					}
-					break;
+			if (validateNumber(a1) && validateNumber(a2)) {
+				switch (a4) {
+					case "add":
+						result = parseFloat(a1) + parseFloat(a2);
+						break;
+					case "subtract":
+						result = parseFloat(a1) - parseFloat(a2);
+						break;
+					case "multiply":
+						result = parseFloat(a1) * parseFloat(a2);
+						break;
+					case "divide":
+						if (parseFloat(a2) == 0) {
+							result = "Cannot divide by 0";
+						} else {
+							result = parseFloat(a1) / parseFloat(a2);
+						}
+						break;
+				}
+			} else {
+				alert("Please enter Number");
 			}
 			para1.textContent = "";
 			para1.innerHTML = "<h4>Result: " + result + "</h4>";

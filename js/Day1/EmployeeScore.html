@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <title>Employee Score</title>
     <script type="text/javascript">
+        
         var validationFailed = false;
+
         function validateEmpNum() {
+
             var empNum = document.getElementById("emp_num").value;
 
-            if (empNum.length < 6 || empNum.length > 6) {
+            if (isNaN(parseInt(empNum))) {
+                document.getElementById("emp_num_err").innerHTML = "* Employee Number should be Numeric";
+                validationFailed = true;
+            } else if (empNum.length < 6 || empNum.length > 6) {
                 //alert("Employee Number should be of 6 length ");
                 document.getElementById("emp_num_err").innerHTML = "* Employee Number should be of 6 length ";
                 validationFailed = true;
-
             } else {
                 document.getElementById("emp_num_err").innerHTML = "";
                 //validationFailed= false;
@@ -27,7 +32,6 @@
                 //alert("Employee Name should be less than 30 characters");
                 document.getElementById("emp_name_err").innerHTML = "* Employee Name should be less than 30 characters";
                 validationFailed = true;
-
             } else {
                 document.getElementById("emp_name_err").innerHTML = "";
                 //validationFailed= false;
@@ -70,9 +74,7 @@
             var domain = document.getElementById("sel_domain").value;
             validateDomain();
             if (domain === "jee") {
-
                 var module = document.getElementById("sel_module");
-
                 while (module.length > 1) {
                     //alert(module.length);
                     module.remove(module.length - 1);
@@ -99,7 +101,6 @@
                 opt_mod.text = "Spring"
                 module.appendChild(opt_mod);
 
-
             } else if (domain === "net") {
                 var module = document.getElementById("sel_module");
                 while (module.length > 1) {
@@ -112,12 +113,14 @@
                 opt_mod.value = "c";
                 opt_mod.text = "C#"
                 module.appendChild(opt_mod);
+
                 var opt_mod = document.createElement("option");
                 opt_mod.id = "opt_module";
                 opt_mod.name = "opt_module";
                 opt_mod.value = "adonet";
                 opt_mod.text = "ADO.NET"
                 module.appendChild(opt_mod);
+
                 var opt_mod = document.createElement("option");
                 opt_mod.id = "opt_module";
                 opt_mod.name = "opt_module";
@@ -170,7 +173,6 @@
                 score = ((mpt_marks * 0.15) + (mtt_marks * 0.15) + (assign_marks * 0.7));
                 //alert("Score: " + score); 
                 document.getElementById("score").innerHTML = score;
-
             }
         }
 
