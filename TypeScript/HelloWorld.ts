@@ -1,7 +1,8 @@
-//let fname:string="John";
+var fname:string="John";
+
 //console.log("Hello World" + fname);
 
-function greeter(person) {
+function greeter(person:String) {
     return "Hello, " + person;
 }
 
