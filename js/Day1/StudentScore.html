@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Score</title>
+    <script type="text/javascript">
+
+        var validationFailed = false;
+
+        function validateStdNum() {
+
+            var stdNum = document.getElementById("std_num").value;
+
+            if (isNaN(parseInt(stdNum))) {
+                document.getElementById("std_num_err").innerHTML = "* Student Number should be Numeric";
+                validationFailed = true;
+            } else if (stdNum.length < 6 || stdNum.length > 6) {
+                //alert("stdloyee Number should be of 6 length ");
+                document.getElementById("std_num_err").innerHTML = "* Student Number should be of 6 length ";
+                validationFailed = true;
+            } else {
+                document.getElementById("std_num_err").innerHTML = "";
+                //validationFailed= false;
+            }
+        }
+
+        function validateStdName() {
+            var stdName = document.getElementById("std_name").value;
+
+            if (stdName.length > 30 || stdName.length < 1) {
+                //alert("stdloyee Name should be less than 30 characters");
+                document.getElementById("std_name_err").innerHTML = "* Student Name should be less than 30 characters";
+                validationFailed = true;
+            } else {
+                document.getElementById("std_name_err").innerHTML = "";
+                //validationFailed= false;
+            }
+        }
+
+        function validateMarks() {
+            var marks = document.getElementById("internal_score").value;
+            if (marks < 0 || marks > 100 || marks.length == 0) {
+                //alert("MPT Marks should be between 0 and 100");
+                document.getElementById("internal_score_err").innerHTML = "* Internal Score should be between 0 and 100";
+                validationFailed = true;
+            } else {
+                document.getElementById("internal_score_err").innerHTML = "";
+                //validationFailed= false;
+            }
+
+            var marks = document.getElementById("external_score").value;
+            if (marks < 0 || marks > 100 || marks.length == 0) {
+                //alert("MTT Marks should be between 0 and 100");
+                document.getElementById("external_score_err").innerHTML = "* External Score should be between 0 and 100";
+                validationFailed = true;
+            } else {
+                document.getElementById("external_score_err").innerHTML = "";
+                //validationFailed= false;
+            }
+
+
+        }
+
+        function populateDept() {
+            var college = document.getElementById("sel_college").value;
+            validateCollege();
+            if (college === "iit-b") {
+                var dept = document.getElementById("sel_dept");
+                while (dept.length > 1) {
+                    //alert(dept.length);
+                    dept.remove(dept.length - 1);
+                }
+
+                var opt_mod = document.createElement("option");
+                opt_mod.id = "opt_dept";
+                opt_mod.name = "opt_dept";
+                opt_mod.value = "cse";
+                opt_mod.text = "CSE"
+                dept.appendChild(opt_mod);
+
+                var opt_mod = document.createElement("option");
+                opt_mod.id = "opt_dept";
+                opt_mod.name = "opt_dept";
+                opt_mod.value = "it";
+                opt_mod.text = "IT"
+                dept.appendChild(opt_mod);
+
+                var opt_mod = document.createElement("option");
+                opt_mod.id = "opt_dept";
+                opt_mod.name = "opt_dept";
+                opt_mod.value = "mech";
+                opt_mod.text = "Mech"
+                dept.appendChild(opt_mod);
+
+            } else if (college === "iit-m") {
+                var dept = document.getElementById("sel_dept");
+                while (dept.length > 1) {
+                    dept.remove(dept.length - 1);
+                }
+
+                var opt_mod = document.createElement("option");
+                opt_mod.id = "opt_dept";
+                opt_mod.name = "opt_dept";
+                opt_mod.value = "ece";
+                opt_mod.text = "ECE"
+                dept.appendChild(opt_mod);
+
+                var opt_mod = document.createElement("option");
+                opt_mod.id = "opt_dept";
+                opt_mod.name = "opt_dept";
+                opt_mod.value = "eee";
+                opt_mod.text = "EEE"
+                dept.appendChild(opt_mod);
+
+                var opt_mod = document.createElement("option");
+                opt_mod.id = "opt_dept";
+                opt_mod.name = "opt_dept";
+                opt_mod.value = "eni";
+                opt_mod.text = "E&I"
+                dept.appendChild(opt_mod);
+            }
+        }
+
+
+        function validateDept() {
+            var dept = document.getElementById("sel_dept").value;
+            if (dept === "default") {
+                //alert("Plese select valid dept");
+                document.getElementById("dept_err").innerHTML = "* Plese select valid Department";
+                validationFailed = true;
+            } else {
+                document.getElementById("dept_err").innerHTML = "";
+                //validationFailed= false;
+            }
+        }
+
+        function validateCollege() {
+            var college = document.getElementById("sel_college").value;
+            if (college === "default") {
+
+                document.getElementById("college_err").innerHTML = "* Plese select valid College";
+                validationFailed = true;
+            } else {
+                document.getElementById("college_err").innerHTML = "";
+                //validationFailed= false;
+            }
+        }
+
+        function validateForm() {
+            validationFailed = false;
+            validateStdNum();
+            validateStdName();
+            validateCollege();
+            validateDept();
+            validateMarks();
+        }
+
+        function calculateScore() {
+            validateForm();
+            var internal_score = parseInt(document.getElementById("internal_score").value);
+            var external_score = parseInt(document.getElementById("external_score").value);
+            if (!validationFailed) {
+                score = ((internal_score * 0.3) + (external_score * 0.7));
+                //alert("Score: " + score); 
+                document.getElementById("score").innerHTML = score;
+            }
+        }
+
+    </script>
+    <style>
+        body {
+            width: 100%;
+            padding-top: 35px;
+        }
+
+        table {
+            width: 70%;
+            height: 80%;
+            margin: auto;
+            padding: 25px;
+            border: 10px solid black;
+            background-color: gainsboro;
+        }
+
+        tr {
+            height: 60px;
+        }
+
+        .text {
+            background-color: khaki;
+            width: 250px;
+
+        }
+
+        .button {
+            background-color: lightgreen;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .width {
+            width: 250px;
+        }
+
+        .select {
+            background-color: khaki;
+            width: 250px;
+        }
+
+        .td_err {
+            color: red;
+        }
+
+        .td_1 {
+            width: "30%";
+        }
+
+        .td_2 {
+            width: "30%";
+        }
+
+
+        .td_3 {
+            width: "40%";
+        }
+    </style>
+</head>
+
+<body style="background-color: lightblue">
+    <form id="frm" name="frm">
+        <table>
+            <tr>
+                <td width="200px" class="td_1">Enter Student Number</td>
+                <td class="td_2">
+                    <input type="text" id="std_num" name="std_num" class="text" onblur="validateStdNum();" />
+                </td>
+                <td class="td_3">
+                    <p id="std_num_err" name="std_num_err" class="td_err"></p>
+                </td>
+            </tr>
+            <tr>
+                <td width="200px" class="td_1">Enter Student Name</td>
+                <td class="td_2">
+                    <input type="text" id="std_name" name="std_name" class="text" />
+                </td>
+                <td class="td_3">
+                    <p id="std_name_err" name="std_name_err" class="td_err"></p>
+                </td>
+            </tr>
+            <tr>
+                <td width="200px" class="td_1">Enter Student College</td>
+                <td class="td_2">
+                    <select id="sel_college" name="sel_college" class="select" onchange="populateDept();">
+                        <option id="opt_college" name="opt_college" value="default">-----Select College-----</option>
+                        <option id="opt_college" name="opt_college" value="iit-b">IIT-B</option>
+                        <option id="opt_college" name="opt_college" value="iit-m">IIT-M</option>
+                    </select>
+                </td>
+                <td class="td_3">
+                    <p id="college_err" name="college_err" class="td_err"></p>
+                </td>
+            </tr>
+            <tr>
+                <td width="200px" class="td_1">Choose Student Department</td>
+                <td class="td_2">
+                    <select id="sel_dept" name="sel_dept" class="select" onchange="validatedept();">
+                        <option id="
+                        opt_dept" name="opt_dept" value="default">-----Select dept-----
+                        </option>
+                    </select>
+
+                </td>
+                <td class="td_3">
+                    <p id="dept_err" name="dept_err" class="td_err"></p>
+                </td>
+            </tr>
+            <tr>
+                <td width="200px" class="td_1">Enter Internal Score</td>
+                <td class="td_2">
+                    <input type="number" id="internal_score" name="internal_score" class="text" />
+                </td>
+                <td class="td_3">
+                    <p id="internal_score_err" name="internal_score_err" class="td_err"></p>
+                </td>
+            </tr>
+            <tr>
+                <td width="200px" class="td_1">Enter External Score</td>
+                <td class="td_2">
+                    <input type="number" id="external_score" name="external_score" class="text" />
+                </td>
+                <td class="td_3">
+                    <p id="external_score_err" name="external_score_err" class="td_err"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" id="calculate" name="calculate" class="button" value="Calculate Score" onClick="calculateScore();" />
+                </td>
+                <td colspan="2">
+                    <p id="score" name="score"></p>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
