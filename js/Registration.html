@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <style>
+    
+    .mandatory{
+        color:red;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <h2>Registration Page</h2>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="uname"> </td>
+            <td class="mandatory">*</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><textarea name="address"></textarea></td>
+            <td  class="mandatory"></td>
+        </tr>
+        <tr>
+            <td>Zip Code</td>
+            <td><input type="text" name="zipcode"></td>
+            <td  class="mandatory">*</td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td><select>
+                <option name="ctry_opt" value="USA">USA</option>
+                <option name="ctry_opt" value="INDIA">INDIA</option>
+                <option name="ctry_opt" value="LONDON">LONDON</option>
+                <option name="ctry_opt" value="CHINA">CHINA</option>
+                <option name="ctry_opt" value="SINGAPORE">SINGAPORE</option>
+                <option name="ctry_opt" value="AUSTRALIA">AUSTRALIA</option>
+            </select></td>
+            <td  class="mandatory">*</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female</td>
+            <td  class="mandatory">*</td>
+        </tr>
+        <tr>
+            <td>Preferences</td>
+            <td><input type="checkbox" name="pref1" value="ruby">Ruby
+                <input type="checkbox" name="pref2" value="groovy">Groovy
+                <input type="checkbox" name="pref3" value="bluetooth">Bluetooth</td>
+            <td  class="mandatory">*</td>
+        </tr>
+        <tr>
+            <td>Phone<span  class="mandatory">*</span></td>
+            <td><input type="text" name="phone"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" name="email"></td>
+            <td  class="mandatory">*</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" name="password"></td>
+            <td  class="mandatory">*</td>
+        </tr>
+        <tr>
+            <td>Verify Password</td>
+            <td><input type="text" name="verifyPassword"></td>
+            <td  class="mandatory">*</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" name="send" value="SEND"><input type="reset" name="reset" value="RESET"</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>
