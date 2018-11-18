@@ -3,14 +3,11 @@
 <head>
     <title>Gallery</title>
     <style>
-
-
         .item {
-            width: 150px;
             text-align: center;
             display: block;
             background-color: transparent;
-            border: 5px solid white ;
+            border: 5px solid white;
             margin-right: 10px;
             margin-bottom: 1px;
             float: left;
@@ -20,17 +17,28 @@
 
 <body>
     <h1>Gallery Page</h1>
-
-    <div class="item">
-        <img src="images/happiness.jpg" />
-        <p>Happiness poster<br/>
-            Price: $100 only</p>
-    </div>
-    <div class="item">
-        <img src="images/dog.jpg" />
-        <p>Dog poster<br/>
-            Price: $50 only</p>
-    </div>
+    <table><tr><td><div class="item" style="width:150px">
+            <img src="images/happiness.jpg" />
+            <p>Happiness poster
+                <br/> Price: $100 only</p>
+        </div>
+        <div class="item" style="width:150px">
+            <img src="images/dog.jpg" />
+            <p>Dog poster
+                <br/> Price: $50 only</p>
+        </div>
+        <div class="item" style="width:178px">
+            <img src="images/nature.jpg" />
+            <p>Nature poster
+                <br/> Price: $50 only</p>
+        </div></td></tr>
+        <tr><td><div class="item" style="width:162px">
+                <img src="images/birds.jpg" />
+                <p>Birds poster
+                    <br/> Price: $50 only</p>
+            </div></td></tr>
+    </table>
+        
 </body>
 
 </html>
