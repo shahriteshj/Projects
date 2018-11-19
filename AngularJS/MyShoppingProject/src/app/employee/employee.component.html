@@ -34,8 +34,8 @@
     </tr>
     <tr *ngFor="let e of Employees;">
         <td>{{e.code}}</td>
-        <td>{{e.fname}}</td>
-        <td>{{e.gender}}</td>
+        <td>{{e.fname | genderpipe:e.gender}}</td>
+        <td>{{e.gender }}</td>
         <td>{{e.annualSalary}}</td>
         <td>{{e.dateOfBirth}}</td>
     </tr>
@@ -45,5 +45,17 @@
 
 
 <p>Subjects: <span *ngFor="let s of Subjects;let i=index"><span *ngIf="i!=0">,</span> {{s}}</span>
-
 </p>
+
+<span>{{emp| json}}</span><br/><br/>
+
+<p>{{emp.empType}}</p>
+<p>{{emp.empType}}</p>
+<span [ngSwitch]="emp.empType"> 
+    
+        <span *ngSwitchCase="0">Daily</span> 
+        <span *ngSwitchCase="1">Permanent</span> 
+        <span *ngSwitchCase="2">Contract</span> 
+        <span *ngSwitchCase="3">Retired</span> 
+        <span *ngSwitchDefault>Other</span> 
+    </span>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Employee } from '../model/employee';
+import { Employee, EmployeeType } from '../model/employee';
 
 @Component({
   selector: 'app-employee',
@@ -30,7 +30,7 @@ export class EmployeeComponent implements OnInit {
     return this.fname + " " + this.lname;
   }
 
-  emp: Employee = new Employee(1, "Emp1", 1000);
+  emp: Employee = new Employee(1, "Emp1", 1000,EmployeeType.Daily);
 
   ngOnInit() {
   }
