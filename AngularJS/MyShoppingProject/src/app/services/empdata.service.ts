@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class EmpdataService {
-
+  
   getEmployees(): any[] {
     return [
       { code: "emp101", name: "Rashmi", gender: "Female", annualSalary: 5500, dateOfBirth: "25/6/1985" },
@@ -13,5 +13,6 @@ export class EmpdataService {
 
     ];
   }
-  constructor() { }
+  constructor() { 
+  }
 }
