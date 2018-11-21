@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <table border=1 style="border-collapse:collapse; font-family:Arial; table-layout: fixed">
+    <tr style="background-color:silver; font-weight: bold">
+      <td colspan="3" style="padding:3px; white-space:nowrap; width:100%">
+        <h4>Employee Form</h4>
+      </td>
+    </tr>
+    <tr style="background-color:silver; font-weight: bold">
+      <td style="padding:10px; white-space:nowrap; width:33%">
+        <div>touched : {{ frm.touched }}</div>
+        <div>untouched : {{ frm.untouched }}</div>
+      </td>
+      <td style="padding:10px; white-space:nowrap; width:33%">
+        <div>pristine : {{ frm.pristine }}</div>
+        <div>dirty : {{ frm.dirty }}</div>
+      </td>
+      <td style="padding:10px; white-space:nowrap; width:33%">
+        <div>valid : {{ frm.valid }}</div>
+        <div>invalid : {{ frm.invalid }}</div>
+      </td>
+    </tr>
+  </table>
+  <div>
+    <h1>Template Form Creation</h1>
+  </div>
+
+  <div class="container">
+    <div class="jumbotron">
+      <form #frm="ngForm" (ngSubmit)="SaveEmployee(frm)" ngNativeValidate>
+        <div class="form-group">
+          <label for="name">
+            Name:
+          </label>
+          <input type="text" name="name" [(ngModel)]="defName" pattern="[a-zA-Z][a-zA-Z ]+" #nameControl="ngModel"
+            required class="form-control">
+          <div *ngIf="nameControl?.touched && nameControl?.invalid" class="alert alert-danger">
+            <div *ngIf="nameControl.errors?.required">Name is required</div>
+            <div *ngIf="nameControl.errors?.pattern">Please enter valid Name</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact">
+            Contact:
+          </label>
+          <input type="text" name="contact" [(ngModel)]="defContact" pattern="[0-9]{10}" #contactControl="ngModel"
+            required class="form-control">
+          <div *ngIf="contactControl?.touched && contactControl?.invalid" class="alert alert-danger">
+            <div *ngIf="contactControl.errors?.required">Contact is required</div>
+            <div *ngIf="contactControl.errors?.pattern">Please enter valid Contact</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">
+            Email:
+          </label> <!-- [a-zA-Z0-9][/\w.]+@[/\w]+[.][a-zA-Z]{2,3}   -->
+          <input type="text" name="email" [(ngModel)]="defEmail" pattern="[a-zA-Z][a-zA-z0-9]*@[a-zA-Z0-9]+[.][a-zA-Z]{2,3}" #emailControl="ngModel" required class="form-control">
+          <div *ngIf="emailControl?.touched && emailControl?.invalid" class="alert alert-danger">
+            <div *ngIf="emailControl.errors?.required">Email is required</div>
+            <div *ngIf="emailControl.errors?.pattern">Please enter valid Email</div>
+          </div>
+        </div>
+        <button type="submit" name="button" class="btn btn-success" [disabled]="frm.invalid">Add User</button>
+      </form>
+    </div>
+  </div>
+  {{frm.value|json}}
+</body>
+
+</html>

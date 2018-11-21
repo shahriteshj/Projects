@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Java",
+      "author": "John"
+    },
+    {
+      "id": 2,
+      "title": "C",
+      "author": "Smith"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
