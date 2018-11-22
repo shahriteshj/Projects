@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">INR
+        <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">SGD</a></li>
+        <li><a href="#">USD</a></li>
+        <li><a href="#">GBP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3" *ngFor="let item of items">
+        <div class="panel panel-primary" >
+          <div class="panel-heading">{{item.name}}</div>
+          <div class="panel-body"><img [src]="item.photoPath" class="imageClass img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">Price: {{item.price}}</div>
+          <div class="panel-footer"><button>Add to Cart</button></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>

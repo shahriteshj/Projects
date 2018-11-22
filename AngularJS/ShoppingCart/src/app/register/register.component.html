@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Register</title>
+</head>
+
+<body>
+  <div class="container" style="align-content: center">
+    <div class="jumbotron">
+      <form #registerFrm="ngForm" (ngSubmit)="Register(frm)" ngNativeValidate >
+        <div class="form-group">
+           <label for="Name"> 
+            Name:
+           </label> 
+          <input type="text" name="name" pattern="[a-zA-Z0-9]+"  
+          required class="form-control" ngModel #nameControl="ngModel">
+            <div *ngIf="nameControl?.touched && nameControl?.invalid" class="alert alert-danger">
+            <div *ngIf="nameControl.errors?.required">Name is required</div>
+            <div *ngIf="nameControl.errors?.pattern">Please enter valid Name</div>
+          </div>  
+        </div>
+
+        <div class="form-group">
+            <label for="contact">
+              Contact:
+            </label>
+            <input type="text" name="contact" [(ngModel)]="defContact" pattern="[0-9]{10}" #contactControl="ngModel"
+              required class="form-control">
+            <div *ngIf="contactControl?.touched && contactControl?.invalid" class="alert alert-danger">
+              <div *ngIf="contactControl.errors?.required">Contact is required</div>
+              <div *ngIf="contactControl.errors?.pattern">Please enter valid Contact</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">
+              Email:
+            </label> <!-- [a-zA-Z0-9][/\w.]+@[/\w]+[.][a-zA-Z]{2,3}   -->
+            <input type="text" name="email" [(ngModel)]="defEmail" pattern="[a-zA-Z][a-zA-z0-9]*@[a-zA-Z0-9]+[.][a-zA-Z]{2,3}" #emailControl="ngModel" required class="form-control">
+            <div *ngIf="emailControl?.touched && emailControl?.invalid" class="alert alert-danger">
+              <div *ngIf="emailControl.errors?.required">Email is required</div>
+              <div *ngIf="emailControl.errors?.pattern">Please enter valid Email</div>
+            </div>
+          </div>
+        <div class="form-group">
+            <button type="submit" name="button" class="btn btn-info" [disabled]="registerFrm.invalid">Submit</button>
+         </div>
+      </form>
+      <div class="form-group">
+          <a routerLink="../register">Create New account</a>
+       </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

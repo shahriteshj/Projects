@@ -66,11 +66,10 @@
             <div *ngIf="emailControl.errors?.pattern">Please enter valid Email</div>
           </div>
         </div>
-        <button type="submit" name="button" class="btn btn-success" [disabled]="frm.invalid">Add User</button>
       </form>
     </div>
   </div>
-  {{frm.value|json}}
+  
 </body>
 
 </html>

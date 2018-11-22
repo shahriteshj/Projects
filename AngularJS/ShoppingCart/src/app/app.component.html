@@ -1,0 +1,31 @@
+<div style="padding:5px">
+  <ul class="nav nav-tabs">
+      <li routerLinkActive="active">
+          <a routerLink="shoppingcart" *ngIf="userVerified">Shopping Cart</a>
+      </li> 
+    <li routerLinkActive="active">
+        <a routerLink="login" *ngIf="userVerified">Login</a>
+    </li> 
+    <li routerLinkActive="active">
+        <a routerLink="register" *ngIf="userVerified">Register</a>
+    </li> 
+    <li routerLinkActive="active">
+      <a routerLink="home" *ngIf="userVerified">Home</a>
+  </li> 
+  <li routerLinkActive="active">
+    <a routerLink="about" *ngIf="userVerified">About</a>
+</li> 
+<li routerLinkActive="active">
+  <a routerLink="shoppingitem" *ngIf="userVerified">Shopping Item</a>
+</li> 
+<li routerLinkActive="active">
+  <a routerLink="productlist" *ngIf="userVerified">Product List</a>
+</li>
+<li routerLinkActive="active">
+        <a routerLink="logout" *ngIf="!userVerified">LogOut</a>
+      </li>
+</ul>
+</div> 
+<router-outlet></router-outlet>
+  
+<div class="footer">Happy Learning Angular</div>
