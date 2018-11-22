@@ -38,7 +38,7 @@ export class HttpServiceComponent implements OnInit {
     }
 
     this.httpclientservice.setItem(post).subscribe(post => { this.getItems(); })
-    
+
   }
 
 
@@ -65,7 +65,7 @@ export class HttpServiceComponent implements OnInit {
     this.toggleForm = true;
   }
 
-  showAddForm(){
+  showAddForm() {
     this.toggleForm = false;
   }
 
