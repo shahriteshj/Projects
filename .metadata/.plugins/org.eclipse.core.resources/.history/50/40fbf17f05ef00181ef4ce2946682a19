@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package com.jp.db;
+
+/**
+ * @author Administrator
+ *
+ */
+public class DBConnection {
+	
+
+}
