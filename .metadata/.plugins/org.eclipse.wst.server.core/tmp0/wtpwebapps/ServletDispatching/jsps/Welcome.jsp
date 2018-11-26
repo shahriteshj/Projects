@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h1>Welcome.jsp</h1>
-	<p>${ param.param1}</p>
+	<a href="/">Login</a>
+	<a href="">Register</a>
 </body>
 </html>
