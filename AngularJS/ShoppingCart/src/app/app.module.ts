@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { StorageServiceModule } from 'angular-webstorage-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { RegisterComponent } from './register/register.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { LogOutComponent } from './log-out/log-out.component';
-
+import {AuthGuard} from './auth-Guard';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,10 @@ import { LogOutComponent } from './log-out/log-out.component';
   imports: [
     BrowserModule,
     FormsModule,
+    StorageServiceModule ,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
