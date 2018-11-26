@@ -105,3 +105,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jface.text 2 0 2018-11-26 11:45:58.545
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.ui 4 4 2018-11-26 14:51:59.330
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@5a3d52a0)} vs {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@4d4b2b3f)}
