@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Welcome.jsp</h1>
-	<a href="loginServlet">Login</a><br/>
-	<a href="registrationServlet">Register</a>
+	<a href="controllerServlet?action=login">Login</a><br/>
+	<a href="controllerServlet?action=register">Register</a>
 </body>
 </html>
