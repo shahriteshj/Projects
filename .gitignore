@@ -10,3 +10,5 @@ JUnitDemos/out/*
 .metadata/*
 .metadata/.log
 .metadata/.log
+.metadata/.log
+.metadata/.plugins/org.eclipse.core.resources/.projects/DBProject/.indexes/e4/81/46/7e/history.index
