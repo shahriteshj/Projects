@@ -8,3 +8,5 @@ libraries/*
 EMP.DAT
 JUnitDemos/out/*
 .metadata/*
+.metadata/.log
+.metadata/.log
