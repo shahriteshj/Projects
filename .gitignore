@@ -7,7 +7,5 @@ logs/*
 libraries/*
 EMP.DAT
 JUnitDemos/out/*
-.metadata/*
-.metadata/.log
-.metadata/.plugins/*
-.recommenders/*
+.metadata
+.recommenders
