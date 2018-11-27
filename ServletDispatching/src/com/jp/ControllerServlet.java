@@ -1,6 +1,8 @@
 package com.jp;
 
 import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Iterator;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,12 +20,29 @@ public class ControllerServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		Enumeration<String> headerNames = request.getHeaderNames();
+		
+		while(headerNames.hasMoreElements()){
+			String headerName = headerNames.nextElement();
+			System.out.println( headerName + ": " + request.getHeader(headerName));
+		}
+		
+		
+		Iterator<String> resHeaderNamesIT = response.getHeaderNames().iterator();
+		while(resHeaderNamesIT.hasNext())
+		{
+			System.out.println("in res for");
+			String headerName = resHeaderNamesIT.next();
+			System.out.println( headerName + ": " + response.getHeader(headerName));
+		}
+		
+		
 		String action = request.getParameter("action");
-		System.out.println(action);
+
 		RequestDispatcher rd = null;
 		switch (action) {
 		case "login":
-			System.out.println("in login");
 			rd = request.getRequestDispatcher("/WEB-INF/jsps/Login.jsp");
 			break;
 		case "register":

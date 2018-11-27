@@ -61,9 +61,9 @@ public class ConnectionUtil {
 				System.out.println(sqlEX.getMessage());
 				sqlEX.printStackTrace();
 			}
-			return flag;
 
 		}
+		return flag;
 
 	}
 
@@ -74,7 +74,7 @@ public class ConnectionUtil {
 		try {
 			conn = ConnectionUtil.getConnection();
 			DatabaseMetaData dbMetaData = conn.getMetaData();
-			rs = dbMetaData.getTables(null, null, null, new String[]{"TABLE"});
+			rs = dbMetaData.getTables(null, null, null, new String[] { "TABLE" });
 			while (rs.next()) {
 				tableList.add(rs.getString(3));
 			}
@@ -92,11 +92,11 @@ public class ConnectionUtil {
 				System.out.println(sqlEX.getMessage());
 				sqlEX.printStackTrace();
 			}
-			return tableList;
 
 		}
+		return tableList;
 	}
-	
+
 	public ArrayList<ArrayList<String>> getTableDetails(String tableName) {
 		Connection conn = null;
 		Statement st = null;
@@ -108,24 +108,22 @@ public class ConnectionUtil {
 		try {
 			conn = ConnectionUtil.getConnection();
 			st = conn.createStatement();
-			rs= st.executeQuery(strQuery);
+			rs = st.executeQuery(strQuery);
 			ResultSetMetaData rsMetaData = rs.getMetaData();
 			int colCount = rsMetaData.getColumnCount();
-			for(int i=1;i<=colCount;i++){
+			for (int i = 1; i <= colCount; i++) {
 				colNames.add(rsMetaData.getColumnName(i));
 			}
 			dataValues.add(colNames);
-			while(rs.next()){
+			while (rs.next()) {
 				ArrayList<String> rowValues = new ArrayList<String>();
-				for(int i =1;i<=colCount;i++){
-					
+				for (int i = 1; i <= colCount; i++) {
+
 					rowValues.add(rs.getString(i));
 				}
 				dataValues.add(rowValues);
 			}
-			
-			
-			
+
 		} catch (SQLException SQLex) {
 			System.out.println(SQLex.getMessage());
 			SQLex.printStackTrace();
@@ -140,9 +138,10 @@ public class ConnectionUtil {
 				System.out.println(sqlEX.getMessage());
 				sqlEX.printStackTrace();
 			}
-			return dataValues;
 
 		}
+		return dataValues;
+
 	}
 
 }

@@ -7,9 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:include page="/WEB-INF/jsps/Head.jsp"></jsp:include>
-	<jsp:include page="/WEB-INF/jsps/PageHeader.jsp"></jsp:include>
-	<a href="controllerServlet?action=login">Login</a><br/>
-	<a href="controllerServlet?action=register">Register</a>
+	<%
+	ServletContext ctx = super.getServletContext();
+	%>
+	<%= ctx.getInitParameter("CompanyName")%>
+	
+	
 </body>
 </html>
