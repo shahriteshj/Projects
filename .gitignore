@@ -7,3 +7,4 @@ logs/*
 libraries/*
 EMP.DAT
 JUnitDemos/out/*
+.metadata/*
