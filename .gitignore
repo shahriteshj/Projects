@@ -8,4 +8,5 @@ libraries/*
 EMP.DAT
 JUnitDemos/out/*
 .metadata
+.metadata/*
 .recommenders
