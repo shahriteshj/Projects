@@ -5,23 +5,25 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
-import { MenuComponent } from 'src/menu/menu.component';
-import { LogOutComponent } from 'src/menu/log-out/log-out.component';
-import { ProductListComponent } from 'src/menu/product-list/product-list.component';
-import { ShoppingItemComponent } from 'src/menu/shopping-item/shopping-item.component';
-import { ShoppingCartComponent } from 'src/menu/shopping-cart/shopping-cart.component';
+import { MenuComponent } from 'src/app/menu/menu.component';
+import { LogOutComponent } from './log-out/log-out.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ShoppingItemComponent } from './shopping-item/shopping-item.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { AuthGuard } from './guards/auth.guards';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard]  },
   { path: 'about', component: AboutComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'logout', component: LogOutComponent },
-  { path: 'productlist', component: ProductListComponent, },
-  { path: 'shoppingitem', component: ShoppingItemComponent,},
-  { path: 'shoppingcart', component: ShoppingCartComponent },
+  { path: 'menu', component: MenuComponent, canActivate: [AuthGuard]  },
+  { path: 'logout', component: LogOutComponent, canActivate: [AuthGuard]  },
+  { path: 'productlist', component: ProductListComponent, canActivate: [AuthGuard]  },
+  { path: 'shoppingitem', component: ShoppingItemComponent, canActivate: [AuthGuard] },
+  { path: 'shoppingcart', component: ShoppingCartComponent, canActivate: [AuthGuard]  },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', redirectTo: '' }
 
 ];
 

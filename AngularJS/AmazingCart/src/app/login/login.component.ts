@@ -21,10 +21,12 @@ export class LoginComponent implements OnInit {
     let username=frm.value.username; 
     console.log(username);
     AppComponent.userLogged=true;
+
+    localStorage.setItem('currentUser',username);
     
     this.router
     this.router.navigate(['/menu']);
-    
+      
    // if(username=="admin"){
       
  //     sessionStorage.setItem("profile",'admin');
