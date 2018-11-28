@@ -1,32 +1,9 @@
-<div style="padding:5px">
-    <ul class="nav nav-tabs">
-        <li routerLinkActive="active">
-            <a routerLink="home" *ngIf="!userLogged">Home</a>
-        </li>
-        <li routerLinkActive="active">
-            <a routerLink="login" *ngIf="!userLogged">Login</a>
-        </li>
-        <li routerLinkActive="active">
-            <a routerLink="register" *ngIf="!userLogged">Register</a>
-        </li>
-        <li routerLinkActive="active">
-            <a routerLink="about" *ngIf="!userLogged">About</a>
-        </li>
-        <li routerLinkActive="active">
-            <a routerLink="shoppingcart"  *ngIf="userLogged" >Shopping Cart</a>
-        </li>
-        <li routerLinkActive="active">
-            <a routerLink="shoppingitem"  *ngIf="userLogged">Shopping Item</a>
-        </li>
-        <li routerLinkActive="active">
-            <a routerLink="productlist"  *ngIf="userLogged">Product List </a>
-        </li>
-        <li routerLinkActive="active">
-            <a routerLink="logout"  *ngIf="userLogged">Logout</a>
-        </li>
-    </ul>
+<div class="jumbotron">
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-2">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <div class="footer">Happy Learning Angular</div>
 </div>
 
-<router-outlet></router-outlet>
-
-<div class="footer">Happy Learning Angular</div>

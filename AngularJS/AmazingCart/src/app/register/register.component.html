@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Register</title>
-</head>
-
-<body>
-  <div class="container" style="align-content: center">
-    <div class="jumbotron">
-      <form #registerFrm="ngForm" (ngSubmit)="Register(frm)" ngNativeValidate >
+<div class="col-md-6 col-md-offset-3">
+    <h2>Register</h2>
+  <form #registerFrm="ngForm" (ngSubmit)="Register(frm)" ngNativeValidate >
         <div class="form-group">
            <label for="Name"> 
             Name:
@@ -22,33 +14,30 @@
         </div>
 
         <div class="form-group">
-            <label for="contact">
-              Contact:
+            <label for="username">
+              Username:
             </label>
-            <input type="text" name="contact" [(ngModel)]="defContact" pattern="[0-9]{10}" #contactControl="ngModel"
+            <input type="text" name="username" [(ngModel)]="defusername" pattern="[a-zA-Z]+" #usernameControl="ngModel"
               required class="form-control">
-            <div *ngIf="contactControl?.touched && contactControl?.invalid" class="alert alert-danger">
-              <div *ngIf="contactControl.errors?.required">Contact is required</div>
-              <div *ngIf="contactControl.errors?.pattern">Please enter valid Contact</div>
+            <div *ngIf="usernameControl?.touched && usernameControl?.invalid" class="alert alert-danger">
+              <div *ngIf="usernameControl.errors?.required">Username is required</div>
+              <div *ngIf="usernameControl.errors?.pattern">Please enter valid Username</div>
             </div>
           </div>
           <div class="form-group">
-            <label for="email">
-              Email:
+            <label for="password">
+              Password:
             </label> <!-- [a-zA-Z0-9][/\w.]+@[/\w]+[.][a-zA-Z]{2,3}   -->
-            <input type="text" name="email" [(ngModel)]="defEmail" pattern="[a-zA-Z][a-zA-z0-9]*@[a-zA-Z0-9]+[.][a-zA-Z]{2,3}" #emailControl="ngModel" required class="form-control">
-            <div *ngIf="emailControl?.touched && emailControl?.invalid" class="alert alert-danger">
-              <div *ngIf="emailControl.errors?.required">Email is required</div>
-              <div *ngIf="emailControl.errors?.pattern">Please enter valid Email</div>
+            <input type="text" name="password" [(ngModel)]="defpassword" pattern="[a-zA-Z]+" #passwordControl="ngModel" required class="form-control">
+            <div *ngIf="passwordControl?.touched && passwordControl?.invalid" class="alert alert-danger">
+              <div *ngIf="passwordControl.errors?.required">Password is required</div>
+              <div *ngIf="passwordControl.errors?.pattern">Please enter valid Password</div>
             </div>
           </div>
         <div class="form-group">
-            <button type="submit" name="button" class="btn btn-info" [disabled]="registerFrm.invalid">Submit</button>
+            <button type="submit" name="button" class="btn btn-primary" [disabled]="registerFrm.invalid">Submit</button>
+            <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
          </div>
       </form>
     </div>
-  </div>
-
-</body>
-
-</html>
+  
