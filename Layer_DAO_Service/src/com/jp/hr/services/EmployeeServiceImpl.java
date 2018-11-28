@@ -22,4 +22,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return empList;
 	}
 
+	@Override
+	public Employee getEmpDetails(int empId) throws HRException {
+		return empDAO.getEmpDetails(empId);
+	}
+
+	@Override
+	public boolean joinNewEmployee(Employee emp) throws HRException {
+		return empDAO.insertNewRecord(emp);
+	}
+	
 }

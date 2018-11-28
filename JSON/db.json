@@ -14,5 +14,19 @@
   "comments": [],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "Users": [
+    {
+      "name": "Ritesh",
+      "username": "ritesh",
+      "password": "ritesh",
+      "id": 1
+    },
+    {
+      "name": "John",
+      "username": "john",
+      "password": "john",
+      "id": 2
+    }
+  ]
 }

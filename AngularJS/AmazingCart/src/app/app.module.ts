@@ -16,6 +16,9 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShoppingItemComponent } from './shopping-item/shopping-item.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { LogOutComponent } from './log-out/log-out.component';
+import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import { UserServiceService } from './service/user-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -30,14 +33,16 @@ import { LogOutComponent } from './log-out/log-out.component';
     ShoppingCartComponent,
     ShoppingItemComponent,
     ProductListComponent,
-    LogOutComponent
+    LogOutComponent,
+    MenuBarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule    
+    AppRoutingModule,
+    HttpClientModule    
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard,UserServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

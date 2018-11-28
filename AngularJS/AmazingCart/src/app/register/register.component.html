@@ -1,6 +1,6 @@
 <div class="col-md-6 col-md-offset-3">
     <h2>Register</h2>
-  <form #registerFrm="ngForm" (ngSubmit)="Register(frm)" ngNativeValidate >
+  <form #registerFrm="ngForm" (ngSubmit)="Register(registerFrm)" ngNativeValidate >
         <div class="form-group">
            <label for="Name"> 
             Name:
@@ -17,7 +17,7 @@
             <label for="username">
               Username:
             </label>
-            <input type="text" name="username" [(ngModel)]="defusername" pattern="[a-zA-Z]+" #usernameControl="ngModel"
+            <input type="text" name="username" ngModel pattern="[a-zA-Z]+" #usernameControl="ngModel"
               required class="form-control">
             <div *ngIf="usernameControl?.touched && usernameControl?.invalid" class="alert alert-danger">
               <div *ngIf="usernameControl.errors?.required">Username is required</div>
@@ -27,8 +27,8 @@
           <div class="form-group">
             <label for="password">
               Password:
-            </label> <!-- [a-zA-Z0-9][/\w.]+@[/\w]+[.][a-zA-Z]{2,3}   -->
-            <input type="text" name="password" [(ngModel)]="defpassword" pattern="[a-zA-Z]+" #passwordControl="ngModel" required class="form-control">
+            </label> 
+            <input type="text" name="password" ngModel pattern="[a-zA-Z]+" #passwordControl="ngModel" required class="form-control">
             <div *ngIf="passwordControl?.touched && passwordControl?.invalid" class="alert alert-danger">
               <div *ngIf="passwordControl.errors?.required">Password is required</div>
               <div *ngIf="passwordControl.errors?.pattern">Please enter valid Password</div>

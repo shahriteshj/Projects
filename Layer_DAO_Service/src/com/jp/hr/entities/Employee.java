@@ -2,13 +2,13 @@ package com.jp.hr.entities;
 
 public class Employee {
 	private int empId;
-	private String first_Name;
+	private String firstName;
 	private String lastName;
 
-	public Employee(int empId, String first_Name, String lastName) {
+	public Employee(int empId, String firstName, String lastName) {
 		super();
 		this.empId = empId;
-		this.first_Name = first_Name;
+		this.firstName = firstName;
 		this.lastName = lastName;
 	}
 
@@ -24,12 +24,12 @@ public class Employee {
 		this.empId = empId;
 	}
 
-	public String getFirst_Name() {
-		return first_Name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFirst_Name(String first_Name) {
-		this.first_Name = first_Name;
+	public void setFirst_Name(String firstName) {
+		this.firstName = firstName;
 	}
 
 	public String getLastName() {
@@ -42,7 +42,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [empId=" + empId + ", first_Name=" + first_Name + ", lastName=" + lastName + "]";
+		return "Employee [empId=" + empId + ", firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
 
 }
