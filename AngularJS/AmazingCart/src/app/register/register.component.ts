@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../model/user';
-import { UserServiceService } from '../service/user-service.service';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-register',
@@ -8,10 +8,17 @@ import { UserServiceService } from '../service/user-service.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-  constructor(private _userService: UserServiceService) { }
+  users:User[];
+  constructor(private _userService: UserService) { }
 
   ngOnInit() {
+    this.getAllUsers();
+    console.log(this.users);
+  }
+
+  getAllUsers() {
+    return this._userService.getAll().subscribe(userList=>{this.users=<User[]>userList});
+   //return this._userService.getAll().subscribe(_users=>{this._userService.getAll();});
   }
 
   Register(registerFrm) {

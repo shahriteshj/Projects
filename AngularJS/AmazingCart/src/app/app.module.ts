@@ -17,7 +17,7 @@ import { ShoppingItemComponent } from './shopping-item/shopping-item.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { LogOutComponent } from './log-out/log-out.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
-import { UserServiceService } from './service/user-service.service';
+import { UserService } from './service/user.service';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -42,7 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule    
   ],
-  providers: [AuthGuard,UserServiceService],
+  providers: [AuthGuard,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

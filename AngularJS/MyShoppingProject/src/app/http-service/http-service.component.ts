@@ -22,7 +22,7 @@ export class HttpServiceComponent implements OnInit {
   }
 
   getItems() {
-    return this.httpclientservice.getItems().subscribe(posts => { this.posts = <Posts[]>posts; });
+    return this.httpclientservice.getItems().subscribe(posts1 => { this.posts = <Posts[]>posts1; });
   }
 
   setItems(post: Posts) {
