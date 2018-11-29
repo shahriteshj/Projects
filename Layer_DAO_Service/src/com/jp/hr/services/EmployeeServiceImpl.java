@@ -11,7 +11,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	private EmployeeDAO empDAO;
 
-	public EmployeeServiceImpl() {
+	public EmployeeServiceImpl() throws HRException {
 		empDAO = new EmployeeDAOImpl();
 	}
 
@@ -31,5 +31,5 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public boolean joinNewEmployee(Employee emp) throws HRException {
 		return empDAO.insertNewRecord(emp);
 	}
-	
+
 }

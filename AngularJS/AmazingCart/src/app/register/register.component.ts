@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../model/user';
 import { UserService } from '../service/user.service';
+import { Router } from '@angular/router';
+import { AlertService } from '../service/alert.service';
 
 @Component({
   selector: 'app-register',
@@ -8,34 +10,45 @@ import { UserService } from '../service/user.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  users:User[];
-  constructor(private _userService: UserService) { }
+  loading = false;
+  users: User[];
+
+  constructor(private router: Router, private _userService: UserService,
+    private alertService: AlertService) { }
 
   ngOnInit() {
-    this.getAllUsers();
-    console.log(this.users);
   }
 
-  getAllUsers() {
-    return this._userService.getAll().subscribe(userList=>{this.users=<User[]>userList});
-   //return this._userService.getAll().subscribe(_users=>{this._userService.getAll();});
-  }
 
   Register(registerFrm) {
+
+    this.loading = true;
     let name = registerFrm.value.name;
     let username = registerFrm.value.username;
     let password = registerFrm.value.password;
     console.log(name);
     console.log(username);
     console.log(password);
+    
     let user: User = {
       name: registerFrm.value.name,
-      username: registerFrm.value.username, 
+      username: registerFrm.value.username,
       password: registerFrm.value.password
     }
     console.log(user);
-    this._userService.create(user).subscribe(_users=>{this._userService.getAll();});
-    console.log(username);
+    
+    this._userService.create(user)
+      .subscribe(
+        data => {
+          this.alertService.success('Registration successful', true);
+          this.router.navigate(['/login']);
+        },
+        error => {
+          this.alertService.error(error);
+          this.loading = false;
+        }
+      );
+
 
   }
 

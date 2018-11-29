@@ -1,4 +1,29 @@
 <app-menu-bar></app-menu-bar>
-<p>
-  shopping-cart works!
-</p>
+
+  <div class="container">
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">INR
+        <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">SGD</a></li>
+        <li><a href="#">USD</a></li>
+        <li><a href="#">GBP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3" *ngFor="let p of products">
+        <div class="panel panel-primary" >
+          <div class="panel-heading">{{p.name}}</div>
+          <div class="panel-body"><img [src]="p.photoPath" class="imageClass img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">Price: {{p.price}}</div>
+          <div class="panel-footer"><button>Add to Cart</button>   <input type="number" maxlength="3" min="0" max="100" name="quantity" required></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  

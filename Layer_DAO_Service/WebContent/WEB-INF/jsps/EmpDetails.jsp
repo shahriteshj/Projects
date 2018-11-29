@@ -7,6 +7,8 @@
 <title>Employee Details</title>
 </head>
 <body>
+	<jsp:include page="Header.jsp" />
+	<jsp:include page="Header01.jsp" />
 	<table border="1">
 		<tr>
 			<th>Employee Id</th>
@@ -19,6 +21,6 @@
 			<td>${requestScope.empDetails.lastName}</td>
 		</tr>
 	</table>
-	<a href="empList.do">Go back to list</a>"
+	<a href="empList.do">Go back to list</a>
 </body>
 </html>

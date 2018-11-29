@@ -10,27 +10,29 @@
 <title>Employee List</title>
 </head>
 <body>
-	<%-- ${ requestScope.empList }--%>
+	<jsp:include page="Header.jsp" />
+	<jsp:include page="Header01.jsp" />
 	<table border="1">
 		<tr>
 			<th>Employee Id</th>
 			<th>View Details</th>
-			
+
 		</tr>
 
 		<%-- for (Employee emp : (ArrayList<Employee>) request.getAttribute("empList")) {	--%>
 		<!-- <tr> -->
-			<%-- <td><%=emp.getEmpId()%></td> --%> 
-			<%-- <td><%=emp.getFirstName()%></td> --%> 
-			<%-- <td><%=emp.getLastName()%></td> --%> 
+		<%-- <td><%=emp.getEmpId()%></td> --%>
+		<%-- <td><%=emp.getFirstName()%></td> --%>
+		<%-- <td><%=emp.getLastName()%></td> --%>
 		<!-- </tr> -->
 		<%-- }	--%>
 
 		<c:forEach items="${requestScope.empList }" var="emp">
 			<tr>
 				<td>${emp.empId }</td>
-				<td><a href="empDetails.do?empId=${ emp.empId }">View Details</a></td>
-				
+				<td><a href="empDetails.do?empId=${ emp.empId }">View
+						Details</a></td>
+
 			</tr>
 		</c:forEach>
 
@@ -38,7 +40,7 @@
 
 	</table>
 
-
+	<a href="mainMenu.do">Go back to Main Menu</a>
 
 </body>
 </html>

@@ -11,7 +11,7 @@ public class ProductServiceImpl implements ProductService {
 
 	private ProductDAO prodDAO;
 
-	public ProductServiceImpl() {
+	public ProductServiceImpl() throws HRException {
 		prodDAO = new ProductDAOImpl();
 	}
 

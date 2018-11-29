@@ -19,6 +19,8 @@ import { LogOutComponent } from './log-out/log-out.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { UserService } from './service/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AlertService } from './service/alert.service';
+import { ProductService } from './service/product.service';
 
 
 @NgModule({
@@ -42,7 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule    
   ],
-  providers: [AuthGuard,UserService],
+  providers: [AuthGuard,UserService,AlertService,ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
 import { UserService } from '../service/user.service';
 import { User } from '../model/user';
+import { AlertService } from '../service/alert.service';
 
 
 
@@ -12,47 +13,49 @@ import { User } from '../model/user';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  
+
+  loading = false;
   users: User[];
-  user:User;
-  usersArr:Object[][];
-  username:string;
-  password:string;
-  constructor(private _userService: UserService) { }
+  user: User;
+  username: string;
+  password: string;
+  constructor(private router: Router, private _userService: UserService,
+    private alertService: AlertService) { }
 
   ngOnInit() {
-    this.getAllUsers();
-    console.log(this.usersArr);
+    localStorage.removeItem('currentUser');
   }
-
-  getAllUsers() {
-   return this._userService.getAll().subscribe(usersList => { this.usersArr = <Object[][]>usersList; console.log(this.usersArr);});
-     
-  }
-
 
 
   Login(frm: NgForm) {
+    this.loading = true;
     this.username = frm.value.username;
     this.password = frm.value.password;
-    console.log(this.username);
-    this._userService.authenticateUser(this.username,this.password).subscribe(user=>{this.user=<User>user;});
-
-    //this._userService.getAll().subscribe(users => { this.userList = <User[]>users });
-  //users: User[];
-  console.log(this.user);
-    // for (let user1 of this.userList) {
-    //   if (username == user1.username && password == user1.password) {
-    //     this.router.navigate(['/menu']);
-    //   } else {
-    //     this.router.navigate(['/login']);
-    //   }
-    }
-
-
-
-
-
+    this._userService.authenticateUser(this.username, this.password).subscribe(
+      data => {
+        console.log(data);
+        let strUser = JSON.parse(localStorage.getItem('currentUser'));
+        this.user = strUser[0];
+        if (this.user != undefined) {
+          console.log("success");
+          this.router.navigate(['/menu']);
+        } else {
+          console.log("failure");
+          this.router.navigate(['/login']);
+          this.loading = false;
+        }
+      },
+      error => {
+        this.alertService.error(error);
+        this.loading = false;
+      }
+    );
   }
+
+
+
+
+
+}
 
 

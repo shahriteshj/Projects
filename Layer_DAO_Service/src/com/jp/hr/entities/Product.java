@@ -5,11 +5,11 @@ public class Product {
 	String category;
 	String name;
 	Float price;
-	
-	public Product(){
-		
+
+	public Product() {
+
 	}
-	
+
 	public Product(Integer prodID, String category, String name, Float price) {
 		super();
 		this.prodID = prodID;
@@ -54,7 +54,5 @@ public class Product {
 	public String toString() {
 		return "Product [prodID=" + prodID + ", category=" + category + ", name=" + name + ", price=" + price + "]";
 	}
-	
-	
 
 }

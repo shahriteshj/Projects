@@ -17,7 +17,7 @@ export class HttpServiceComponent implements OnInit {
   constructor(private httpclientservice: HttpClientService) { }
 
   ngOnInit() {
-    this.getItems()
+    this.getItems();
 
   }
 

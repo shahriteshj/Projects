@@ -7,24 +7,30 @@
 <title>Edit Product</title>
 </head>
 <body>
+	<jsp:include page="Header.jsp" />
+	<jsp:include page="Header01.jsp" />
 	<form method="POST" action="modifyProduct.do">
-		
+
 		<table>
 			<tr>
 				<th>Product Id</th>
-				<td><input type="text" name="prodID" value="${requestScope.productDetails.prodID}" readonly></td>
+				<td><input type="text" name="prodID"
+					value="${requestScope.productDetails.prodID}" readonly></td>
 			</tr>
 			<tr>
 				<th>Category</th>
-				<td><input type="text" name="category" value="${requestScope.productDetails.category}"></td>
+				<td><input type="text" name="category"
+					value="${requestScope.productDetails.category}"></td>
 			</tr>
 			<tr>
 				<th>Name</th>
-				<td><input type="text" name="name" value="${requestScope.productDetails.name}"></td>
+				<td><input type="text" name="name"
+					value="${requestScope.productDetails.name}"></td>
 			</tr>
-						<tr>
+			<tr>
 				<th>Price</th>
-				<td><input type="text" name="price" value="${requestScope.productDetails.price}"></td>
+				<td><input type="text" name="price"
+					value="${requestScope.productDetails.price}"></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" value="Update" /></td>

@@ -27,6 +27,50 @@
       "username": "john",
       "password": "john",
       "id": 2
+    },
+    {
+      "name": "Smith",
+      "username": "smith",
+      "password": "smith",
+      "id": 3
+    }
+  ],
+  "Products": [
+    {
+      "id": 1,
+      "name": "iPhone 7",
+      "price": 65000,
+      "photoPath": "assets/images/phone1.jpg"
+    },
+    {
+      "name": "iWatch",
+      "price": 15000,
+      "photoPath": "assets/images/iwatch.jpg",
+      "id": 2
+    },
+    {
+      "name": "Juice",
+      "price": 100,
+      "photoPath": "assets/images/juice.jpg",
+      "id": 3
+    },
+    {
+      "name": "Perfume",
+      "price": 500,
+      "photoPath": "assets/images/perfume.jpg",
+      "id": 4
+    },
+    {
+      "name": "Headphones",
+      "price": 2500,
+      "photoPath": "assets/images/headphones.jpg",
+      "id": 5
+    },
+    {
+      "name": "Shoes",
+      "price": 5000,
+      "photoPath": "assets/images/shoes.jpg",
+      "id": 6
     }
   ]
 }

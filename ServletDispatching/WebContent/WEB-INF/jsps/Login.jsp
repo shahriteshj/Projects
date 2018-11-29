@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form id="loginfrm" name="loginfrm" method="POST"
-		action="controllerServlet?action=authenticate">
+		action="authenticate.do">
 		<div style="color:red">${errMsg}</div>
 		User Name: <input type="text" name="username"> <br /> <br />
 		Password: <input type="password" name="password"> <br /> <br />

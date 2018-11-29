@@ -7,6 +7,8 @@
 <title>New Product</title>
 </head>
 <body>
+	<jsp:include page="Header.jsp" />
+	<jsp:include page="Header01.jsp" />
 	<form method="POST" action="addProduct.do">
 		${message}
 		<table>
@@ -22,7 +24,7 @@
 				<th>Name</th>
 				<td><input type="text" name="name"></td>
 			</tr>
-						<tr>
+			<tr>
 				<th>Price</th>
 				<td><input type="text" name="price"></td>
 			</tr>

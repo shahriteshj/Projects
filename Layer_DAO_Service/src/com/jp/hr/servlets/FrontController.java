@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.jp.hr.entities.Employee;
 import com.jp.hr.entities.Product;
@@ -29,8 +30,13 @@ public class FrontController extends HttpServlet {
 
 	@Override
 	public void init() throws ServletException {
-		services = new EmployeeServiceImpl();
-		productService = new ProductServiceImpl();
+		try {
+			services = new EmployeeServiceImpl();
+			productService = new ProductServiceImpl();
+		} catch (HRException e) {
+			throw new ServletException("Init method failed",e);
+		}
+		
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -46,8 +52,43 @@ public class FrontController extends HttpServlet {
 		try {
 			switch (action) {
 			case "*":
+			case "home": {
+				jspName = "Home";
+				break;
+			}
+
+			case "login": {
+				jspName = "Login";
+				break;
+			}
+
+			case "authenticate": {
+				String username = request.getParameter("username");
+				String password = request.getParameter("password");
+
+				if (username.equalsIgnoreCase("a") && password.equals("a")) {
+					String userFullName = "John Smith";
+					HttpSession session = request.getSession();
+					session.setAttribute("userFullName", userFullName);
+					jspName = "MainMenu";
+				} else {
+					String msg = "Invalid Credentials. Please enter again";
+					request.setAttribute("errMsg", msg);
+					jspName = "Login";
+				}
+
+				break;
+			}
+
 			case "mainMenu": {
 				jspName = "MainMenu";
+				break;
+			}
+			case "logout": {
+				HttpSession session = request.getSession();
+				request.setAttribute("userFullName", session.getAttribute("userFullName"));
+				session.invalidate();
+				jspName = "ThanksPage";
 				break;
 			}
 			case "empList": {
@@ -112,7 +153,7 @@ public class FrontController extends HttpServlet {
 				String strPrice = request.getParameter("price");
 				Float price = Float.parseFloat(strPrice);
 				int prodId = Integer.parseInt(strProdId);
-				Product p = new Product(prodId, category, name,price);
+				Product p = new Product(prodId, category, name, price);
 				boolean isSuccessful = productService.addNewProduct(p);
 				String msg = isSuccessful ? "Product Inserted" : "Insertion failed";
 				request.setAttribute("message", msg);
@@ -135,12 +176,11 @@ public class FrontController extends HttpServlet {
 				Float price = Float.parseFloat(strPrice);
 				int prodId = Integer.parseInt(strProdId);
 				System.out.println(price);
-				Product p = new Product(prodId, category, name,price);
+				Product p = new Product(prodId, category, name, price);
 				boolean isSuccessful = productService.modifyProduct(p);
 				String msg = isSuccessful ? "Product Update" : "Updation failed";
 				request.setAttribute("message", msg);
 				productList = productService.getProductList();
-				
 				request.setAttribute("productList", productList);
 				jspName = "ProductList";
 				break;
@@ -151,6 +191,9 @@ public class FrontController extends HttpServlet {
 				boolean isSuccessful = productService.removeProduct(productId);
 				String msg = isSuccessful ? "Product Deleted" : "Deletion failed";
 				request.setAttribute("message", msg);
+				productList = productService.getProductList();
+				request.setAttribute("productList", productList);
+
 				jspName = "ProductList";
 				break;
 			}

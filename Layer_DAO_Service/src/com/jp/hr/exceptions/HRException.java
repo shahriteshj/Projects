@@ -9,6 +9,5 @@ public class HRException extends Exception {
 	public HRException(String message) {
 		super(message);
 	}
-	
 
 }

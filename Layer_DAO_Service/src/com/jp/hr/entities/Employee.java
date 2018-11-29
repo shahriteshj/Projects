@@ -12,10 +12,10 @@ public class Employee {
 		this.lastName = lastName;
 	}
 
-	public Employee(){
-		
+	public Employee() {
+
 	}
-	
+
 	public int getEmpId() {
 		return empId;
 	}

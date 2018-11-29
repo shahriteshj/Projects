@@ -7,6 +7,8 @@
 <title>Product Details</title>
 </head>
 <body>
+	<jsp:include page="Header.jsp" />
+	<jsp:include page="Header01.jsp" />
 	<table border="1">
 		<tr>
 			<th>Product Id</th>
@@ -21,8 +23,10 @@
 			<td>${requestScope.prodDetails.category}</td>
 			<td>${requestScope.prodDetails.name}</td>
 			<td>${requestScope.prodDetails.price}</td>
-			<td><a href="editProduct.do?prodID=${requestScope.prodDetails.prodID}">Edit</a></td>
-			<td><a href="deleteProduct.do?prodID=${requestScope.prodDetails.prodID}">Delete</a></td>
+			<td><a
+				href="editProduct.do?prodID=${requestScope.prodDetails.prodID}">Edit</a></td>
+			<td><a
+				href="deleteProduct.do?prodID=${requestScope.prodDetails.prodID}">Delete</a></td>
 		</tr>
 	</table>
 	<a href="productList.do">Go back to Product List</a>

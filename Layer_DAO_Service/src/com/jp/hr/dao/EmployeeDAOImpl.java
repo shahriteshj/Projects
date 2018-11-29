@@ -1,30 +1,34 @@
 package com.jp.hr.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
 import com.jp.hr.entities.Employee;
 import com.jp.hr.exceptions.HRException;
+import com.jp.hr.utilities.ConnectionFactory;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
 
-	private Connection getConnection() throws ClassNotFoundException, SQLException {
-		String driverName = "oracle.jdbc.OracleDriver";
-		String url = "jdbc:oracle:thin:@localhost:1521/orcl";
-		String userName = "hr";
-		String password = "hr";
+	private ConnectionFactory factory;
 
-		Class.forName(driverName);
-		return DriverManager.getConnection(url, userName, password);
+	public EmployeeDAOImpl() throws HRException {
+		try {
+			factory = new ConnectionFactory();
+		} catch (ClassNotFoundException | SQLException e) {
+			throw new HRException("Problem in creating database connection",e);
+		}
+
 	}
 
-	private void closeConnection(Connection conn) throws SQLException {
-		conn.close();
+	private void closeConnection(Connection conn) throws HRException {
+//		try {
+//			factory.closeConnection();
+//		} catch (SQLException e) {
+//			throw new HRException("Problem in releasing database connection",e);
+//		}
 	}
 
 	@Override
@@ -34,7 +38,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		ResultSet rs = null;
 		ArrayList<Employee> empList = new ArrayList<Employee>();
 		try {
-			conn = getConnection();
+			conn = factory.getConnection();
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery("SELECT employee_id, first_name, last_name FROM EMP_DETAILS");
 			while (rs.next()) {
@@ -44,7 +48,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 				empList.add(new Employee(empId, firstName, lastName));
 			}
 
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			throw new HRException("Problem in fetching data.", e);
 		} finally {
 			try {
@@ -70,7 +74,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		ResultSet rs = null;
 		String strQuery = "SELECT employee_id, first_name, last_name FROM EMP_DETAILS WHERE employee_id=?";
 		try {
-			conn = getConnection();
+			conn = factory.getConnection();
 			stmt = conn.prepareStatement(strQuery);
 			stmt.setInt(1, empId);
 			rs = stmt.executeQuery();
@@ -82,7 +86,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 				return null;
 			}
 
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			throw new HRException("Problem in fetching data.", e);
 		} finally {
 			try {
@@ -102,21 +106,27 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 
 	@Override
+	protected void finalize() throws Throwable {
+		factory.closeConnection();
+		super.finalize();
+	}
+
+	@Override
 	public boolean insertNewRecord(Employee emp) throws HRException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		
+
 		String strQuery = "INSERT INTO EMP_DETAILS (employee_id,first_name,Last_name) VALUES(?,?,?)";
 		try {
-			conn = getConnection();
+			conn = factory.getConnection();
 			stmt = conn.prepareStatement(strQuery);
-			stmt.setInt(1,emp.getEmpId() );
-			stmt.setString(2,emp.getFirstName() );
-			stmt.setString(3,emp.getLastName() );
+			stmt.setInt(1, emp.getEmpId());
+			stmt.setString(2, emp.getFirstName());
+			stmt.setString(3, emp.getLastName());
 			int recInserted = stmt.executeUpdate();
-			return recInserted==1? true: false;
+			return recInserted == 1 ? true : false;
 
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			throw new HRException("Problem in fetching data.", e);
 		} finally {
 			try {

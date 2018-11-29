@@ -7,6 +7,8 @@
 <title>New Joining</title>
 </head>
 <body>
+	<jsp:include page="Header.jsp" />
+	<jsp:include page="Header01.jsp" />
 	<form method="POST" action="submitJoinee.do">
 		${message}
 		<table>
@@ -26,6 +28,7 @@
 				<td colspan="2"><input type="submit" value="Go" /></td>
 			</tr>
 		</table>
+		<a href="mainMenu.do">Go back to Main Menu</a>
 	</form>
 </body>
 </html>
