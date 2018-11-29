@@ -14,6 +14,7 @@
 
   <div class="container">
     <div class="row">
+      <form #frm="ngForm" (ngSubmit)="addItem(frm)">
       <div class="col-lg-3 col-md-3 col-sm-3" *ngFor="let p of products">
         <div class="panel panel-primary" >
           <div class="panel-heading">{{p.name}}</div>
@@ -22,8 +23,43 @@
           <div class="panel-footer"><button>Add to Cart</button>   <input type="number" maxlength="3" min="0" max="100" name="quantity" required></div>
         </div>
       </div>
-
+    </form>
     </div>
 
   </div>
+
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Products in Cart</h3>
+    </div>
+    <div class="panel-body">
+      <table class="table-hover" style="width:600px;">
+        <thead>
+          <tr>
   
+            <th>ID</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th></th>
+            <th></th>
+            <th></th>
+  
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartItems;">
+  
+            <td >{{item.id}}</td>
+            <td>{{item.product.name }}</td>
+            <td>{{item.quantity }}</td>
+            <td style="width:50px"><button type="button" name="button" class="btn btn-info btn-xs" (click)='showEditform(p)' [disabled]='toggleForm'>Edit</button></td>
+            <td style="width:50px"><button type="button" name="button" class="btn btn-danger btn-xs" (click)='deleteItem(p.id)'>Delete</button></td>
+            <td style="width:50px"><button type="button" name="button" class="btn btn-xs" (click)='showAddForm()'>Cancel</button></td>
+          </tr>
+          <tr *ngIf="!items || items.length==0">
+            <td colspan="3">No Records to display</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

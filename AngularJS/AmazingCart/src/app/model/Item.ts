@@ -1,6 +1,9 @@
 export class Item {
+    id?:number;
+    productId?:number;
     name:string;
-    quantity?:number;
-    price?:number;
-    photoPath?:string;
+    quantity:number;
+    
+
+    
 }
