@@ -33,6 +33,12 @@
       "username": "smith",
       "password": "smith",
       "id": 3
+    },
+    {
+      "name": "Rashmi",
+      "username": "rashmi",
+      "password": "rashmi",
+      "id": 4
     }
   ],
   "Products": [
@@ -49,10 +55,10 @@
       "id": 2
     },
     {
+      "id": 3,
       "name": "Juice",
-      "price": 100,
-      "photoPath": "assets/images/juice.jpg",
-      "id": 3
+      "price": 1000,
+      "photoPath": "assets/images/juice.jpg"
     },
     {
       "name": "Perfume",
@@ -71,6 +77,12 @@
       "price": 5000,
       "photoPath": "assets/images/shoes.jpg",
       "id": 6
+    },
+    {
+      "name": "iphone 8",
+      "price": 50000,
+      "photoPath": "assets/images/phone1.jpg",
+      "id": 7
     }
   ]
 }
