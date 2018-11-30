@@ -8,6 +8,16 @@
 </head>
 <body>
 	<jsp:include page="Header.jsp" />
-
+	<form id="loginfrm" name="loginfrm" method="POST"
+		action="registration.do">
+		<div style="color: red">${errMsg}</div>
+		Full Name: <input type="text" name="name"> <br /> <br />
+		User Name: <input type="text" name="username"> <br /> <br />
+		Password: <input type="password" name="password"> <br /> <br />
+		Email: <input type="text" name="email"> <br /> <br />
+		<input type="submit" name="submit" value="Register"> <input
+			type="reset" name="reset" value="Cancel">
+			<a href="/login.do" >Back to Login</a>
+	</form>
 </body>
 </html>

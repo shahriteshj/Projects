@@ -1,34 +1,25 @@
 package com.jp.hr.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+
+import javax.sql.DataSource;
+
 import com.jp.hr.entities.Product;
 import com.jp.hr.exceptions.HRException;
-import com.jp.hr.utilities.ConnectionFactory;
+import com.jp.hr.utilities.ConnectionFactoryTomcat;
 
 public class ProductDAOImpl implements ProductDAO {
-	private ConnectionFactory factory;
+	private DataSource dataSource=null;
+	
 
 	public ProductDAOImpl() throws HRException {
-		try {
-			factory = new ConnectionFactory();
-		} catch (ClassNotFoundException | SQLException e) {
-			throw new HRException("Problem in creating database connection",e);
-		}
-
-	}
-
-	private void closeConnection(Connection conn) throws HRException {
-//		try {
-//			factory.closeConnection();
-//		} catch (SQLException e) {
-//			throw new HRException("Problem in releasing database connection",e);
-//		}
+			ConnectionFactoryTomcat factory = ConnectionFactoryTomcat.getConnectionFactory();
+			dataSource = factory.getDataSource();
 	}
 
 	@Override
@@ -38,7 +29,7 @@ public class ProductDAOImpl implements ProductDAO {
 		ResultSet rs = null;
 		ArrayList<Product> prodList = new ArrayList<Product>();
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery("SELECT ID,CATEGORY,NAME,PRICE FROM PRODUCT");
 			while (rs.next()) {
@@ -61,7 +52,9 @@ public class ProductDAOImpl implements ProductDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new HRException("Problem in closing resources.", e);
 			}
@@ -77,7 +70,7 @@ public class ProductDAOImpl implements ProductDAO {
 		ResultSet rs = null;
 		String strQuery = "SELECT id, category, name, price FROM PRODUCT WHERE id=?";
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.prepareStatement(strQuery);
 			stmt.setInt(1, productId);
 			rs = stmt.executeQuery();
@@ -100,7 +93,9 @@ public class ProductDAOImpl implements ProductDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new HRException("Problem in closing resources.", e);
 			}
@@ -116,7 +111,7 @@ public class ProductDAOImpl implements ProductDAO {
 
 		String strQuery = "INSERT INTO PRODUCT (id,category,name,price) VALUES(?,?,?,?)";
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.prepareStatement(strQuery);
 			stmt.setInt(1, product.getProdID());
 			stmt.setString(2, product.getCategory());
@@ -132,7 +127,9 @@ public class ProductDAOImpl implements ProductDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new HRException("Problem in closing resources.", e);
 			}
@@ -147,7 +144,7 @@ public class ProductDAOImpl implements ProductDAO {
 
 		String strQuery = "DELETE FROM PRODUCT where ID = ? ";
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.prepareStatement(strQuery);
 			stmt.setInt(1, productId);
 			int recDeleted = stmt.executeUpdate();
@@ -160,7 +157,9 @@ public class ProductDAOImpl implements ProductDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new HRException("Problem in closing resources.", e);
 			}
@@ -174,7 +173,7 @@ public class ProductDAOImpl implements ProductDAO {
 		PreparedStatement stmt = null;
 		String strQuery = "UPDATE PRODUCT SET category=?, name=?, price=? WHERE id=?";
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.prepareStatement(strQuery);
 			stmt.setString(1, product.getCategory());
 			stmt.setString(2, product.getName());
@@ -190,7 +189,9 @@ public class ProductDAOImpl implements ProductDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new HRException("Problem in closing resources.", e);
 			}
@@ -198,13 +199,5 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 
 	}
-
-	@Override
-	protected void finalize() throws Throwable {
-		factory.closeConnection();
-		super.finalize();
-	}
-	
-	
 
 }

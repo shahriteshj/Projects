@@ -16,6 +16,7 @@
 		Password: <input type="password" name="password"> <br /> <br />
 		<input type="submit" name="submit" value="Ok"> <input
 			type="reset" name="reset" value="Cancel">
+			
 	</form>
 </body>
 </html>

@@ -1,6 +1,7 @@
 package com.jp.hr.dao;
 
 import java.util.ArrayList;
+
 import com.jp.hr.entities.Product;
 import com.jp.hr.exceptions.HRException;
 

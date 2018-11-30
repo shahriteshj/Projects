@@ -13,11 +13,14 @@ import javax.servlet.http.HttpSession;
 
 import com.jp.hr.entities.Employee;
 import com.jp.hr.entities.Product;
+import com.jp.hr.entities.User;
 import com.jp.hr.exceptions.HRException;
 import com.jp.hr.services.EmployeeService;
 import com.jp.hr.services.EmployeeServiceImpl;
 import com.jp.hr.services.ProductService;
 import com.jp.hr.services.ProductServiceImpl;
+import com.jp.hr.services.UserService;
+import com.jp.hr.services.UserServiceImpl;
 
 /**
  * Servlet implementation class FrontController
@@ -27,16 +30,18 @@ public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private EmployeeService services;
 	private ProductService productService;
+	private UserService userService;
 
 	@Override
 	public void init() throws ServletException {
 		try {
 			services = new EmployeeServiceImpl();
 			productService = new ProductServiceImpl();
+			userService = new UserServiceImpl();
 		} catch (HRException e) {
-			throw new ServletException("Init method failed",e);
+			throw new ServletException("Init method failed", e);
 		}
-		
+
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -49,6 +54,7 @@ public class FrontController extends HttpServlet {
 		String jspName = "";
 		String prefix = "/WEB-INF/jsps/";
 		String postfix = ".jsp";
+		System.out.println(action);
 		try {
 			switch (action) {
 			case "*":
@@ -66,20 +72,42 @@ public class FrontController extends HttpServlet {
 				String username = request.getParameter("username");
 				String password = request.getParameter("password");
 
-				if (username.equalsIgnoreCase("a") && password.equals("a")) {
+				User user =  userService.findByUsername(username.toLowerCase());
+				System.out.println(user);
+				if(user!=null && password.equals(user.getPassword())){
 					String userFullName = "John Smith";
 					HttpSession session = request.getSession();
 					session.setAttribute("userFullName", userFullName);
 					jspName = "MainMenu";
-				} else {
+				}
+				else{
 					String msg = "Invalid Credentials. Please enter again";
 					request.setAttribute("errMsg", msg);
 					jspName = "Login";
 				}
-
+				
 				break;
 			}
 
+			case "register": {
+				jspName = "Registration";
+				break;
+			}
+			
+			case "registration": {
+				String name = request.getParameter("name");
+				String username = request.getParameter("username");
+				String password = request.getParameter("password");
+				String email = request.getParameter("email");
+				
+				User user = new User(name,username,password,email,"");
+				boolean isSuccessful = userService.addNewUser(user);
+				String msg = isSuccessful ? "User Registered" : "Registration failed";
+				request.setAttribute("message", msg);
+				jspName = "login";
+				break;
+			}
+			
 			case "mainMenu": {
 				jspName = "MainMenu";
 				break;
@@ -200,7 +228,7 @@ public class FrontController extends HttpServlet {
 			}
 
 		} catch (HRException e) {
-			e.printStackTrace();
+			throw new ServletException(e.getMessage());
 		}
 		rd = request.getRequestDispatcher(prefix + jspName + postfix);
 		rd.forward(request, response);
@@ -216,7 +244,7 @@ public class FrontController extends HttpServlet {
 		int leftPosition = uri.lastIndexOf("/");
 		int rightPosition = uri.lastIndexOf(".");
 		if (rightPosition == -1 || leftPosition == -1) {
-			return "mainMenu";
+			return "home";
 		} else {
 			return uri.substring(leftPosition + 1, rightPosition);
 		}

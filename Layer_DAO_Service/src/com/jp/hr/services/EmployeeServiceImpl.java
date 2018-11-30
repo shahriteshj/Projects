@@ -7,7 +7,7 @@ import com.jp.hr.dao.EmployeeDAOImpl;
 import com.jp.hr.entities.Employee;
 import com.jp.hr.exceptions.HRException;
 
-public class EmployeeServiceImpl implements EmployeeService, ViewRole {
+public class EmployeeServiceImpl implements EmployeeService {
 
 	private EmployeeDAO empDAO;
 

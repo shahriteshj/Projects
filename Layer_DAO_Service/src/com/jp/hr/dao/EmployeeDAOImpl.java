@@ -6,29 +6,25 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+
+import javax.sql.DataSource;
+
 import com.jp.hr.entities.Employee;
 import com.jp.hr.exceptions.HRException;
 import com.jp.hr.utilities.ConnectionFactory;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
 
-	private ConnectionFactory factory;
+	private DataSource dataSource;
 
 	public EmployeeDAOImpl() throws HRException {
 		try {
-			factory = new ConnectionFactory();
+			ConnectionFactory factory = ConnectionFactory.getConnectionFactory();
+			dataSource = factory.getDataSource();
 		} catch (ClassNotFoundException | SQLException e) {
-			throw new HRException("Problem in creating database connection",e);
+			throw new HRException("Problem in creating database connection", e);
 		}
 
-	}
-
-	private void closeConnection(Connection conn) throws HRException {
-//		try {
-//			factory.closeConnection();
-//		} catch (SQLException e) {
-//			throw new HRException("Problem in releasing database connection",e);
-//		}
 	}
 
 	@Override
@@ -38,9 +34,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		ResultSet rs = null;
 		ArrayList<Employee> empList = new ArrayList<Employee>();
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.createStatement();
-			rs = stmt.executeQuery("SELECT employee_id, first_name, last_name FROM EMP_DETAILS");
+			rs = stmt.executeQuery("SELECT employee_id, first_name, last_name FROM EMP_DETAILS1");
 			while (rs.next()) {
 				int empId = rs.getInt("employee_id");
 				String firstName = rs.getString("first_name");
@@ -58,7 +54,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new HRException("Problem in closing resources.", e);
 			}
@@ -74,7 +72,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		ResultSet rs = null;
 		String strQuery = "SELECT employee_id, first_name, last_name FROM EMP_DETAILS WHERE employee_id=?";
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.prepareStatement(strQuery);
 			stmt.setInt(1, empId);
 			rs = stmt.executeQuery();
@@ -96,7 +94,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new HRException("Problem in closing resources.", e);
 			}
@@ -106,19 +106,13 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 
 	@Override
-	protected void finalize() throws Throwable {
-		factory.closeConnection();
-		super.finalize();
-	}
-
-	@Override
 	public boolean insertNewRecord(Employee emp) throws HRException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 
 		String strQuery = "INSERT INTO EMP_DETAILS (employee_id,first_name,Last_name) VALUES(?,?,?)";
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.prepareStatement(strQuery);
 			stmt.setInt(1, emp.getEmpId());
 			stmt.setString(2, emp.getFirstName());
@@ -133,7 +127,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new HRException("Problem in closing resources.", e);
 			}
