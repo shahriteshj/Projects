@@ -5,6 +5,7 @@ public class Product {
 	String category;
 	String name;
 	Float price;
+	byte[] image;
 
 	public Product() {
 
@@ -16,6 +17,17 @@ public class Product {
 		this.category = category;
 		this.name = name;
 		this.price = price;
+		
+	}
+	
+	public Product(Integer prodID, String category, String name, Float price,byte[] image) {
+		super();
+		this.prodID = prodID;
+		this.category = category;
+		this.name = name;
+		this.price = price;
+		this.image = image;
+		
 	}
 
 	public Integer getProdID() {
@@ -48,6 +60,14 @@ public class Product {
 
 	public void setPrice(Float price) {
 		this.price = price;
+	}
+	
+		public byte[] getImage() {
+		return image;
+	}
+
+	public void setImage(byte[] image) {
+		this.image = image;
 	}
 
 	@Override

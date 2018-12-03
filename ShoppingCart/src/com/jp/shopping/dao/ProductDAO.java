@@ -1,6 +1,7 @@
 package com.jp.shopping.dao;
 
 import java.util.ArrayList;
+
 import com.jp.shopping.entities.Product;
 import com.jp.shopping.exceptions.CartException;
 

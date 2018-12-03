@@ -36,7 +36,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		try {
 			conn = dataSource.getConnection();
 			stmt = conn.createStatement();
-			rs = stmt.executeQuery("SELECT employee_id, first_name, last_name FROM EMP_DETAILS1");
+			rs = stmt.executeQuery("SELECT employee_id, first_name, last_name FROM EMP_DETAILS");
 			while (rs.next()) {
 				int empId = rs.getInt("employee_id");
 				String firstName = rs.getString("first_name");
@@ -110,13 +110,13 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 
-		String strQuery = "INSERT INTO EMP_DETAILS (employee_id,first_name,Last_name) VALUES(?,?,?)";
+		String strQuery = "INSERT INTO EMP_DETAILS (employee_id,first_name,Last_name) VALUES(seqEmpId.nextval,?,?)";
 		try {
 			conn = dataSource.getConnection();
 			stmt = conn.prepareStatement(strQuery);
-			stmt.setInt(1, emp.getEmpId());
-			stmt.setString(2, emp.getFirstName());
-			stmt.setString(3, emp.getLastName());
+			
+			stmt.setString(1, emp.getFirstName());
+			stmt.setString(2, emp.getLastName());
 			int recInserted = stmt.executeUpdate();
 			return recInserted == 1 ? true : false;
 

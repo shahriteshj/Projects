@@ -9,7 +9,7 @@
 <body>
 	<jsp:include page="Header.jsp" />
 	<jsp:include page="Header01.jsp" />
-	<form method="POST" action="addProduct.do">
+	<form method="POST" action="addProduct.do" enctype="multipart/form-data">
 		${message}
 		<table>
 			<tr>
@@ -27,6 +27,10 @@
 			<tr>
 				<th>Price</th>
 				<td><input type="text" name="price"></td>
+			</tr>
+			<tr>
+				<th>Image</th>
+				<td><input type="file" name="filetoupload"></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" value="Go" /></td>

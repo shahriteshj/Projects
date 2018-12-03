@@ -75,7 +75,7 @@ public class FrontController extends HttpServlet {
 				User user =  userService.findByUsername(username.toLowerCase());
 				System.out.println(user);
 				if(user!=null && password.equals(user.getPassword())){
-					String userFullName = "John Smith";
+					String userFullName = user.getName();
 					HttpSession session = request.getSession();
 					session.setAttribute("userFullName", userFullName);
 					jspName = "MainMenu";
@@ -125,7 +125,6 @@ public class FrontController extends HttpServlet {
 				System.out.println(empList);
 				request.setAttribute("empList", empList);
 				jspName = "EmpList";
-
 				break;
 			}
 			case "empDetails": {
@@ -138,11 +137,11 @@ public class FrontController extends HttpServlet {
 				break;
 			}
 			case "submitJoinee": {
-				String strEmpId = request.getParameter("empId");
+				//String strEmpId = request.getParameter("empId");
 				String firstName = request.getParameter("firstName");
 				String lastName = request.getParameter("lastName");
-				int empId = Integer.parseInt(strEmpId);
-				Employee e = new Employee(empId, firstName, lastName);
+				//int empId = Integer.parseInt(strEmpId);
+				Employee e = new Employee(firstName, lastName);
 				boolean isSuccessful = services.joinNewEmployee(e);
 				String msg = isSuccessful ? "Employee Inserted" : "Insertion failed";
 				request.setAttribute("message", msg);

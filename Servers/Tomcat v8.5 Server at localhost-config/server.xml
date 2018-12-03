@@ -151,7 +151,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Layer_DAO_Service" path="/Layer_DAO_Service" reloadable="true" source="org.eclipse.jst.jee.server:Layer_DAO_Service"/><Context docBase="FilterDemo" path="/FilterDemo" reloadable="true" source="org.eclipse.jst.jee.server:FilterDemo"/><Context docBase="ListenerDemo" path="/ListenerDemo" reloadable="true" source="org.eclipse.jst.jee.server:ListenerDemo"/></Host>
+      <Context docBase="OnlineShopping_Ritesh" path="/OnlineShopping_Ritesh" reloadable="true" source="org.eclipse.jst.jee.server:OnlineShopping_Ritesh"/></Host>
     </Engine>
   </Service>
 </Server>

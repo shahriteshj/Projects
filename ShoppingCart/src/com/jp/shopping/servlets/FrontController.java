@@ -1,7 +1,10 @@
 package com.jp.shopping.servlets;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,10 +13,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import org.apache.tomcat.util.http.fileupload.FileItem;
+import org.apache.tomcat.util.http.fileupload.FileUploadException;
+import org.apache.tomcat.util.http.fileupload.RequestContext;
+import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+
+import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
+
+import com.jp.shopping.entities.User;
 import com.jp.shopping.entities.Product;
 import com.jp.shopping.exceptions.CartException;
 import com.jp.shopping.services.ProductService;
 import com.jp.shopping.services.ProductServiceImpl;
+import com.jp.shopping.services.UserService;
+import com.jp.shopping.services.UserServiceImpl;
 
 /**
  * Servlet implementation class FrontController
@@ -22,15 +37,17 @@ import com.jp.shopping.services.ProductServiceImpl;
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private ProductService productService;
+	private UserService userService;
 
 	@Override
 	public void init() throws ServletException {
 		try {
 			productService = new ProductServiceImpl();
+			userService = new UserServiceImpl();
 		} catch (CartException e) {
-			throw new ServletException("Init method failed",e);
+			throw new ServletException("Init method failed", e);
 		}
-		
+
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -55,17 +72,14 @@ public class FrontController extends HttpServlet {
 				jspName = "Login";
 				break;
 			}
-			
-			case "register": {
-				jspName = "Registration";
-				break;
-			}
 
 			case "authenticate": {
 				String username = request.getParameter("username");
 				String password = request.getParameter("password");
 
-				if (username.equalsIgnoreCase("a") && password.equals("a")) {
+				User user = userService.findByUsername(username.toLowerCase());
+				System.out.println(user);
+				if (user != null && password.equals(user.getPassword())) {
 					String userFullName = "John Smith";
 					HttpSession session = request.getSession();
 					session.setAttribute("userFullName", userFullName);
@@ -79,18 +93,41 @@ public class FrontController extends HttpServlet {
 				break;
 			}
 
+			case "register": {
+				jspName = "Registration";
+				break;
+			}
+
+			case "registration": {
+				String name = request.getParameter("name");
+				String username = request.getParameter("username");
+				String password = request.getParameter("password");
+				String email = request.getParameter("email");
+
+				User user = new User(name, username, password, email, "");
+				boolean isSuccessful = userService.addNewUser(user);
+				String msg = isSuccessful ? "User Registered" : "Registration failed";
+				request.setAttribute("message", msg);
+				jspName = "login";
+				break;
+			}
+
 			case "mainMenu": {
 				jspName = "MainMenu";
 				break;
 			}
 			case "logout": {
-				HttpSession session = request.getSession();
-				request.setAttribute("userFullName", session.getAttribute("userFullName"));
-				session.invalidate();
-				jspName = "ThanksPage";
+				HttpSession session = request.getSession(false);
+				if (session == null) {
+					jspName = "Login";
+				} else {
+					request.setAttribute("userFullName", session.getAttribute("userFullName"));
+					session.invalidate();
+					jspName = "ThanksPage";
+				}
 				break;
 			}
-						case "productList": {
+			case "productList": {
 
 				productList = productService.getProductList();
 				System.out.println(productList);
@@ -112,11 +149,41 @@ public class FrontController extends HttpServlet {
 				break;
 			}
 			case "addProduct": {
-				String strProdId = request.getParameter("prodID");
-				String category = request.getParameter("category");
-				String name = request.getParameter("name");
-				String strPrice = request.getParameter("price");
-				Float price = Float.parseFloat(strPrice);
+				String strProdId=null;
+				String category=null;
+				String name=null;
+				String strPrice=null;
+				Float price=0f;
+				 byte[] bytesArray; 
+				 
+				if(ServletFileUpload.isMultipartContent(request)){
+					List<FileItem> multiparts = new ServletFileUpload(
+							new DiskFileItemFactory()).parseRequest((RequestContext) request);
+					for(FileItem item : multiparts){
+						if(!item.isFormField()){
+							 File imageFile = new File(item.getName());
+							 bytesArray   = new byte[(int) imageFile.length()];
+							 FileInputStream fis = new FileInputStream(imageFile);
+							  fis.read(bytesArray); //read file into bytes[]
+							  fis.close();
+							 
+						}else {
+							if(item.getName().equals("prodID")){
+								strProdId = request.getParameter("prodID");
+							}else if(item.getName().equals("category")){
+								category = request.getParameter("category");
+							}else if(item.getName().equals("name")){
+								name = request.getParameter("name");
+							}else if(item.getName().equals("price")){
+								strPrice = request.getParameter("price");
+								price = Float.parseFloat(strPrice);
+							}
+						}
+
+					}
+
+
+				}
 				int prodId = Integer.parseInt(strProdId);
 				Product p = new Product(prodId, category, name, price);
 				boolean isSuccessful = productService.addNewProduct(p);
@@ -166,9 +233,12 @@ public class FrontController extends HttpServlet {
 
 		} catch (CartException e) {
 			e.printStackTrace();
+		} catch (FileUploadException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		rd = request.getRequestDispatcher(prefix + jspName + postfix);
-		rd.forward(request, response);
+		rd.include(request, response);
 
 	}
 

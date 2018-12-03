@@ -13,10 +13,6 @@
 		${message}
 		<table>
 			<tr>
-				<th>Employee Id</th>
-				<td><input type="text" name="empId"></td>
-			</tr>
-			<tr>
 				<th>First Name</th>
 				<td><input type="text" name="firstName"></td>
 			</tr>

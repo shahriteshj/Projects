@@ -1,33 +1,26 @@
 package com.jp.shopping.dao;
 
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+
+import javax.sql.DataSource;
+import javax.sql.rowset.serial.SerialBlob;
+
 import com.jp.shopping.entities.Product;
 import com.jp.shopping.exceptions.CartException;
-import com.jp.shopping.utilities.ConnectionFactory;
+import com.jp.shopping.utilities.ConnectionFactoryTomcat;
 
 public class ProductDAOImpl implements ProductDAO {
-	private ConnectionFactory factory;
+	private DataSource dataSource = null;
 
 	public ProductDAOImpl() throws CartException {
-		try {
-			factory = new ConnectionFactory();
-		} catch (ClassNotFoundException | SQLException e) {
-			throw new CartException("Problem in creating database connection",e);
-		}
-
-	}
-
-	private void closeConnection(Connection conn) throws CartException {
-//		try {
-//			factory.closeConnection();
-//		} catch (SQLException e) {
-//			throw new HRException("Problem in releasing database connection",e);
-//		}
+		ConnectionFactoryTomcat factory = ConnectionFactoryTomcat.getConnectionFactory();
+		dataSource = factory.getDataSource();
 	}
 
 	@Override
@@ -37,17 +30,20 @@ public class ProductDAOImpl implements ProductDAO {
 		ResultSet rs = null;
 		ArrayList<Product> prodList = new ArrayList<Product>();
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.createStatement();
-			rs = stmt.executeQuery("SELECT ID,CATEGORY,NAME,PRICE FROM PRODUCT");
+			byte[] imgData = null;
+			Blob img = null;
+			rs = stmt.executeQuery("SELECT ID,CATEGORY,NAME,PRICE,IMAGE FROM PRODUCT");
 			while (rs.next()) {
 
 				int prodID = rs.getInt("ID");
 				String category = rs.getString("CATEGORY");
 				String name = rs.getString("NAME");
 				Float price = rs.getFloat("PRICE");
-				;
-				prodList.add(new Product(prodID, category, name, price));
+				img = rs.getBlob("IMAGE");
+				imgData = img.getBytes(1, (int) img.length());
+				prodList.add(new Product(prodID, category, name, price,imgData));
 			}
 
 		} catch (SQLException e) {
@@ -60,7 +56,9 @@ public class ProductDAOImpl implements ProductDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new CartException("Problem in closing resources.", e);
 			}
@@ -74,9 +72,11 @@ public class ProductDAOImpl implements ProductDAO {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		String strQuery = "SELECT id, category, name, price FROM PRODUCT WHERE id=?";
+		byte[] imgData = null;
+		Blob img = null;
+		String strQuery = "SELECT id, category, name, price,IMAGE FROM PRODUCT WHERE id=?";
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.prepareStatement(strQuery);
 			stmt.setInt(1, productId);
 			rs = stmt.executeQuery();
@@ -84,7 +84,9 @@ public class ProductDAOImpl implements ProductDAO {
 				String category = rs.getString("category");
 				String name = rs.getString("name");
 				Float price = rs.getFloat("price");
-				return new Product(productId, category, name, price);
+				img = rs.getBlob("IMAGE");
+				imgData = img.getBytes(1, (int) img.length());
+				return new Product(productId, category, name, price,imgData);
 			} else {
 				return null;
 			}
@@ -99,7 +101,9 @@ public class ProductDAOImpl implements ProductDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new CartException("Problem in closing resources.", e);
 			}
@@ -112,15 +116,22 @@ public class ProductDAOImpl implements ProductDAO {
 	public boolean insertNewRecord(Product product) throws CartException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-
-		String strQuery = "INSERT INTO PRODUCT (id,category,name,price) VALUES(?,?,?,?)";
+		byte[] imgData = null;
+		Blob img = null;
+		String strQuery = "INSERT INTO PRODUCT (id,category,name,price,image) VALUES(?,?,?,?,?)";
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.prepareStatement(strQuery);
 			stmt.setInt(1, product.getProdID());
 			stmt.setString(2, product.getCategory());
 			stmt.setString(3, product.getName());
 			stmt.setFloat(4, product.getPrice());
+			
+			imgData = product.getImage();
+			img = new SerialBlob(imgData);
+			img.setBytes(1, imgData);
+			stmt.setBlob(5, img);
+			
 			int recInserted = stmt.executeUpdate();
 			return recInserted == 1 ? true : false;
 
@@ -131,7 +142,9 @@ public class ProductDAOImpl implements ProductDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new CartException("Problem in closing resources.", e);
 			}
@@ -146,7 +159,7 @@ public class ProductDAOImpl implements ProductDAO {
 
 		String strQuery = "DELETE FROM PRODUCT where ID = ? ";
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.prepareStatement(strQuery);
 			stmt.setInt(1, productId);
 			int recDeleted = stmt.executeUpdate();
@@ -159,7 +172,9 @@ public class ProductDAOImpl implements ProductDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new CartException("Problem in closing resources.", e);
 			}
@@ -171,14 +186,23 @@ public class ProductDAOImpl implements ProductDAO {
 	public boolean updateRecord(Product product) throws CartException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
+		byte[] imgData = null;
+		Blob img = null;
+		
 		String strQuery = "UPDATE PRODUCT SET category=?, name=?, price=? WHERE id=?";
 		try {
-			conn = factory.getConnection();
+			conn = dataSource.getConnection();
 			stmt = conn.prepareStatement(strQuery);
 			stmt.setString(1, product.getCategory());
 			stmt.setString(2, product.getName());
 			stmt.setFloat(3, product.getPrice());
 			stmt.setInt(4, product.getProdID());
+			
+			imgData = product.getImage();
+			img = new SerialBlob(imgData);
+			img.setBytes(1, imgData);
+			stmt.setBlob(5, img);
+			
 			int recUpdated = stmt.executeUpdate();
 			return recUpdated == 1 ? true : false;
 
@@ -189,7 +213,9 @@ public class ProductDAOImpl implements ProductDAO {
 				if (stmt != null) {
 					stmt.close();
 				}
-				closeConnection(conn);
+				if (conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
 				throw new CartException("Problem in closing resources.", e);
 			}
@@ -197,13 +223,4 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 
 	}
-
-	@Override
-	protected void finalize() throws Throwable {
-		factory.closeConnection();
-		super.finalize();
-	}
-	
-	
-
 }

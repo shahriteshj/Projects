@@ -1,4 +1,4 @@
-package com.jp.filters.filter;
+package com.jp.shopping.filter;
 
 import java.io.IOException;
 import javax.servlet.DispatcherType;
@@ -21,7 +21,7 @@ public class ModifyResponse implements Filter {
 			throws IOException, ServletException {
 		//Before part
 		System.out.println("In Filter MR: Before");
-		RequestDispatcher dispatch = request.getRequestDispatcher("/WEB-INF/jsps/Head.jsp");
+		RequestDispatcher dispatch = request.getRequestDispatcher("/WEB-INF/jsps/Header.jsp");
 		dispatch.include(request, response);
 		
 		chain.doFilter(request, response);

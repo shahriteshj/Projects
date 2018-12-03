@@ -7,7 +7,6 @@
 <title>Menu</title>
 </head>
 <body>
-	<jsp:include page="Header.jsp" />
 	<jsp:include page="Header01.jsp" />
 	<h3 align="center">Main Menu</h3>
 

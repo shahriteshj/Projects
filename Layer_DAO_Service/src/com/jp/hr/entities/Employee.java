@@ -5,13 +5,20 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 
-	public Employee(int empId, String firstName, String lastName) {
+	public Employee(String firstName, String lastName) {
+		super();
+		//this.empId = empId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+	public Employee(int empId,String firstName, String lastName) {
 		super();
 		this.empId = empId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
-
+	
 	public Employee() {
 
 	}
