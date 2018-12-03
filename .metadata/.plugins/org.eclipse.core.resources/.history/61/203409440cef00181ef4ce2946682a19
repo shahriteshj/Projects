@@ -1,7 +1,0 @@
-package com.jp.db;
-
-import java.sql.DatabaseMetaData;
-
-public class DatabaseTables extends DatabaseMetaData {
-
-}
