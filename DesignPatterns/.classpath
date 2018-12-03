@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="01_FactoryMethodPattern/src"/>
+	<classpathentry kind="src" path="02_AbstractFactoryPattern/src"/>
+	<classpathentry kind="src" path="03_PrototypePattern/src"/>
+	<classpathentry kind="src" path="04_BuilderPattern/src"/>
+	<classpathentry kind="src" path="05_SingletonPattern/src"/>
+	<classpathentry kind="src" path="06_AdapterPattern/src"/>
+	<classpathentry kind="src" path="07_BridgePattern/src"/>
+	<classpathentry kind="src" path="08_CompositePattern/src"/>
+	<classpathentry kind="src" path="09_DecoratorPattern/src"/>
+	<classpathentry kind="src" path="10_FacadePattern/src"/>
+	<classpathentry kind="src" path="11_FlyWeightPattern/src"/>
+	<classpathentry kind="src" path="12_ProxyPattern/src"/>
+	<classpathentry kind="src" path="13_ChainOfResponsibility/src"/>
+	<classpathentry kind="src" path="14_CommandPattern/src"/>
+	<classpathentry kind="src" path="15_InterpreterPattern/src"/>
+	<classpathentry kind="src" path="16_IteratorPattern/src"/>
+	<classpathentry kind="src" path="17_MediatorPattern/src"/>
+	<classpathentry kind="src" path="18_MementoPattern/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="01_FactoryMethodPattern/out/production/01_FactoryMethodPattern"/>
+</classpath>
