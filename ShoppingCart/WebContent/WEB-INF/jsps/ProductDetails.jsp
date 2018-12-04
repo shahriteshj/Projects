@@ -7,14 +7,14 @@
 <title>Product Details</title>
 </head>
 <body>
-	<jsp:include page="Header.jsp" />
-	<jsp:include page="Header01.jsp" />
+	
 	<table border="1">
 		<tr>
 			<th>Product Id</th>
 			<th>Category</th>
 			<th>Name</th>
 			<th>Price</th>
+			<th>Image</th>
 			<th></th>
 			<th></th>
 		</tr>
@@ -23,6 +23,7 @@
 			<td>${requestScope.prodDetails.category}</td>
 			<td>${requestScope.prodDetails.name}</td>
 			<td>${requestScope.prodDetails.price}</td>
+			<td><img src="data:image/jpg;base64,${requestScope.prodDetails.base64Image}" alt="No image"></td>
 			<td><a
 				href="editProduct.do?prodID=${requestScope.prodDetails.prodID}">Edit</a></td>
 			<td><a

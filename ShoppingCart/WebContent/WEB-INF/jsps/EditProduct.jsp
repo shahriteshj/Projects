@@ -7,7 +7,7 @@
 <title>Edit Product</title>
 </head>
 <body>
-	<jsp:include page="Header.jsp" />
+	
 	<jsp:include page="Header01.jsp" />
 	<form method="POST" action="modifyProduct.do">
 
@@ -31,6 +31,13 @@
 				<th>Price</th>
 				<td><input type="text" name="price"
 					value="${requestScope.productDetails.price}"></td>
+			</tr>
+			<tr>
+			<td>Image</td>
+			<td><img
+					src="data:image/jpg;base64,${requestScope.productDetails.base64Image}"
+					alt="No image"><br/>
+					<input type="file" name="filetoupload"></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" value="Update" /></td>

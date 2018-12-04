@@ -14,13 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.tomcat.util.http.fileupload.FileItem;
-import org.apache.tomcat.util.http.fileupload.FileUploadException;
-import org.apache.tomcat.util.http.fileupload.RequestContext;
-import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 
-import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import com.jp.shopping.entities.User;
 import com.jp.shopping.entities.Product;
@@ -135,57 +133,73 @@ public class FrontController extends HttpServlet {
 				jspName = "ProductList";
 				break;
 			}
-			case "prodDetails": {
+/*			case "prodDetails": {
 				String strId = request.getParameter("prodId");
 				System.out.println(strId);
 				int prodid = Integer.parseInt(strId);
 				Product prod = productService.getProductDetails(prodid);
+				System.out.println(prod.getImage());
+				String encodeBase64 = Base64.getEncoder().encodeToString(prod.getImage());
+				prod.setBase64Image(encodeBase64);		
 				request.setAttribute("prodDetails", prod);
 				jspName = "ProductDetails";
 				break;
 			}
-			case "newProduct": {
+*/			case "newProduct": {
 				jspName = "NewProduct";
 				break;
 			}
 			case "addProduct": {
-				String strProdId=null;
-				String category=null;
-				String name=null;
-				String strPrice=null;
-				Float price=0f;
-				 byte[] bytesArray; 
-				 
-				if(ServletFileUpload.isMultipartContent(request)){
-					List<FileItem> multiparts = new ServletFileUpload(
-							new DiskFileItemFactory()).parseRequest((RequestContext) request);
-					for(FileItem item : multiparts){
-						if(!item.isFormField()){
-							 File imageFile = new File(item.getName());
-							 bytesArray   = new byte[(int) imageFile.length()];
-							 FileInputStream fis = new FileInputStream(imageFile);
-							  fis.read(bytesArray); //read file into bytes[]
-							  fis.close();
-							 
-						}else {
-							if(item.getName().equals("prodID")){
-								strProdId = request.getParameter("prodID");
-							}else if(item.getName().equals("category")){
-								category = request.getParameter("category");
-							}else if(item.getName().equals("name")){
-								name = request.getParameter("name");
-							}else if(item.getName().equals("price")){
-								strPrice = request.getParameter("price");
+				String strProdId = null;
+				String category = null;
+				String name = null;
+				String strPrice = null;
+				Float price = 0f;
+				byte[] bytesArray;
+
+				Product p = new Product();
+
+				if (ServletFileUpload.isMultipartContent(request)) {
+
+					List<FileItem> multiparts = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
+					for (FileItem item : multiparts) {
+						if (!item.isFormField()) {
+							String fileName = item.getName();
+							if(fileName == null || fileName.equals("")){
+								throw new ServletException("File Name can't be null or empty");
+							}
+							File file = new File(request.getServletContext().getAttribute("FILES_DIR")+File.separator+fileName);
+							if(!file.exists()){
+								throw new ServletException("File doesn't exists on server.");
+							}
+							System.out.println("File location on server::"+file.getAbsolutePath());
+							bytesArray = new byte[(int) file.length()];
+							FileInputStream fis = new FileInputStream(file);
+							fis.read(bytesArray); // read file into bytes[]
+							fis.close();
+							p.setImage(bytesArray);
+
+						} else {
+							if (item.getFieldName().equals("prodID")) {
+								strProdId = item.getString();
+								int prodId = Integer.parseInt(strProdId);
+								p.setProdID(prodId);
+							} else if (item.getFieldName().equals("category")) {
+								category = item.getString();
+								p.setCategory(category);
+							} else if (item.getFieldName().equals("name")) {
+								name = item.getString();
+								p.setName(name);
+							} else if (item.getFieldName().equals("price")) {
+								strPrice = item.getString();
 								price = Float.parseFloat(strPrice);
+								p.setPrice(price);
 							}
 						}
 
 					}
-
-
 				}
-				int prodId = Integer.parseInt(strProdId);
-				Product p = new Product(prodId, category, name, price);
+
 				boolean isSuccessful = productService.addNewProduct(p);
 				String msg = isSuccessful ? "Product Inserted" : "Insertion failed";
 				request.setAttribute("message", msg);
@@ -207,10 +221,12 @@ public class FrontController extends HttpServlet {
 				String strPrice = request.getParameter("price");
 				Float price = Float.parseFloat(strPrice);
 				int prodId = Integer.parseInt(strProdId);
-				System.out.println(price);
+				
 				Product p = new Product(prodId, category, name, price);
+				
+				
 				boolean isSuccessful = productService.modifyProduct(p);
-				String msg = isSuccessful ? "Product Update" : "Updation failed";
+				String msg = isSuccessful ? "Product Updated" : "Updation failed";
 				request.setAttribute("message", msg);
 				productList = productService.getProductList();
 				request.setAttribute("productList", productList);

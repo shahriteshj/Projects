@@ -11,21 +11,33 @@
 <title>Product List</title>
 </head>
 <body>
-	<jsp:include page="Header.jsp" />
+
 	<jsp:include page="Header01.jsp" />
 	${message}
 	<table border="1">
 		<tr>
 			<th>Product Id</th>
-			<th>View Details</th>
+			<th>Category</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Image</th>
+			<th></th>
+			<th></th>
 
 		</tr>
 		<c:forEach items="${requestScope.productList }" var="prod">
 			<tr>
 				<td>${prod.prodID }</td>
-				<td><a href="prodDetails.do?prodId=${ prod.prodID }">View
-						Details</a></td>
-
+				<td>${prod.category}</td>
+				<td>${prod.name}</td>
+				<td>${prod.price}</td>
+				<td><img
+					src="data:image/jpg;base64,${prod.base64Image}"
+					alt="No image"></td>
+				<td><a
+					href="editProduct.do?prodID=${prod.prodID}">Edit</a></td>
+				<td><a
+					href="deleteProduct.do?prodID=${prod.prodID}">Delete</a></td>
 			</tr>
 		</c:forEach>
 	</table>

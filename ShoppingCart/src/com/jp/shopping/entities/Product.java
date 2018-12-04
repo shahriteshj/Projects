@@ -6,7 +6,8 @@ public class Product {
 	String name;
 	Float price;
 	byte[] image;
-
+	String base64Image;
+	
 	public Product() {
 
 	}
@@ -17,7 +18,15 @@ public class Product {
 		this.category = category;
 		this.name = name;
 		this.price = price;
-		
+	}
+	
+	public Product(Integer prodID, String category, String name, Float price,byte[] image,String base64Image) {
+		this.prodID = prodID;
+		this.category = category;
+		this.name = name;
+		this.price = price;
+		this.image = image;
+		this.base64Image = base64Image;
 	}
 	
 	public Product(Integer prodID, String category, String name, Float price,byte[] image) {
@@ -68,6 +77,16 @@ public class Product {
 
 	public void setImage(byte[] image) {
 		this.image = image;
+	}
+	
+	
+
+	public String getBase64Image() {
+		return base64Image;
+	}
+
+	public void setBase64Image(String base64Image) {
+		this.base64Image = base64Image;
 	}
 
 	@Override

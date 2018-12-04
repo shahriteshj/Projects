@@ -7,10 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Base64;
 
 import javax.sql.DataSource;
-import javax.sql.rowset.serial.SerialBlob;
-
 import com.jp.shopping.entities.Product;
 import com.jp.shopping.exceptions.CartException;
 import com.jp.shopping.utilities.ConnectionFactoryTomcat;
@@ -36,14 +35,20 @@ public class ProductDAOImpl implements ProductDAO {
 			Blob img = null;
 			rs = stmt.executeQuery("SELECT ID,CATEGORY,NAME,PRICE,IMAGE FROM PRODUCT");
 			while (rs.next()) {
-
+				String encodeBase64="";
 				int prodID = rs.getInt("ID");
 				String category = rs.getString("CATEGORY");
 				String name = rs.getString("NAME");
 				Float price = rs.getFloat("PRICE");
 				img = rs.getBlob("IMAGE");
-				imgData = img.getBytes(1, (int) img.length());
-				prodList.add(new Product(prodID, category, name, price,imgData));
+				if (img == null) {
+					imgData = new byte[0];
+				} else {
+					imgData = img.getBytes(1, (int) img.length());
+					encodeBase64 = Base64.getEncoder().encodeToString(imgData);
+					
+				}
+				prodList.add(new Product(prodID, category, name, price, imgData,encodeBase64));
 			}
 
 		} catch (SQLException e) {
@@ -74,6 +79,7 @@ public class ProductDAOImpl implements ProductDAO {
 		ResultSet rs = null;
 		byte[] imgData = null;
 		Blob img = null;
+		String encodeBase64="";
 		String strQuery = "SELECT id, category, name, price,IMAGE FROM PRODUCT WHERE id=?";
 		try {
 			conn = dataSource.getConnection();
@@ -85,8 +91,15 @@ public class ProductDAOImpl implements ProductDAO {
 				String name = rs.getString("name");
 				Float price = rs.getFloat("price");
 				img = rs.getBlob("IMAGE");
-				imgData = img.getBytes(1, (int) img.length());
-				return new Product(productId, category, name, price,imgData);
+				
+				if (img == null) {
+					imgData = new byte[0];
+				} else {
+					imgData = img.getBytes(1, (int) img.length());
+					encodeBase64 = Base64.getEncoder().encodeToString(imgData);
+				}
+				
+				return new Product(productId, category, name, price, imgData,encodeBase64);
 			} else {
 				return null;
 			}
@@ -117,7 +130,6 @@ public class ProductDAOImpl implements ProductDAO {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		byte[] imgData = null;
-		Blob img = null;
 		String strQuery = "INSERT INTO PRODUCT (id,category,name,price,image) VALUES(?,?,?,?,?)";
 		try {
 			conn = dataSource.getConnection();
@@ -126,12 +138,10 @@ public class ProductDAOImpl implements ProductDAO {
 			stmt.setString(2, product.getCategory());
 			stmt.setString(3, product.getName());
 			stmt.setFloat(4, product.getPrice());
-			
+
 			imgData = product.getImage();
-			img = new SerialBlob(imgData);
-			img.setBytes(1, imgData);
-			stmt.setBlob(5, img);
-			
+			stmt.setBytes(5, imgData);
+
 			int recInserted = stmt.executeUpdate();
 			return recInserted == 1 ? true : false;
 
@@ -187,8 +197,7 @@ public class ProductDAOImpl implements ProductDAO {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		byte[] imgData = null;
-		Blob img = null;
-		
+
 		String strQuery = "UPDATE PRODUCT SET category=?, name=?, price=? WHERE id=?";
 		try {
 			conn = dataSource.getConnection();
@@ -197,12 +206,10 @@ public class ProductDAOImpl implements ProductDAO {
 			stmt.setString(2, product.getName());
 			stmt.setFloat(3, product.getPrice());
 			stmt.setInt(4, product.getProdID());
-			
+
 			imgData = product.getImage();
-			img = new SerialBlob(imgData);
-			img.setBytes(1, imgData);
-			stmt.setBlob(5, img);
-			
+			stmt.setBytes(5, imgData);
+
 			int recUpdated = stmt.executeUpdate();
 			return recUpdated == 1 ? true : false;
 

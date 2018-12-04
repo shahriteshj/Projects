@@ -8,7 +8,7 @@
 <title>Home Page</title>
 </head>
 <body>
-	<jsp:include page="Header.jsp" />
+	
 	<a href="login.do">Login</a>
 	<a href="register.do">Register</a>
 </body>

@@ -8,7 +8,7 @@
 <title>Thanks</title>
 </head>
 <body>
-	<jsp:include page="Header.jsp" />
+	
 	Thanks Mr./Ms. ${requestScope.userFullName }
 	<br />
 	<br />

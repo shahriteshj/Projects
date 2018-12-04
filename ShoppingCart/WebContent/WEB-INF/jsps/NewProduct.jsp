@@ -7,7 +7,7 @@
 <title>New Product</title>
 </head>
 <body>
-	<jsp:include page="Header.jsp" />
+	
 	<jsp:include page="Header01.jsp" />
 	<form method="POST" action="addProduct.do" enctype="multipart/form-data">
 		${message}
