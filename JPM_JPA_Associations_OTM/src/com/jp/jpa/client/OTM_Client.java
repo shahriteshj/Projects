@@ -15,8 +15,8 @@ public class OTM_Client {
 		EntityManager em = JPAUtil.getEntityManager();
 		
 		Department department = new Department();
-		department.setDeptId(10l);
-		department.setDeptName("Sales");
+		department.setDeptId(20l);
+		department.setDeptName("IT");
 		
 		Employee e1 = new Employee();
 		e1.setEmpId(101l);
@@ -25,18 +25,23 @@ public class OTM_Client {
 		e1.setDepartment(department);
 		
 		Employee e2 = new Employee();
-		e1.setEmpId(102l);
-		e1.setEmpName("Will");
-		e1.setEmpSal(1500.0);
+		e2.setEmpId(102l);
+		e2.setEmpName("Will");
+		e2.setEmpSal(1500.0);
 		e2.setDepartment(department);
 		
 		
 		Set<Employee> employees = new HashSet<Employee>();
 		employees.add(e1);
+		employees.add(e2);
 		
+		department.setEmployeeSet(employees);
 		
 		em.getTransaction().begin();
+		em.persist(department);
 		
+		em.getTransaction().commit();
+		em.close();
 	}
 
 }

@@ -2,6 +2,8 @@ package com.jp.jpa.entity;
 
 import java.io.Serializable;
 import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -28,7 +30,7 @@ public class Department implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	@OneToMany(mappedBy = "department")
+	@OneToMany(mappedBy = "department",cascade=CascadeType.ALL)
 	private Set<Employee> employeeSet;
 
 	public Long getDeptId() {
