@@ -3,6 +3,7 @@ package com.jp.jpa.dao;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import com.jp.jpa.entities.Employee;
 import com.jp.jpa.exception.EmployeeException;
@@ -23,9 +24,10 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	@Override
-	public List<Employee> getEmployeeList(Long employeeId) throws EmployeeException {
-		//entityManager.persist(employee);
-		return null;
+	public List<Employee> getEmployeeList() throws EmployeeException {
+		Query query = entityManager.createQuery("from Employee");
+		List<Employee> empList= query.getResultList(); 
+		return empList;
 	}
 
 	@Override
@@ -47,13 +49,13 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	@Override
 	public void commitTransaction() {
-		entityManager.getTransaction().begin();
+		entityManager.getTransaction().commit();
 		
 	}
 
 	@Override
 	public void beginTransaction() {
-		entityManager.getTransaction().commit();
+		entityManager.getTransaction().begin();
 		
 	}
 

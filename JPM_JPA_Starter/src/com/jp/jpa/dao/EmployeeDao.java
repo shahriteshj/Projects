@@ -9,7 +9,7 @@ public interface EmployeeDao {
 	
 	public Long addEmployee(Employee employee) throws EmployeeException;
 	
-	public List<Employee> getEmployeeList(Long employeeId) throws EmployeeException;
+	public List<Employee> getEmployeeList() throws EmployeeException;
 	
 	public Employee getEmployeeById(Long empId)throws EmployeeException;//S-search
 

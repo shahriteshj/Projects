@@ -1,5 +1,7 @@
 package com.jp.jpa.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,7 +11,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Employee_crud")
-public class Employee {
+public class Employee implements Serializable{
+	
+	private static final long serialVersionUID = 1153235360873694239L;
 	
 	@Id //Primary key
 	@SequenceGenerator(name="EMP_GEN", sequenceName="emp_master_seq",allocationSize=1)

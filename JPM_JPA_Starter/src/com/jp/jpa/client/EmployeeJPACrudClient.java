@@ -1,23 +1,16 @@
-/**
- * 
- */
 package com.jp.jpa.client;
 
+import java.util.List;
 import java.util.Scanner;
-
 import com.jp.jpa.entities.Employee;
 import com.jp.jpa.exception.EmployeeException;
-import com.jp.jpa.service.EmployeeService;
 import com.jp.jpa.service.EmployeeServiceImpl;
 
-/**
- * @author brije
- *
- */
+
 public class EmployeeJPACrudClient {
 	//prep-work
 		//ref of service layer interface
-		private static EmployeeService employeeService;
+		private static EmployeeServiceImpl employeeServiceImpl;
 		private static Long empId;
 		private static Employee employee;
 		private static Scanner sc ;
@@ -25,7 +18,7 @@ public class EmployeeJPACrudClient {
 		//static block
 		static {
 			// obj of service layer impl class
-			employeeService = new EmployeeServiceImpl();
+			employeeServiceImpl = new EmployeeServiceImpl();
 			sc = new Scanner(System.in);
 			choice = 0;
 		}
@@ -105,37 +98,78 @@ public class EmployeeJPACrudClient {
 		System.out.println("Enter Employee Salary to be added");
 		employee.setSalary(sc.nextDouble());
 		//call the service method to add employee
-		Long empId = employeeService.addEmployee(employee);
+		Long empId = employeeServiceImpl.addEmployee(employee);
 		if(empId>0) {
 			System.out.println("Employee Record Persisted successfully with unique Employee Id : "+empId);
 		}else {
-		System.err.println("Sorry !!! Employee Record NOT Persisted ");
+		System.err.println("Employee Record NOT Persisted ");
 		}
 	}
 
 	private static void list() {
-		// TODO Auto-generated method stub
-		
+		try {
+			List<Employee> employeeList = employeeServiceImpl.getEmployeeList();
+
+			if (employeeList != null) {
+				for (Employee employee : employeeList) {
+					System.out.println(employee);
+				}
+			} else {
+				System.err.println("No Employee Record found !!");
+			}
+		} catch (EmployeeException e) {
+			System.err.println("No Employee Record found !!");
+		}
 	}
 
 	private static void update() {
-		// TODO Auto-generated method stub
-		
+		try {
+			System.out.println("Enter Employee Id to be Searched : ");
+			empId = sc.nextLong();
+			Employee employee = employeeServiceImpl.getEmployeeById(empId);
+			System.out.println("Employee before update :" + employee);
+			System.out.println("Enter Employee Name to be updated");
+			employee.setName(sc.next());
+			System.out.println("Enter Employee Salary to be updated");
+			employee.setSalary(sc.nextDouble());
+			Employee updatedEmployee = employeeServiceImpl.updateEmployee(employee);
+			if (updatedEmployee != null) {
+				System.out.println("\n**********Employee Record Updated successfully **********\n" + updatedEmployee);
+			} else {
+				System.err.println("No Employee Record Updated !!");
+			}
+		} catch (EmployeeException e) {
+			System.err.println("No Employee Record Updated !!");
+		}
 	}
-
-	private static void delete() throws EmployeeException {
-		System.out.println("Enter Employee Id to delete");
-		Long empId = sc.nextLong();
-		empId = employeeService.deleteEmployeeById(empId);
-		System.out.println(empId);
-		
+	private static void delete() {
+		try {
+			System.out.println("Enter Employee Id to be Deleted : ");
+			empId = sc.nextLong();
+			Long result = employeeServiceImpl.deleteEmployeeById(empId);
+			if (result > 0) {
+				System.out.println("Employee Record deleted successfully.... with a Employee Id :" + empId);
+			} else
+				System.err.println("Not able to delete Employee Record");
+		} catch (EmployeeException e) {
+			System.err.println("Not able to delete Employee Record");
+		}
 	}
+	private static void search() {
+		try {
+			System.out.println("Enter Employee Id to be Searched : ");
 
-	private static void search() throws EmployeeException {
-		System.out.println("Enter Employee Id to find");
-		Long empId = sc.nextLong();
-		Employee emp = employeeService.getEmployeeById(empId);
-		System.out.println(emp.toString());
+			empId = sc.nextLong();
+			employee = employeeServiceImpl.getEmployeeById(empId);
+
+			if (employee != null) {
+				System.out.println("\n**********Employee Record Found **********\n" + employee);
+			} else {
+				System.err.println("No Employee Record found !!");
+			}
+		} catch (EmployeeException e) {
+			System.err.println("No Employee Record found !!");
+		}
 	}
 
 	private static void end() {
@@ -143,7 +177,7 @@ public class EmployeeJPACrudClient {
 				  "\n=====================Thank you for Using our Application====================================================================================\n"
 				+ "\n                         Do Visit Again!!!!\n"
 				+ "\n======================================================================================================================================\n");
-		//customerService.exitApp();
+		//employeeService.exitApp();
 		System.exit(0);
 	}
 

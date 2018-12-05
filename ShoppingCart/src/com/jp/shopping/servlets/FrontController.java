@@ -215,16 +215,55 @@ public class FrontController extends HttpServlet {
 				break;
 			}
 			case "modifyProduct": {
-				String strProdId = request.getParameter("prodID");
-				String category = request.getParameter("category");
-				String name = request.getParameter("name");
-				String strPrice = request.getParameter("price");
-				Float price = Float.parseFloat(strPrice);
-				int prodId = Integer.parseInt(strProdId);
-				
-				Product p = new Product(prodId, category, name, price);
-				
-				
+				String strProdId = null;
+				String category = null;
+				String name = null;
+				String strPrice = null;
+				Float price = 0f;
+				byte[] bytesArray;
+				Product p = new Product();
+
+				if (ServletFileUpload.isMultipartContent(request)) {
+
+					List<FileItem> multiparts = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
+					for (FileItem item : multiparts) {
+						if (!item.isFormField()) {
+							String fileName = item.getName();
+							if(fileName == null || fileName.equals("")){
+								
+							}
+							File file = new File(request.getServletContext().getAttribute("FILES_DIR")+File.separator+fileName);
+							if(!file.exists()){
+								
+							}
+							System.out.println("File location on server::"+file.getAbsolutePath());
+							bytesArray = new byte[(int) file.length()];
+							FileInputStream fis = new FileInputStream(file);
+							fis.read(bytesArray); // read file into bytes[]
+							fis.close();
+							p.setImage(bytesArray);
+
+						} else {
+							if (item.getFieldName().equals("prodID")) {
+								strProdId = item.getString();
+								int prodId = Integer.parseInt(strProdId);
+								p.setProdID(prodId);
+							} else if (item.getFieldName().equals("category")) {
+								category = item.getString();
+								p.setCategory(category);
+							} else if (item.getFieldName().equals("name")) {
+								name = item.getString();
+								p.setName(name);
+							} else if (item.getFieldName().equals("price")) {
+								strPrice = item.getString();
+								price = Float.parseFloat(strPrice);
+								p.setPrice(price);
+							}
+						}
+
+					}
+				}
+
 				boolean isSuccessful = productService.modifyProduct(p);
 				String msg = isSuccessful ? "Product Updated" : "Updation failed";
 				request.setAttribute("message", msg);

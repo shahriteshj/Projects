@@ -6,34 +6,30 @@ import com.jp.jpa.dao.EmployeeDaoImpl;
 import com.jp.jpa.entities.Employee;
 import com.jp.jpa.exception.EmployeeException;
 
-
 public class EmployeeServiceImpl implements EmployeeService {
 
 	private EmployeeDao employeeDao;
-	
+
 	public EmployeeServiceImpl() {
-		employeeDao.beginTransaction();
 		employeeDao = new EmployeeDaoImpl();
-		employeeDao.commitTransaction();
 	}
-	
-	
+
 	@Override
 	public Long addEmployee(Employee employee) throws EmployeeException {
 		employeeDao.beginTransaction();
-		Long empId =  employeeDao.addEmployee(employee);
+		Long empId = employeeDao.addEmployee(employee);
 		employeeDao.commitTransaction();
 		return empId;
-		
+
 	}
 
 	@Override
 	public List<Employee> getEmployeeList() throws EmployeeException {
 		employeeDao.beginTransaction();
+		List<Employee> empList = employeeDao.getEmployeeList();
 		employeeDao.commitTransaction();
-		return null;
+		return empList;
 	}
-
 
 	@Override
 	public Employee getEmployeeById(Long empId) throws EmployeeException {
@@ -43,24 +39,20 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return emp;
 	}
 
-
 	@Override
 	public Employee updateEmployee(Employee employee) throws EmployeeException {
 		employeeDao.beginTransaction();
-		Employee emp =  employeeDao.updateEmployee(employee);
+		Employee emp = employeeDao.updateEmployee(employee);
 		employeeDao.commitTransaction();
 		return emp;
 	}
 
-
 	@Override
 	public Long deleteEmployeeById(Long empId) throws EmployeeException {
 		employeeDao.beginTransaction();
-		empId =  employeeDao.deleteEmployeeById(empId);
+		empId = employeeDao.deleteEmployeeById(empId);
 		employeeDao.commitTransaction();
 		return empId;
 	}
-	
-	
 
 }
