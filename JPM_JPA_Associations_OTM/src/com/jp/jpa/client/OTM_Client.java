@@ -14,7 +14,7 @@ public class OTM_Client {
 	public static void main(String[] args) {
 		EntityManager em = JPAUtil.getEntityManager();
 		
-		Department department = new Department();
+	/*	Department department = new Department();
 		department.setDeptId(20l);
 		department.setDeptName("IT");
 		
@@ -35,11 +35,17 @@ public class OTM_Client {
 		employees.add(e1);
 		employees.add(e2);
 		
-		department.setEmployeeSet(employees);
+		department.setEmployeeSet(employees);*/
+		
+		
 		
 		em.getTransaction().begin();
-		em.persist(department);
-		
+		Department department = em.find(Department.class, 20L);
+		//department.setDeptId(30L);
+		department.setDeptName("IT");
+		System.out.println(department.getEmployeeSet());
+		//em.persist(department);
+		em.merge(department);
 		em.getTransaction().commit();
 		em.close();
 	}
