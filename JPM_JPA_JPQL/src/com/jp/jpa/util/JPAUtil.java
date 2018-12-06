@@ -22,8 +22,15 @@ public class JPAUtil {
 	
 	
 	public static void closeFactory() {
-		if (factory == null || !factory.isOpen()) {
+		if (factory == null || factory.isOpen()) {
 			factory.close();
 		}
 	}
+	
+	public static void closeEntityManager() {
+		if (entityManager == null || entityManager.isOpen()) {
+			entityManager.close();
+		}
+	}
+	
 }

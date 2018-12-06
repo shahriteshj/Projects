@@ -10,3 +10,7 @@ JUnitDemos/out/*
 .metadata
 .metadata/*
 .recommenders
+.metadata/.mylyn/.tasks.xml.zip
+.metadata/.mylyn/.tasks.xml.zip
+.metadata/.log
+.metadata/.mylyn/tasks.xml.zip
