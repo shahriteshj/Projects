@@ -151,7 +151,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Layer_DAO_Service1" path="/Layer_DAO_Service" reloadable="true" source="org.eclipse.jst.jee.server:Layer_DAO_Service1"/><Context docBase="JPM_JPA_Layer_DAO_Service" path="/JPM_JPA_Layer_DAO_Service" reloadable="true" source="org.eclipse.jst.jee.server:JPM_JPA_Layer_DAO_Service"/><Context docBase="JPM_JPA_OnlineShopping" path="/OnlineShopping_Ritesh" reloadable="true" source="org.eclipse.jst.jee.server:JPM_JPA_OnlineShopping"/></Host>
+      <Context docBase="Layer_DAO_Service1" path="/Layer_DAO_Service" reloadable="true" source="org.eclipse.jst.jee.server:Layer_DAO_Service1"/><Context docBase="JPM_JPA_Layer_DAO_Service" path="/JPM_JPA_Layer_DAO_Service" reloadable="true" source="org.eclipse.jst.jee.server:JPM_JPA_Layer_DAO_Service"/><Context docBase="JPM_JPA_OnlineShopping" path="/OnlineShopping_Ritesh" reloadable="true" source="org.eclipse.jst.jee.server:JPM_JPA_OnlineShopping"/><Context docBase="JPM_JEE_Basic_Security" path="/JPM_JEE_Basic_Security" reloadable="true" source="org.eclipse.jst.jee.server:JPM_JEE_Basic_Security"/><Context docBase="JPM_JEE_Form_Security" path="/JPM_JEE_Form_Security" reloadable="true" source="org.eclipse.jst.jee.server:JPM_JEE_Form_Security"/></Host>
     </Engine>
   </Service>
 </Server>
