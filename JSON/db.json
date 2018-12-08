@@ -83,6 +83,13 @@
       "price": 50000,
       "photoPath": "assets/images/phone1.jpg",
       "id": 7
+    },
+    {
+      "name": "iPhoneX",
+      "price": 100000,
+      "photoPath": "assets/images/phoneX.jpg",
+      "id": 8
     }
-  ]
+  ],
+  "CartItem": []
 }
