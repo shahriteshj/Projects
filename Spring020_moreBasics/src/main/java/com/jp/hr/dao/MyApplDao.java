@@ -1,4 +1,4 @@
-package com.java;
+package com.jp.hr.dao;
 
 import org.springframework.stereotype.Repository;
 
