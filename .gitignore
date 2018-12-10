@@ -14,3 +14,7 @@ JUnitDemos/out/*
 .metadata/.mylyn/.tasks.xml.zip
 .metadata/.log
 .metadata/.mylyn/tasks.xml.zip
+.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.indexes/c7/history.index
+.metadata/.plugins/org.eclipse.wst.server.core/tmp0/conf/server.xml
+.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/segments.gen
+*.gen
