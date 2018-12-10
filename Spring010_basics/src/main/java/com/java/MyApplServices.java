@@ -7,7 +7,7 @@ public class MyApplServices {
 	public MyApplServices(){
 		
 		//This code owns responsibility of creating an object and holding a reference
-		dao = new MyApplDao();
+		//dao = new MyApplDao();
 		System.out.println("Object of class MyApplServices() is created.");
 	}
 	
