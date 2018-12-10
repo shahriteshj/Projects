@@ -18,3 +18,4 @@ JUnitDemos/out/*
 .metadata/.plugins/org.eclipse.wst.server.core/tmp0/conf/server.xml
 .recommenders/index/http___download_eclipse_org_recommenders_models_neon_/segments.gen
 *.gen
+.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs
