@@ -15,6 +15,7 @@ import org.springframework.util.StopWatch;
 public class AuthorizationAspect2 implements Ordered {
 	private int order;
 	
+	@Override
 	public int getOrder() {
 		return order;
 	}
@@ -24,7 +25,7 @@ public class AuthorizationAspect2 implements Ordered {
 		this.order = order;
 	}
 	
-	@Around ("execution(* pack_40_aop.pack_10_aspect.pack_joinpoints.packDao.*.*(..))") //Pointcut
+	@Around ("execution(* pack_40_aop.pack_10_aspect.pack_joinpoints.pack_dao.*.*(..))") //Pointcut
 	public Object adviceAuthorization(ProceedingJoinPoint call) throws Throwable {
 		StopWatch st = new StopWatch();
 		st.start();

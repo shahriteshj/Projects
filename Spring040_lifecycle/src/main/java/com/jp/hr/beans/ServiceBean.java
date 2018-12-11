@@ -17,6 +17,15 @@ import org.springframework.stereotype.Component;
  *  	* The exception being thrown cannot be changed.
  *  	* The initializing code cannot be grouped as per category in different methods.
  * 		* The interface tightly bound code to spring framework API. 
+ * 
+ * The ApplicationContextAware is an interface to inject SpringCOntext reference within bean
+ * 		Such a reference can be used to achieve Dependency relationship.
+ * 
+ * Lifecycle:
+ * 		1. Object created and constructor invoked.
+ * 		2. All setter methods (Value and Reference initialization).
+ * 		3. All Aware methods
+ * 		4. The init() methods (@PostConstruct afterPropertiesSet(); 
  */
 
 @Component("service")

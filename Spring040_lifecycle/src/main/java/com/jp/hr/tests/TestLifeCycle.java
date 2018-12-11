@@ -13,6 +13,7 @@ public class TestLifeCycle {
 		ServiceBean bean = (ServiceBean) ctx.getBean("service");
 		System.out.println(bean);
 		
+		((ClassPathXmlApplicationContext) ctx).close();
 	}
 
 }
