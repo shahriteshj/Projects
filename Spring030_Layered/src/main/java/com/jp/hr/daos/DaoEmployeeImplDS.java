@@ -45,7 +45,7 @@ public class DaoEmployeeImplDS implements DaoEmployee {
 				if (stmt != null) {
 					stmt.close();
 				}
-				// factory.closeConnection();
+				connect.close();
 			} catch (SQLException e) {
 				throw new HrException("Problem in closing resources.", e);
 			}

@@ -11,7 +11,7 @@
 
 		<java.version>1.7</java.version>
 		<spring-ioc.version>4.0.9.RELEASE</spring-ioc.version>
-		<!-- <hibernate.version>4.3.10.Final</hibernate.version> <junit.version>4.11</junit.version> -->
+		 <hibernate.version>4.3.10.Final</hibernate.version> <junit.version>4.11</junit.version> 
 	</properties>
 
 	<dependencies>
@@ -22,26 +22,26 @@
 			<version>${spring-ioc.version}</version>
 		</dependency>
 
-		<!-- Spring jdbc 
+		<!-- Spring jdbc --> 
 		<dependency> 
 			<groupId>org.springframework</groupId> 
 			<artifactId>spring-jdbc</artifactId> 
 			<version>${spring-ioc.version}</version> 
-		</dependency> -->
+		</dependency> 
 		
-		<!-- Spring AOP 
+		<!-- Spring AOP -->
 		<dependency> 
 			<groupId>org.springframework</groupId> 
 			<artifactId>spring-aop</artifactId> 
 			<version>${spring-ioc.version}</version> 
-		</dependency> -->
+		</dependency> 
 
-		<!-- 
+		
 		<dependency> 
 			<groupId>org.springframework</groupId> 
 			<artifactId>spring-aspects</artifactId> 
 			<version>${spring-ioc.version}</version> 
-		</dependency> -->
+		</dependency> 
 
 		<!-- 
 		<dependency> 
@@ -57,21 +57,21 @@
 			<version>11.2.0.3.0</version>
 		</dependency> -->
 		
-		<!-- 
+		 
 		<dependency> 
 			<groupId>commons-dbcp</groupId> 
 			<artifactId>commons-dbcp</artifactId> 
 			<version>1.4</version> 
-		</dependency> -->
+		</dependency> 
 		
-		<!-- Spring DI 
+		<!-- Spring DI  --> 
 		<dependency> 
 			<groupId>javax.inject</groupId> 
 			<artifactId>javax.inject</artifactId> 
 			<version>1</version>
-		</dependency> -->
+		</dependency>
 		
-		<!-- Spring jUnit 
+		<!-- Spring jUnit -->
 		<dependency> 
 			<groupId>junit</groupId> 
 			<artifactId>junit</artifactId> 
@@ -82,11 +82,15 @@
 			<groupId>org.springframework</groupId> 
 			<artifactId>spring-test</artifactId> 
 			<version>${spring-ioc.version}</version> 
-		</dependency> -->
+		</dependency> 
 			
-		<!-- Spring Hibernate <dependency> <groupId>org.springframework</groupId> 
+		<!-- Spring Hibernate  --> 
+<!-- 		<dependency> <groupId>org.springframework</groupId> 
 			<artifactId>spring-orm</artifactId> <version>${spring-ioc.version}</version> 
-			</dependency> <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-core</artifactId> 
-			<version>${hibernate.version}</version> </dependency> -->
+			</dependency>
+			<dependency> <groupId>org.hibernate</groupId> 
+			 	<artifactId>hibernate-core</artifactId> 
+				<version>${hibernate.version}</version> 
+			</dependency> -->
 	</dependencies>
 </project>
