@@ -13,10 +13,6 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="lib" path="D:/Projects/Layer_DAO_Service/WebContent/WEB-INF/lib/ojdbc6.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="D:/Projects/JPA_LIB/ojdbc6.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
