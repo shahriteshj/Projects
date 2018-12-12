@@ -95,8 +95,35 @@ public class DaoEmployeeImplDS implements DaoEmployee {
 
 	@Override
 	public boolean insertNewRecord(Employee emp) throws HrException {
-		// TODO Auto-generated method stub
-		return false;
+		String qry = "INSERT INTO employees (EMPLOYEE_ID,FIRST_NAME,LAST_NAME) VALUES (?,?,?)";
+		Connection connect = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		try {
+			connect = dataSource.getConnection();
+			stmt = connect.prepareStatement(qry);
+			stmt.setInt(1, emp.getEmpId());
+			stmt.setString(2, emp.getFirstName());
+			stmt.setString(3, emp.getLastName());
+
+			int recInserted = stmt.executeUpdate();
+			return recInserted == 1 ? true : false;
+
+		} catch (SQLException e) {
+			throw new HrException("Problem in fetching.", e);
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (stmt != null) {
+					stmt.close();
+				}
+				connect.close();
+			} catch (SQLException e) {
+				throw new HrException("Problem in closing resources.", e);
+			}
+		}
 	}
 
 }

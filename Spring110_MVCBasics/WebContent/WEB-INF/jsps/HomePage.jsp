@@ -8,6 +8,7 @@
 </head>
 <body>
 <h1>Welcome to Home Page!!</h1>
-<a href="getEmpList.hr">Employee List</a>
+<a href="getEmpList.hr">Employee List</a><br/><br/>
+<a href="registrationForm.hr">Join New Employee</a>
 </body>
 </html>

@@ -25,7 +25,7 @@ import com.jp.hr.interfaces.DaoEmployee;
  */
 
 @Service("service")
-public class ServiceEmployeeImpl implements ServiceEmployee, Role1 {
+public class ServiceEmployeeImpl implements ServiceEmployee {
 	
 	private DaoEmployee daoEmp;
 	

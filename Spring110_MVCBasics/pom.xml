@@ -33,6 +33,19 @@
 			<version>${spring-ioc.version}</version> 
 		</dependency>
 		
+				<!--  Validations -->
+		<dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		    <version>1.0.0.GA</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+			    <artifactId>hibernate-validator</artifactId>
+			    <version>4.3.1.Final</version>
+		</dependency>
+		
 				<!-- Logging -->
 <!-- 		<dependency>
 			<groupId>org.slf4j</groupId>
