@@ -29,13 +29,13 @@ public class HomePageController {
 	@Qualifier("service")
 	private ServiceEmployee empService;
 	
-	@RequestMapping("homePage.do")
+	@RequestMapping("homePage.hr")
 	public String getHomePage(){
 		System.out.println("In getHomePage().");
 		return "HomePage";
 	}
 	
-	@RequestMapping("getEmpList.do")
+	@RequestMapping("getEmpList.hr")
 	public ModelAndView getEmpList(){
 		System.out.println("In getEmpList().");
 		ModelAndView mAndV = new ModelAndView();
@@ -49,7 +49,7 @@ public class HomePageController {
 		return mAndV;
 	}
 	
-	@RequestMapping("empDetails.do")
+	@RequestMapping("empDetails.hr")
 	public ModelAndView getEmployeeDetails(@RequestParam("empId") int empId){
 		System.out.println("In getEmployeeDetails().");
 		ModelAndView mAndV = new ModelAndView();

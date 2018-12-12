@@ -21,6 +21,6 @@
 			<td>${requestScope.empDetails.lastName}</td>
 		</tr>
 	</table>
-	<a href="getEmpList.do">Go back to list</a>
+	<a href="getEmpList.hr">Go back to list</a>
 </body>
 </html>

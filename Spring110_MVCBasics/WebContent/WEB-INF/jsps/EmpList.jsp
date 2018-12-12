@@ -30,7 +30,7 @@
 		<c:forEach items="${requestScope.empList }" var="emp">
 			<tr>
 				<td>${emp.empId }</td>
-				<td><a href="empDetails.do?empId=${ emp.empId }">View
+				<td><a href="empDetails.hr?empId=${ emp.empId }">View
 						Details</a></td>
 
 			</tr>
@@ -40,7 +40,7 @@
 
 	</table>
 
-	<a href="homePage.do">Go back to Main Menu</a>
+	<a href="homePage.hr">Go back to Main Menu</a>
 
 </body>
 </html>

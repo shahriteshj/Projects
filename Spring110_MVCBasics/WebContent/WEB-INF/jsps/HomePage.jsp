@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>Welcome to Home Page!!</h1>
-<a href="getEmpList.do">Employee List</a>
+<a href="getEmpList.hr">Employee List</a>
 </body>
 </html>
