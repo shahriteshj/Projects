@@ -111,7 +111,7 @@ public class ProductController {
 		}
 	}
 	
-	@RequestMapping("deleteProduct.prdt.prdt")
+	@RequestMapping("deleteProduct.prdt")
 	public ModelAndView removeProduct(@RequestParam("prodId") int productId, Model model) {
 		System.out.println("In removeProduct().");
 		ModelAndView mAndV = new ModelAndView();
@@ -120,8 +120,10 @@ public class ProductController {
 			Boolean isRemoveSucces = prodService.removeProduct(productId);
 			if(isRemoveSucces){
 				model.addAttribute("msg", "Product successfully removed. ");
+				return getProdList();
 			}else{
 				model.addAttribute("msg", "Product Remove failed. ");
+				return getProdList();
 			}
 			
 		} catch (HrException e) {

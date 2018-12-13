@@ -4,13 +4,16 @@ import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.jp.hr.entities.Product;
 import com.jp.hr.exceptions.HrException;
 import com.jp.hr.interfaces.ProductDAO;
 
 @Service("serviceProd")
+@Transactional
 public class ProductServiceImpl implements ProductService {
 
 	private ProductDAO prodDAO;
