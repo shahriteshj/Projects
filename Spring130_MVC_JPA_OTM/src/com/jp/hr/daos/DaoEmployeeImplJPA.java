@@ -46,6 +46,12 @@ public class DaoEmployeeImplJPA implements DaoEmployee {
 		return emp;
 	}
 
+	@Override
+	public Dept getDeptDetails(int deptId) throws HrException {
+		Dept dept = entityManager.find(Dept.class, deptId);
+		return dept;
+	}
+	
 /*	@Override
 	public boolean insertNewRecord(Employee emp) throws HrException {
 		entityManager.persist(emp);

@@ -13,6 +13,9 @@ public interface DaoEmployee extends Serializable {
 	public List<Dept> getDeptList() throws HrException;
 
 	public Emp getEmpDetails(int empId) throws HrException;
+	
+	public Dept getDeptDetails(int deptId) throws HrException;
+	
 	/*
 	 * public Employee getEmpDetails(int empId) throws HrException;
 	 * 

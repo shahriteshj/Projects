@@ -62,21 +62,6 @@ public class HomePageController {
 		}
 		return mAndV;
 	}
-
-	@RequestMapping("getDeptList.hr")
-	public ModelAndView getDeptList() {
-		System.out.println("In getDeptList().");
-		ModelAndView mAndV = new ModelAndView();
-		try {
-			ArrayList<Dept> deptList = (ArrayList<Dept>)empService.getDeptList();
-			mAndV.addObject("deptList", deptList);
-			mAndV.setViewName("DeptList");
-		} catch (HrException e) {
-			e.printStackTrace();
-		}
-		return mAndV;
-	}
-
 	
 	@RequestMapping("empDetails.hr")
 	public ModelAndView getEmployeeDetails(@RequestParam("empNo") int empId) {
@@ -92,6 +77,36 @@ public class HomePageController {
 		}
 		return mAndV;
 	}
+
+	@RequestMapping("getDeptList.hr")
+	public ModelAndView getDeptList() {
+		System.out.println("In getDeptList().");
+		ModelAndView mAndV = new ModelAndView();
+		try {
+			ArrayList<Dept> deptList = (ArrayList<Dept>)empService.getDeptList();
+			mAndV.addObject("deptList", deptList);
+			mAndV.setViewName("DeptList");
+		} catch (HrException e) {
+			e.printStackTrace();
+		}
+		return mAndV;
+	}
+
+	@RequestMapping("deptDetails.hr")
+	public ModelAndView getDeaprtmentDetails(@RequestParam("deptNo") int deptId) {
+		System.out.println("In getDeaprtmentDetails().");
+		ModelAndView mAndV = new ModelAndView();
+
+		try {
+			Dept dept = empService.getDeptDetails(deptId);
+			mAndV.addObject("deptDetails", dept);
+			mAndV.setViewName("DeptDetails");
+		} catch (HrException e) {
+			e.printStackTrace();
+		}
+		return mAndV;
+	}
+
 
 	/*@RequestMapping("registrationForm.hr")
 	public String getRegistrationForm(Model model) {

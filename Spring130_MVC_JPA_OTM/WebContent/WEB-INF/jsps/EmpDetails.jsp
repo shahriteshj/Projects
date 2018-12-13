@@ -25,6 +25,6 @@
 			<td>${requestScope.empDetails.dept.deptNm}</td>
 		</tr>
 	</table>
-	<a href="getEmpList.hr">Go back to list</a>
+	<a href="getDeptList.hr">Go back to list</a>
 </body>
 </html>

@@ -48,7 +48,7 @@ public class Emp {
 	}
 
 	@OneToOne()
-	@JoinColumn(name="DEPT_NO")
+	@JoinColumn(name="DEPT_NO") // Foreign key column in Emp Table
 	public Dept getDept() {
 		return dept;
 	}

@@ -55,6 +55,10 @@ public class ServiceEmployeeImpl implements ServiceEmployee {
 		return daoEmp.getEmpDetails(empId);
 	}
 
+	@Override
+	public Dept getDeptDetails(int deptId) throws HrException {
+		return daoEmp.getDeptDetails(deptId);
+	}
 /*	@Override
 	public boolean addNewEmployee(Emp emp) throws HrException {
 		return daoEmp.insertNewRecord(emp);

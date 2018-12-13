@@ -15,6 +15,7 @@
 		<tr>
 			<th>Department Id</th>
 			<th>Department Name</th>
+			<th></th>
 
 		</tr>
 
@@ -30,6 +31,7 @@
 			<tr>
 				<td>${dept.deptNo }</td>
 				<td>${dept.deptNm }</td>
+				<td><a href="deptDetails.hr?deptNo=${ dept.deptNo }">View Details</a></td>
 
 			</tr>
 		</c:forEach>
