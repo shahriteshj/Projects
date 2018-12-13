@@ -1,12 +1,8 @@
 package com.jp.jpa.client;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.persistence.EntityManager;
 
 import com.jp.jpa.entity.Department;
-import com.jp.jpa.entity.Employee;
 import com.jp.jpa.util.JPAUtil;
 
 public class OTM_Client {
