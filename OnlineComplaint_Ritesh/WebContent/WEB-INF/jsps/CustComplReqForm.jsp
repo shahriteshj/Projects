@@ -19,12 +19,14 @@
 		var z = document.forms["regFrm"]["accountId"].value;
 		if (!z.match(/^\d+/)) {
 			alert("Please enter only numeric characters for your Account Id")
+			document.forms["regFrm"]["accountId"].focus();
 			return false;
 		}
-		if (z.length != 10) {
+ 		if (z.length != 10) {
 			alert("Please enter valid 10 digit Account Id")
+			document.forms["regFrm"]["accountId"].focus();
 			return false;
-		}
+		} 
 
 	}
 </script>
@@ -43,7 +45,7 @@
 					<td><label>Account Id: <span class="redText">*</span>
 					</label>(Numeric: 10 digits)</td>
 					<td><springForm:input id="accountId" path="accountId"
-							required="true" maxlength="10" onblur="checkDigits()" /></td>
+							required="true" minlength="10" maxlength="10" onblur="validateForm()" /></td>
 					<td><springForm:errors path="accountId" cssClass="error" /></td>
 				</tr>
 				<tr>
