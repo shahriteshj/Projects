@@ -1,0 +1,100 @@
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #31708f;
+	color: white;
+	text-align: center;
+}
+
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+label {
+	width: 100%;
+	padding: 5px;
+	margin: 5px 0 5px 0;
+	display: inline-block;
+	border: none;
+}
+
+input {
+	width: 100%;
+	padding: 5px;
+	margin: 5px 0 5px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 5px 5px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 50%;
+	opacity: 0.9;
+}
+
+.error {
+	color: #ff0000;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.redText {
+	color: #ff0000;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.container {
+	padding: 16px;
+}
+
+select {
+	width: 100%;
+	padding: 5px;
+	margin: 5px 0 5px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+textarea {
+	width: 100%;
+	padding: 5px;
+	margin: 5px 0 5px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+
+#complaints {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#complaints td, #complaints th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+
+#customers tr:hover {background-color: #ddd;}
+
+#complaints th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}

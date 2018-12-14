@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>OnlineComplaint_Ritesh</display-name>
+  <welcome-file-list>
+    <welcome-file>homePage.compl</welcome-file>
+
+  </welcome-file-list>
+  
+  	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/spring.xml</param-value>
+	</context-param>
+  
+	<!-- Creates the Spring Container shared by all Servlets and Filters -->
+	<!--  It creates ApplicationContext which works as Parent context -->
+	<!--  By default referring to application-context.xml 
+			otherwise refers to the config file named in 'contextConfigLocation' 
+			context parameter
+	-->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+  
+    <!-- Processes application requests -->
+	<!--  It creates WebApplicationContext which works as child context -->
+	<!-- The child context can refer to the bean of parent context but vice versa not possible -->
+	<!--  By default referring to servlet cannonical name-servlet.xml -->
+	<servlet>
+		<servlet-name>fcForCOMPL</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/springWebCompl.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>fcForCOMPL</servlet-name>
+		<url-pattern>*.compl</url-pattern>
+	</servlet-mapping>
+	
+
+	
+</web-app>
