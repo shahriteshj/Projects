@@ -15,7 +15,9 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.format.annotation.NumberFormat;
 
 /**
  * @author Ritesh Complaint entity mapped to Complaint table in DB via JPA
@@ -49,6 +51,7 @@ public class Complaint implements Serializable {
 
 	@Column(name = "ACCOUNTID")
 	@NotNull
+	@NumberFormat
 	public Long getAccountId() {
 		return accountId;
 	}
@@ -71,6 +74,7 @@ public class Complaint implements Serializable {
 	@Column(name = "EMAILID")
 	@NotNull
 	@NotBlank
+	@Email
 	@Pattern(regexp = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$", message = "Please enter valid Email Id")
 	public String getEmailId() {
 		return emailId;
