@@ -20,7 +20,7 @@ public class LocateServices {
 			EmpSoapServicesView viewServices = service.getPort(EmpSoapServicesView.class);
 			return viewServices;
 		} catch (MalformedURLException e) {
-			throw new FinException("Soap service link not established.", e);
+			throw new FinException("View Soap service link not established.", e);
 		}
 	}
 
@@ -32,7 +32,7 @@ public class LocateServices {
 			EmpSoapServicesUpdate updateServices = service.getPort(EmpSoapServicesUpdate.class);
 			return updateServices;
 		} catch (MalformedURLException e) {
-			throw new FinException("Soap service link not established.", e);
+			throw new FinException("Update Soap service link not established.", e);
 		}
 	}
 
