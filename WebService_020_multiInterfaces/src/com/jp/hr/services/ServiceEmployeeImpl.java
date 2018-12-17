@@ -2,25 +2,10 @@ package com.jp.hr.services;
 
 import java.util.List;
 
+import com.jp.hr.daos.DaoEmployee;
 import com.jp.hr.daos.DaoEmployeeImpl;
 import com.jp.hr.entities.Employee;
 import com.jp.hr.exceptions.HrException;
-import com.jp.hr.interfaces.DaoEmployee;
-
-/*
- * One layer refers to another layer through interface only.
- * Implementation if business rules should be done here in absence of Business Layer.
- * This layer will also ensure only custom exceptions to come out.
- * 
- * Features:
- * 		* Only one gateway with preserving privacy of all inner classes.
- * 		* One point for implementing security, transaction management, Caching.
- * 		* Multiple interfaces per client to give restricted view of all services.
- * 		* Facade pattern. (GoF pattern)(One point to connect to multiple services)
- * 		* DAO is a JEE pattern.
- * 		* Implemented singleton by creating single object of outermost class.
- * 		* Delegates and controls Cross Cutting Concerns.
- */
 
 public class ServiceEmployeeImpl implements ServiceEmployee, Role1 {
 

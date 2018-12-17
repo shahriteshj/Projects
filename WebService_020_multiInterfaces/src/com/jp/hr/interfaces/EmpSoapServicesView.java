@@ -12,17 +12,19 @@ import com.jp.hr.exceptions.HrException;
 
 @WebService
 @SOAPBinding(style = Style.DOCUMENT)
-public interface EmpSoapServices {
+public interface EmpSoapServicesView {
 
-	@WebMethod
-	public int getTestInteger(int x) throws HrException;
-
+	/*
+	 * @WebMethod public int getTestInteger(int x) throws HrException;
+	 */
 	@WebMethod
 	public Employee getEmpDetails(int empId) throws HrException;
 
 	@WebMethod
 	public List<Employee> getEmpList() throws HrException;
 
-	@WebMethod
-	public boolean addNewEmployee(Employee emp) throws HrException;
+	/*
+	 * @WebMethod public boolean addNewEmployee(Employee emp) throws
+	 * HrException;
+	 */
 }

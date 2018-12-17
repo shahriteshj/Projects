@@ -10,7 +10,6 @@ import java.util.List;
 
 import com.jp.hr.entities.Employee;
 import com.jp.hr.exceptions.HrException;
-import com.jp.hr.interfaces.DaoEmployee;
 import com.jp.hr.utilities.ConnectionFactory;
 
 /*
