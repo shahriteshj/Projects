@@ -48,7 +48,7 @@ public class HomePageController {
 		return empList;
 	}
 
-	@RequestMapping(value="/empDetails", method=RequestMethod.GET,headers="Accept=application/text")
+	@RequestMapping(value="/empDetails", method=RequestMethod.GET,headers="Accept=application/json")
 	public Employee getEmployeeDetails(@RequestParam("empId") int empId) {
 		System.out.println("In getEmployeeDetails().");
 		Employee emp = null;
