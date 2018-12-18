@@ -151,7 +151,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JAX-RS-CRUD" path="/JAX-RS-CRUD" reloadable="true" source="org.eclipse.jst.jee.server:JAX-RS-CRUD"/><Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebServices_030_RestCrud" path="/WebServices_030_RestCrud" reloadable="true" source="org.eclipse.jst.jee.server:WebServices_030_RestCrud"/></Host>
+      <Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Spring300_MVC_JPA_Rest_Ng" path="/Spring300_MVC_JPA_Rest_Ng" reloadable="true" source="org.eclipse.jst.jee.server:Spring300_MVC_JPA_Rest_Ng"/></Host>
     </Engine>
   </Service>
 </Server>
