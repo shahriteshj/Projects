@@ -17,7 +17,7 @@
 		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
 		<init-param>
 			<param-name>jersey.config.server.provider.packages</param-name>
-			<param-value>com.cg.learning.controller</param-value>
+			<param-value>com.jpm.learning.controller</param-value>
 		</init-param>
 		
 		<load-on-startup>1</load-on-startup>

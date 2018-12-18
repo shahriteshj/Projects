@@ -37,6 +37,8 @@
          UserDatabaseRealm to authenticate users
     -->
     <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
+   
+              
   </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share
@@ -149,7 +151,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\DBProject" path="/DBProject" reloadable="true" source="org.eclipse.jst.jee.server:DBProject"/><Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Servlet_Lifecycle" path="/Servlet_Lifecycle" reloadable="true" source="org.eclipse.jst.jee.server:Servlet_Lifecycle"/><Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ServletDispatching" path="/ServletDispatching" reloadable="true" source="org.eclipse.jst.jee.server:ServletDispatching"/></Host>
+      <Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JAX-RS-CRUD" path="/JAX-RS-CRUD" reloadable="true" source="org.eclipse.jst.jee.server:JAX-RS-CRUD"/><Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebServices_030_RestCrud" path="/WebServices_030_RestCrud" reloadable="true" source="org.eclipse.jst.jee.server:WebServices_030_RestCrud"/></Host>
     </Engine>
   </Service>
 </Server>
