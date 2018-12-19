@@ -106,7 +106,7 @@
           <td>{{e.firstName }}</td>
           <td>{{e.lastName }}</td>
           <td style="width:50px"><button type="button" name="button" class="btn btn-info btn-xs" (click)='showEditform(e)' [disabled]='toggleForm'>Edit</button></td>
-          <td style="width:50px"><button type="button" name="button" class="btn btn-danger btn-xs" (click)='deleteEmployeem(e.empId)'>Delete</button></td>
+          <td style="width:50px"><button type="button" name="button" class="btn btn-danger btn-xs" (click)='deleteEmployee(e.empId)'>Delete</button></td>
           <td style="width:50px"><button type="button" name="button" class="btn btn-xs" (click)='showAddForm()'>Cancel</button></td>
         </tr>
         <tr *ngIf="!emp || emp.length==0">

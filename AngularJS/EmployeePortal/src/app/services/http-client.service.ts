@@ -4,13 +4,12 @@ import { Emp } from '../model/emp';
 
 const httpOptions = {
   headers: new HttpHeaders({ 
-    'Access-Control-Allow-Origin':'http://localhost:8080/',
+    'Access-Control-Allow-Origin':'*',
     'Access-Control-Allow-Headers':'X-Requested-With, Content-Type, Accept, Origin, Authorization',
     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
     'Access-Control-Allow-Credentials': 'true' 
   })
 };
-
 
 @Injectable({
   providedIn: 'root'
@@ -27,17 +26,17 @@ export class HttpClientService {
   }
 
   addNewEmployee(emp: Emp) {
-    return this.http.post("http://localhost:8080/Spring300_MVC_JPA_Rest_Ng/hr/create", emp,httpOptions);
+    return this.http.post("http://localhost:8080/Spring300_MVC_JPA_Rest_Ng/hr/empCreate", emp,httpOptions);
 
   }
 
   updateEmployeeDetails(emp: Emp) {
-    return this.http.put('http://localhost:8080/Spring300_MVC_JPA_Rest_Ng/hr/' + emp.empId, emp,httpOptions);
+    return this.http.put('http://localhost:8080/Spring300_MVC_JPA_Rest_Ng/hr/emps' + emp.empId, emp,httpOptions);
 
   }
 
   deleteEmployee(empId) {
-    return this.http.delete('http://localhost:8080/Spring300_MVC_JPA_Rest_Ng/hr/' + empId,httpOptions)
+    return this.http.delete('http://localhost:8080/Spring300_MVC_JPA_Rest_Ng/hr/emps/' + empId,httpOptions)
 
   }
 

@@ -31,7 +31,12 @@ public class HomePageController {
 	 * System.out.println("In getHomePage()."); return "HomePage"; }
 	 */
 
-	@RequestMapping(value = "/emps", method = RequestMethod.GET, headers = "Accept=application/json")
+	@RequestMapping(value = "/emps", 
+			method = RequestMethod.GET, 
+			headers = {"Accept=application/json","Access-Control-Allow-Origin=*",
+					 "Access-Control-Allow-Headers=X-Requested-With, Content-Type, Accept, Origin, Authorization",
+					    "Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS",
+					    "Access-Control-Allow-Credentials=true" })
 	public List<Employee> getEmpList() {
 		System.out.println("In getEmpList().");
 		List<Employee> empList = null;
@@ -44,7 +49,9 @@ public class HomePageController {
 		return empList;
 	}
 
-	@RequestMapping(value = "/empDetails", method = RequestMethod.GET, headers = "Accept=application/json")
+	@RequestMapping(value = "/empDetails", 
+			method = RequestMethod.GET, 
+			headers = "Accept=application/json")
 	public Employee getEmployeeDetails(@RequestParam("empId") int empId) {
 		System.out.println("In getEmployeeDetails().");
 		Employee emp = null;
@@ -56,7 +63,9 @@ public class HomePageController {
 		return emp;
 	}
 
-	@RequestMapping(value = "/empDetails2/{empId}", method = RequestMethod.GET, headers = "Accept=application/json")
+	@RequestMapping(value = "/empDetails2/{empId}",
+			method = RequestMethod.GET, 
+			headers = "Accept=application/json")
 	public Employee getEmployeeDetails2(@PathVariable("empId") int empId) {
 		System.out.println("In getEmployeeDetails().");
 		Employee emp = null;
@@ -68,17 +77,13 @@ public class HomePageController {
 		return emp;
 	}
 
-	@RequestMapping(value = "/emps/create/{empId}/{firstName}/{lastName}", headers = "Accept=application/json", method = RequestMethod.GET)
-	public List<Employee> addEmployee(@PathVariable int empId, @PathVariable String firstName,
-			@PathVariable String lastName) {
+	@RequestMapping(value = "/empCreate",
+			headers = "Accept=application/json",
+			method = {RequestMethod.POST, RequestMethod.GET})
+	public List<Employee> addEmployee(@RequestParam("emp") Employee emp) {
 		List<Employee> empList = null;
-
+		System.out.println("In addEmployee1().");
 		try {
-			Employee emp = new Employee();
-			emp.setEmpId(empId);
-			emp.setFirstName(firstName);
-			emp.setLastName(lastName);
-
 			empService.addNewEmployee(emp);
 			empList = empService.getEmpList();
 		} catch (HrException e) {
@@ -88,12 +93,12 @@ public class HomePageController {
 		return empList;
 	}
 	
-	@RequestMapping(value = "/emps/create", headers = "Accept=application/json", method = RequestMethod.POST)
-	public List<Employee> addEmployee(@RequestParam Employee emp) {
+	@RequestMapping(value = "/emps/{empId}", headers = "Accept=application/json", method = RequestMethod.DELETE)
+	public List<Employee> deleteEmployee(@PathVariable int empId) {
 		List<Employee> empList = null;
 
 		try {
-			empService.addNewEmployee(emp);
+			empService.removeEmployee(empId);
 			empList = empService.getEmpList();
 		} catch (HrException e) {
 			e.printStackTrace();

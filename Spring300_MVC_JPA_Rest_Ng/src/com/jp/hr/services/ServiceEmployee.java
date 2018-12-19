@@ -13,4 +13,5 @@ public interface ServiceEmployee {
 
 	public boolean addNewEmployee(Employee emp) throws HrException;
 
+	public boolean removeEmployee(int empId) throws HrException;
 }

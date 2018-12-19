@@ -45,4 +45,18 @@ public class DaoEmployeeImplJPA implements DaoEmployee {
 		}
 	}
 
+	@Override
+	public boolean deleteEmployee(int empId) throws HrException {
+		Employee emp = entityManager.find(Employee.class, empId);
+		if(emp != null){
+			entityManager.remove(emp);
+		}
+		Employee emp1 = entityManager.find(Employee.class, empId);
+		if (emp1 == null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 }

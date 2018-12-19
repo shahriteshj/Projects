@@ -37,7 +37,7 @@ export class EmpServiceComponent implements OnInit {
       lastName: frm.value.lastName
     }
 
-    this.httpclientservice.addNewEmployee(emp).subscribe(emp => { this.getEmpList(); })
+    this.httpclientservice.addNewEmployee(emp).subscribe(emp => { this.emp = <Emp[]>emp;})
 
   }
 

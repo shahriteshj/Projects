@@ -41,4 +41,10 @@ public class ServiceEmployeeImpl implements ServiceEmployee {
 		return daoEmp.insertNewRecord(emp);
 	}
 
+	@Override
+	@Transactional(rollbackFor = HrException.class)	
+	public boolean removeEmployee(int empId) throws HrException {
+		return daoEmp.deleteEmployee(empId);
+	}
+
 }

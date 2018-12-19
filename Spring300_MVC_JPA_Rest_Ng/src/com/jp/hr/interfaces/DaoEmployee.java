@@ -12,4 +12,6 @@ public interface DaoEmployee extends Serializable {
 	public Employee getEmpDetails(int empId) throws HrException;
 
 	public boolean insertNewRecord(Employee emp) throws HrException;
+	
+	public boolean deleteEmployee(int empId) throws HrException;
 }
