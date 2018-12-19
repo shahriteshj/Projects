@@ -7,7 +7,7 @@
 	<packaging>war</packaging>
 	<properties>
 		<java-version>1.8</java-version>
-		<org.springframework-version>4.1.9.RELEASE</org.springframework-version>
+		<org.springframework-version>4.0.9.RELEASE</org.springframework-version>
 		<spring-ioc.version>4.0.9.RELEASE</spring-ioc.version>
 		<hibernate.version>4.1.9.Final</hibernate.version>
 		<log4j.version>1.2.17</log4j.version>

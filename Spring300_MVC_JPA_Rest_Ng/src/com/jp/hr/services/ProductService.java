@@ -1,12 +1,12 @@
 package com.jp.hr.services;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.jp.hr.entities.Product;
 import com.jp.hr.exceptions.HrException;
 
 public interface ProductService {
-	public ArrayList<Product> getProductList() throws HrException;
+	public List<Product> getProductList() throws HrException;
 
 	public Product getProductDetails(int productId) throws HrException;
 

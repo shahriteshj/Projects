@@ -6,7 +6,7 @@ import com.jp.hr.entities.Employee;
 import com.jp.hr.exceptions.HrException;
 
 public interface ServiceEmployee {
-	
+
 	public List<Employee> getEmpList() throws HrException;
 
 	public Employee getEmpDetails(int empId) throws HrException;

@@ -1,135 +1,47 @@
 package com.jp.hr.controllers;
 
-import java.util.ArrayList;
-import java.util.Set;
-
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.jp.hr.entities.Product;
 import com.jp.hr.exceptions.HrException;
 import com.jp.hr.services.ProductService;
 
-@Controller
+@RestController
 public class ProductController {
 
 	@Autowired
 	@Qualifier("serviceProd")
 	private ProductService prodService;
 
-	private Validator validator;
-
-	@InitBinder
-	private void validatorBinder() {
-		ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
-		validator = validatorFactory.getValidator();
-		System.out.println("Validator is set." + validator.hashCode());
-	}
-
-	@RequestMapping("getProdList.prdt")
-	public ModelAndView getProdList() {
+	@RequestMapping(value = "/products", method = RequestMethod.GET, headers = "Accept=application/json")
+	public List<Product> getProdList() {
 		System.out.println("In getProdList().");
-		ModelAndView mAndV = new ModelAndView();
+		List<Product> prodList = null;
 		try {
-			ArrayList<Product> prodList = prodService.getProductList();
-			mAndV.addObject("productList", prodList);
-			mAndV.setViewName("ProductList");
+			prodList = prodService.getProductList();
 		} catch (HrException e) {
 			e.printStackTrace();
 		}
-		return mAndV;
+		return prodList;
 	}
 
-	@RequestMapping("prodDetails.prdt")
-	public ModelAndView getProductDetails(@RequestParam("prodId") int prodId) {
+	@RequestMapping(value = "/prodDetails", method = RequestMethod.GET, headers = "Accept=application/json")
+	public Product getProductDetails(@RequestParam("prodId") int prodId) {
 		System.out.println("In getProductDetails().");
-		ModelAndView mAndV = new ModelAndView();
-
+		Product prod = null;
 		try {
-			Product prod = prodService.getProductDetails(prodId);
-			mAndV.addObject("prodDetails", prod);
-			mAndV.setViewName("ProductDetails");
+			prod = prodService.getProductDetails(prodId);
 		} catch (HrException e) {
 			e.printStackTrace();
 		}
-		return mAndV;
-	}
-
-	@RequestMapping("AddProductForm.hr")
-	public String getAddProductForm(Model model) {
-		System.out.println("In getAddProductForm().");
-		// Define command object
-		Product product = new Product();
-		model.addAttribute("product", product);
-
-		return "NewProduct";
-	}
-
-	@RequestMapping("saveProduct.prdt")
-	public ModelAndView saveProduct(@ModelAttribute("product") Product product, BindingResult result, Model model) {
-
-		System.out.println("In saveProduct().");
-		System.out.println(product);
-		ModelAndView mAndV = new ModelAndView();
-		Set<ConstraintViolation<Product>> violations = validator.validate(product);
-
-		for (ConstraintViolation<Product> violation : violations) {
-			String propertyPath = violation.getPropertyPath().toString();
-			String message = violation.getMessage();
-			// Add JSR-303 errors to BindingResult. This allows Spring to
-			// display them in view via a FieldError
-			FieldError error = new FieldError("product", propertyPath, "Invalid " + propertyPath + "(" + message + ")");
-			result.addError(error);
-		}
-		if (result.hasErrors()) {
-			model.addAttribute("msg", "Errors in entry. ");
-			mAndV.setViewName("NewProduct");
-			return mAndV;
-		} else {
-			try {
-				prodService.addNewProduct(product);
-				return getProdList();
-			} catch (HrException e) {
-				model.addAttribute("msg", "Insert failed. " + e.getMessage());
-				mAndV.setViewName("NewProduct");
-				return mAndV;
-			}
-		}
-	}
-	
-	@RequestMapping("deleteProduct.prdt")
-	public ModelAndView removeProduct(@RequestParam("prodId") int productId, Model model) {
-		System.out.println("In removeProduct().");
-		ModelAndView mAndV = new ModelAndView();
-
-		try {
-			Boolean isRemoveSucces = prodService.removeProduct(productId);
-			if(isRemoveSucces){
-				model.addAttribute("msg", "Product successfully removed. ");
-				return getProdList();
-			}else{
-				model.addAttribute("msg", "Product Remove failed. ");
-				return getProdList();
-			}
-			
-		} catch (HrException e) {
-			model.addAttribute("msg", "Product Remove failed. " + e.getMessage());
-		}
-		return mAndV;
+		return prod;
 	}
 
 }

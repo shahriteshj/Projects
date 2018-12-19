@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.sql.DataSource;
 
@@ -17,20 +18,18 @@ import com.jp.hr.entities.Product;
 import com.jp.hr.exceptions.HrException;
 import com.jp.hr.interfaces.ProductDAO;
 
-
 @Repository("daoProductDS")
 public class ProductDAOImpl implements ProductDAO {
 	@Autowired
 	@Qualifier("ds")
 	private DataSource dataSource;
-	
 
 	@Override
-	public ArrayList<Product> getProductList() throws HrException {
+	public List<Product> getProductList() throws HrException {
 		Connection conn = null;
 		Statement stmt = null;
 		ResultSet rs = null;
-		ArrayList<Product> prodList = new ArrayList<Product>();
+		List<Product> prodList = new ArrayList<Product>();
 		try {
 			conn = dataSource.getConnection();
 			stmt = conn.createStatement();

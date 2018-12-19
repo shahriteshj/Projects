@@ -8,15 +8,13 @@ import javax.validation.constraints.Size;
 public class Product {
 	Integer prodId;
 	String category;
-	
 
 	@NotNull
-	@Size(min = 3, max = 20, message="Product Name not meeting size constraints.")
+	@Size(min = 3, max = 20, message = "Product Name not meeting size constraints.")
 	@Pattern(regexp = "[a-z-A-Z ]*", message = "Product Name has invalid characters")
 	String name;
-	
-	
-	@Digits(fraction= 2, integer=5)
+
+	@Digits(fraction = 2, integer = 5)
 	Float price;
 
 	public Product() {

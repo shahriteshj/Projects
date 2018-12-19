@@ -27,17 +27,17 @@ export class HttpClientService {
   }
 
   addNewEmployee(emp: Emp) {
-    return this.http.post("http://localhost:8080/hr/", emp,httpOptions);
+    return this.http.post("http://localhost:8080/Spring300_MVC_JPA_Rest_Ng/hr/create", emp,httpOptions);
 
   }
 
   updateEmployeeDetails(emp: Emp) {
-    return this.http.put('http://localhost:8080/hr/' + emp.empId, emp,httpOptions);
+    return this.http.put('http://localhost:8080/Spring300_MVC_JPA_Rest_Ng/hr/' + emp.empId, emp,httpOptions);
 
   }
 
   deleteEmployee(empId) {
-    return this.http.delete('http://localhost:8080/hr/' + empId,httpOptions)
+    return this.http.delete('http://localhost:8080/Spring300_MVC_JPA_Rest_Ng/hr/' + empId,httpOptions)
 
   }
 

@@ -13,7 +13,5 @@ public class HrException extends Exception {
 		super(arg0);
 
 	}
-	
-	
 
 }

@@ -14,12 +14,10 @@ import com.jp.hr.entities.Employee;
 import com.jp.hr.exceptions.HrException;
 import com.jp.hr.services.ServiceEmployee;
 
-
 /*
  * http://localhost:8080/Spring300_MVC_JPA_Rest_Ng/hr/emps
  * http://localhost:8080/Spring300_MVC_JPA_Rest_Ng/hr/empDetails?empId=10
  */
-
 
 @RestController
 public class HomePageController {
@@ -33,8 +31,6 @@ public class HomePageController {
 	 * System.out.println("In getHomePage()."); return "HomePage"; }
 	 */
 
-	// @RequestMapping("getEmpList.hr")
-	
 	@RequestMapping(value = "/emps", method = RequestMethod.GET, headers = "Accept=application/json")
 	public List<Employee> getEmpList() {
 		System.out.println("In getEmpList().");
@@ -48,7 +44,7 @@ public class HomePageController {
 		return empList;
 	}
 
-	@RequestMapping(value="/empDetails", method=RequestMethod.GET,headers="Accept=application/json")
+	@RequestMapping(value = "/empDetails", method = RequestMethod.GET, headers = "Accept=application/json")
 	public Employee getEmployeeDetails(@RequestParam("empId") int empId) {
 		System.out.println("In getEmployeeDetails().");
 		Employee emp = null;
@@ -59,8 +55,8 @@ public class HomePageController {
 		}
 		return emp;
 	}
-	
-	@RequestMapping(value="/empDetails2/{empId}", method=RequestMethod.GET,headers="Accept=application/json")
+
+	@RequestMapping(value = "/empDetails2/{empId}", method = RequestMethod.GET, headers = "Accept=application/json")
 	public Employee getEmployeeDetails2(@PathVariable("empId") int empId) {
 		System.out.println("In getEmployeeDetails().");
 		Employee emp = null;
@@ -71,28 +67,40 @@ public class HomePageController {
 		}
 		return emp;
 	}
-	
-	@RequestMapping(value = "/emps/create/{empId}/{firstName}/{lastName}",
-			headers="Accept=application/json", method = RequestMethod.GET)
-	public List<Employee> addEmployee(@PathVariable int empId,@PathVariable String firstName,@PathVariable String lastName) {
+
+	@RequestMapping(value = "/emps/create/{empId}/{firstName}/{lastName}", headers = "Accept=application/json", method = RequestMethod.GET)
+	public List<Employee> addEmployee(@PathVariable int empId, @PathVariable String firstName,
+			@PathVariable String lastName) {
 		List<Employee> empList = null;
-		
-		
+
 		try {
-			Employee emp=new Employee();
+			Employee emp = new Employee();
 			emp.setEmpId(empId);
 			emp.setFirstName(firstName);
 			emp.setLastName(lastName);
-			
+
 			empService.addNewEmployee(emp);
 			empList = empService.getEmpList();
 		} catch (HrException e) {
 			e.printStackTrace();
 		}
-		
+
 		return empList;
 	}
 	
+	@RequestMapping(value = "/emps/create", headers = "Accept=application/json", method = RequestMethod.POST)
+	public List<Employee> addEmployee(@RequestParam Employee emp) {
+		List<Employee> empList = null;
+
+		try {
+			empService.addNewEmployee(emp);
+			empList = empService.getEmpList();
+		} catch (HrException e) {
+			e.printStackTrace();
+		}
+
+		return empList;
+	}
 
 	/*
 	 * @RequestMapping("registrationForm.hr") public String
@@ -124,7 +132,5 @@ public class HomePageController {
 	 * catch (HrException e) { model.addAttribute("msg", "Insert failed. " +
 	 * e.getMessage()); return "EntryPage"; } } }
 	 */
-	
-	
-	
+
 }

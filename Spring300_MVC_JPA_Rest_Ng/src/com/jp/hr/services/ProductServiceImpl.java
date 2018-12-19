@@ -1,6 +1,6 @@
 package com.jp.hr.services;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -18,7 +18,7 @@ public class ProductServiceImpl implements ProductService {
 	private ProductDAO prodDAO;
 
 	public ProductServiceImpl() throws HrException {
-		
+
 	}
 
 	@Autowired
@@ -27,8 +27,8 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public ArrayList<Product> getProductList() throws HrException {
-		ArrayList<Product> productList = new ArrayList<Product>();
+	public List<Product> getProductList() throws HrException {
+		List<Product> productList = null;
 		productList = prodDAO.getProductList();
 		return productList;
 	}
@@ -39,16 +39,19 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
+	@Transactional
 	public boolean addNewProduct(Product product) throws HrException {
 		return prodDAO.insertNewRecord(product);
 	}
 
 	@Override
+	@Transactional
 	public boolean removeProduct(int productId) throws HrException {
 		return prodDAO.deleteRecord(productId);
 	}
 
 	@Override
+	@Transactional
 	public boolean modifyProduct(Product product) throws HrException {
 		return prodDAO.updateRecord(product);
 	}

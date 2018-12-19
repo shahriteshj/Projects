@@ -13,18 +13,18 @@ import com.jp.hr.interfaces.DaoEmployee;
 
 @Service("service")
 public class ServiceEmployeeImpl implements ServiceEmployee {
-	
+
 	private DaoEmployee daoEmp;
-	
+
 	public ServiceEmployeeImpl() throws HrException {
-		//daoEmp = new DaoEmployeeImpl();
+		// daoEmp = new DaoEmployeeImpl();
 	}
 
 	@Autowired
 	public ServiceEmployeeImpl(@Qualifier("daoDS") DaoEmployee daoEmp) throws HrException {
 		this.daoEmp = daoEmp;
 	}
-	
+
 	@Override
 	public List<Employee> getEmpList() throws HrException {
 		return daoEmp.getEmpList();
@@ -36,7 +36,7 @@ public class ServiceEmployeeImpl implements ServiceEmployee {
 	}
 
 	@Override
-	@Transactional(rollbackFor=HrException.class)
+	@Transactional(rollbackFor = HrException.class)
 	public boolean addNewEmployee(Employee emp) throws HrException {
 		return daoEmp.insertNewRecord(emp);
 	}
