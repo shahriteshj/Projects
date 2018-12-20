@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,13 +31,18 @@ public class HomePageController {
 	 * @RequestMapping("homePage.hr") public String getHomePage() {
 	 * System.out.println("In getHomePage()."); return "HomePage"; }
 	 */
+	
+	/*
+	 * headers = {"Accept=application/json","Access-Control-Allow-Origin=*",
+					 "Access-Control-Allow-Headers=X-Requested-With, Content-Type, Accept, Origin, Authorization",
+					    "Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS",
+					    "Access-Control-Allow-Credentials=true" }
+	 * 
+	 */
 
 	@RequestMapping(value = "/emps", 
 			method = RequestMethod.GET, 
-			headers = {"Accept=application/json","Access-Control-Allow-Origin=*",
-					 "Access-Control-Allow-Headers=X-Requested-With, Content-Type, Accept, Origin, Authorization",
-					    "Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS",
-					    "Access-Control-Allow-Credentials=true" })
+			headers = "Accept=application/json")
 	public List<Employee> getEmpList() {
 		System.out.println("In getEmpList().");
 		List<Employee> empList = null;
@@ -79,8 +85,8 @@ public class HomePageController {
 
 	@RequestMapping(value = "/empCreate",
 			headers = "Accept=application/json",
-			method = {RequestMethod.POST, RequestMethod.GET})
-	public List<Employee> addEmployee(@RequestParam("emp") Employee emp) {
+			method = RequestMethod.POST)
+	public List<Employee> addEmployee(@RequestBody Employee emp) {
 		List<Employee> empList = null;
 		System.out.println("In addEmployee1().");
 		try {

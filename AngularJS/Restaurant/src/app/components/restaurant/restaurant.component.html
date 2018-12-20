@@ -1,0 +1,40 @@
+<div class="well">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Restaurants</th>
+        <th>Address</th>
+        <th>Contact</th>
+        <th>Type</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let res of restaurant.reverse()  | paginate : {itemsPerPage :6, currentPage: p}">
+        <td>{{res.name}}</td>
+        <td>{{res.address}}</td>
+        <td>{{res.contact}}</td>
+        <td>{{res.type}}</td>
+        <td>
+          <button (click)="goToEditRestaurant(res._id)" class="btn btn-xs btn-info glyphicon glyphicon-edit"></button>
+          &nbsp;&nbsp;&nbsp;
+          <button (click)="deleteRestaurantFromService(res)" class="btn btn-xs btn-danger glyphicon">X</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+<div class="col-md-6 col-md-offset-3 form-group">
+  <div>
+    <label>
+      <h2>Add Restaurant</h2>
+    </label>
+  </div>&nbsp;
+  <input type="text" #resName placeholder="Restaurant name" class="form-control" />&nbsp;
+  <input type="text" #resAddress placeholder="Restaurant Address" class="form-control" />&nbsp;
+  <input type="text" #resContact placeholder="Restaurant Contact No" class="form-control" />&nbsp;
+  <input type="text" #resType placeholder="Restaurant Veg/ Non-Veg" class="form-control" />&nbsp;
+  <button (click)="addRestaurantFromService(resName.value, resAddress.value, resContact.value, resType.value)" class="btn btn-xs btn-success form-control" >Add
+    Restaurant</button>&nbsp;
+</div>

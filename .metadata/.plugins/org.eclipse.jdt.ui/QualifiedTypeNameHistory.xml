@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.jp.hr.entities.Dept"/>
 <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
 <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
@@ -40,7 +39,6 @@
 <fullyQualifiedTypeName name="com.jp.hr.interfaces.EmpSoapServicesView"/>
 <fullyQualifiedTypeName name="com.jp.hr.interfaces.EmpSoapServicesUpdate"/>
 <fullyQualifiedTypeName name="com.jp.fin.locator.LocateServices"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.jp.hr.services.ServiceEmployee"/>
 <fullyQualifiedTypeName name="com.jp.hr.services.ServiceEmployeeImpl"/>
 <fullyQualifiedTypeName name="com.jp.hr.utilities.ServiceFactory"/>
@@ -52,12 +50,14 @@
 <fullyQualifiedTypeName name="javax.ws.rs.FormParam"/>
 <fullyQualifiedTypeName name="com.jp.hr.entities.Employee"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
 <fullyQualifiedTypeName name="javax.websocket.server.PathParam"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
 <fullyQualifiedTypeName name="com.jp.hr.exceptions.HrException"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
 </qualifiedTypeNameHistroy>
