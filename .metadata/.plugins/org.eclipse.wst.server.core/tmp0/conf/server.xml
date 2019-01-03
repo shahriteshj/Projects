@@ -151,7 +151,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Spring310_MvcInterceptor" path="/Spring310_MvcInterceptor" reloadable="true" source="org.eclipse.jst.jee.server:Spring310_MvcInterceptor"/></Host>
+      <Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Spring4_0MavenMvc200BasicAuthenticate" path="/Spring4_0MavenMvc200BasicAuthenticate" reloadable="true" source="org.eclipse.jst.jee.server:Spring4_0MavenMvc200BasicAuthenticate"/><Context docBase="D:\Projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Spring4_0MavenMvc210FormAuthenticate" path="/appl" reloadable="true" source="org.eclipse.jst.jee.server:Spring4_0MavenMvc210FormAuthenticate"/></Host>
     </Engine>
   </Service>
 </Server>

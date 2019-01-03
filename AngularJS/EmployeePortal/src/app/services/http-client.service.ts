@@ -27,7 +27,7 @@ export class HttpClientService {
 
   addNewEmployee(emp: Emp) {
     console.log(emp);
-    return this.http.post("/Spring300_MVC_JPA_Rest_Ng/hr/empCreate", emp);
+    return this.http.post("/Spring300_MVC_JPA_Rest_Ng/hr/emps", emp);
 
   }
 

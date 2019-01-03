@@ -1,5 +1,5 @@
 {
-    "/Spring300_MVC_JPA_Rest_Ng/hr/empCreate":{
+    "/Spring300_MVC_JPA_Rest_Ng/hr/emps":{
         "target": "http://localhost:8080",
         "secure": false,
         "logLevel": "debug",

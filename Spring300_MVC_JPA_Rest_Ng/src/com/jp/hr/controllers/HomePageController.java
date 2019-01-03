@@ -83,7 +83,7 @@ public class HomePageController {
 		return emp;
 	}
 
-	@RequestMapping(value = "/empCreate",
+	@RequestMapping(value = "/emps",
 			headers = "Accept=application/json",
 			method = RequestMethod.POST)
 	public List<Employee> addEmployee(@RequestBody Employee emp) {
