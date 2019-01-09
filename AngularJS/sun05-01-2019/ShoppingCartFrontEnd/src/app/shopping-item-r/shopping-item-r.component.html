@@ -1,0 +1,21 @@
+<h2>Shopping List</h2>
+<div class="table-responsive container">
+    <table class="table">
+        <thead>
+            <th>Name</th>
+            <th>Stock</th>
+            <th>Price</th>
+            <th>Bought</th>
+            <th>Add to Cart</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of shoppingItems"> 
+                <td>{{item.itemName}}</td>
+                <td>{{item.itemQuantity}}</td>
+                <td>{{item.price}}</td>
+                <td><input type="text" [(ngModel)]="item.itemBought"></td>
+                <td><input type="image" src="../assets/images/cart.png" class="resizeImage" (click)="addToCart(item)"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WebSocket Demo</title>
+<style>
+#console{
+	width="80%";
+	height=200px;
+	border:2pt solid brown;
+	padding:5px;
+}
+#console .info{
+	background-color: lightblue;
+	font-family: 'monospace','courier new';
+	color: green;
+}
+#console .chat{
+	background-color: lightgreen;
+	font-family: 'arial','ubuntu';
+	color: black;
+	padding: 3px;
+}
+#console .chat .uname {
+	font-weight: bolder;
+	color:brown;
+}
+</style>
+</head>
+<body>
+<h2>Web Socket Demo</h2>
+<form >
+	Your name: <input type="text" id="uname"/><br/>
+	Message : <textarea id="text" rows="3" cols="40"></textarea><br/>
+	<input type="button" onclick="send(this.form)" value="send"/>
+</form>
+<div id="messagePanel">
+
+</div>
+
+<div id="console">
+</div>
+
+</body>
+
+<script>
+var console = document.getElementById("console");
+var socket;
+
+function print(msg){
+	console.innerHTML +="<p class='chat'><span class='uname'>"+msg.from+" </span> : "+msg.text+"</p>";
+}
+function log(s){
+	console.innerHTML += "<p class='info'>"+ s +"</p>";
+}
+function send(frm){
+	message = function(usr,txt){
+		this.from = usr;
+		this.text = txt;
+	};
+	msg = new message(frm.uname.value, frm.text.value);
+	log("Sending new message...");
+	socket.send(JSON.stringify(msg));
+}
+
+function init(){
+	socket = new WebSocket("ws://localhost:8081/WebSocket010_Simple/chat/chandra");
+	socket.onopen=function(e){
+		log("Connection Open!");
+	}
+	socket.onmessage= function(e){
+		var msg = JSON.parse(e.data);
+		log("New Message received");
+		print(msg);
+	}
+	socket.onclose = function(e){
+		log("Connection closed!");
+	}
+}
+init();
+</script>
+</html>

@@ -12,7 +12,6 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Repository;
 
 @Repository("empDao")
@@ -28,11 +27,11 @@ public class EmpDao {
 		this.dataSource = dataSource;
 	}
 	
-	@Secured("ROLE_TELLER") //IS_AUTHENTICATED_ANONYMOUSLY, ROLE_USER, ROLE_TELLER
+	@Secured("ROLE_USER") //IS_AUTHENTICATED_ANONYMOUSLY, ROLE_USER, ROLE_TELLER
 	//@PreAuthorize("hasAuthority('ROLE_TELLER')") // @PreAuthorize("isAnonymous()")
 	public List<Emp> getAllEmps() {
 		// Report details
-		String qry = "Select EMPNO, ENAME, SAL from EMP";
+		String qry = "Select EMP_ID, EMP_NAME, EMP_SAL from Emp_JT";
 		List<Emp> l = new ArrayList<Emp>();
 		Connection conn=null;
 		Statement stmt=null;
@@ -45,9 +44,9 @@ public class EmpDao {
 			
 			while(rs.next()){
 				Emp ep = new Emp();
-				ep.setEmpNo(rs.getInt("EMPNO"));
-				ep.setEmpNm(rs.getString("ENAME"));
-				ep.setEmpSal(rs.getFloat("SAL"));
+				ep.setEmpNo(rs.getInt("EMP_ID"));
+				ep.setEmpNm(rs.getString("EMP_NAME"));
+				ep.setEmpSal(rs.getFloat("EMP_SAL"));
 				l.add(ep);
 			}
 

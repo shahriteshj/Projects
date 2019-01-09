@@ -1,0 +1,316 @@
+#header
+{
+    height: 100px;
+    text-align: center;
+    padding-top: 30px;
+    background-color: darksalmon;
+    border: 1px solid black;
+} 
+#menuarea
+{
+    border: 1px solid black;
+    text-align: center;
+    height: 30px;
+    background-color: burlywood;
+    padding: 5px;
+    font-size: 17px;
+}
+#contentarea
+{
+    height: auto;
+    min-height: 400px ;
+    border: 1px solid black;
+    width: 58.3%;
+    background-color: bisque;
+    float: left;
+    margin: 0;
+    padding: 5px;
+}
+
+#rightpanel
+{
+    height: auto;
+    min-height: 410px !important;
+    border: 1px solid black;
+    width: 20%;
+    float: right;
+    background-color: rgb(209, 196, 255);
+}
+#footer
+{
+    border: 1px solid black;
+    text-align: center;
+    height: 60px;
+    padding-top: 10px;
+    background-color: darksalmon;
+    float: left;
+    width:100%;
+}
+
+#menuarea > a
+{
+    color:darkorchid;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#menuarea > a:hover
+{
+    color:darkmagenta;
+    font-weight: bold;
+    text-decoration: underline;
+} 
+
+/* #header{
+
+
+
+height: 100px;
+
+
+
+text-align: 
+center;
+
+
+
+padding-top: 
+30px;
+
+
+
+background-color: 
+darksalmon;
+
+
+
+border: 1px
+solid black;
+
+
+
+} 
+
+
+
+#menuarea
+
+
+
+{
+
+
+
+border: 1px
+solid black;
+
+
+
+text-align: 
+center;
+
+
+
+height: 30px;
+
+
+
+background-color: 
+burlywood;
+
+
+
+padding: 
+5px;
+
+
+
+font-size: 
+17px;
+
+
+
+}
+
+
+
+#contentarea
+
+
+
+{
+
+
+
+height: auto;
+
+
+
+min-height: 
+400px !important;
+
+
+
+border: 1px
+solid black;
+
+
+
+width: 58.10%;
+
+
+
+background-color: 
+bisque;
+
+
+
+float: left;
+
+
+
+margin: 0;
+
+
+
+padding: 
+5px;
+
+}
+
+
+
+#rightpanel
+
+{
+
+height: auto;
+
+min-height: 
+410px !important;
+
+
+
+border: 1px
+solid black;
+
+
+
+width: 20%;
+
+
+
+float: right;
+
+
+
+background-color: 
+bisque;
+
+
+
+}
+
+
+
+#footer
+
+
+
+{
+
+
+
+border: 1px
+solid black;
+
+
+
+text-align: 
+center;
+
+
+
+height: 60px;
+
+
+
+padding-top: 
+10px;
+
+
+
+background-color: 
+darksalmon;
+
+
+
+float: left;
+
+
+
+width:100%;
+
+
+
+}
+
+
+
+
+
+
+
+#menuarea > a
+
+
+
+{
+
+
+
+color:darkorchid;
+
+
+
+font-size: 
+18px;
+
+
+
+text-decoration: 
+none;
+
+
+
+}
+
+
+
+
+
+
+
+#menuarea > a:hover
+
+
+
+{
+
+
+
+color:darkmagenta;
+
+
+
+font-weight: 
+bold;
+
+
+
+text-decoration: 
+underline;
+
+
+
+} */
