@@ -1,0 +1,45 @@
+
+Employee
+	empNo
+	empNm
+	empSal
+
+Profile
+	address
+	contactNo
+
+Dept
+	deptNo
+	deptNm
+
+Project
+	projectId
+	projectTitle
+
+Employee ------->Profile(1:1)
+Employee ------->Dept(1:1)
+Employee ------->Project(1:M)
+
+{
+ empNo:1000,
+ empNm:"chandrashekhar",
+ empSal:30000
+	 profile:{
+	 	address:"mumbai",
+	 	contactNo:"1111111111"
+	 },
+ dept:{
+ 	deptNo:100,
+ 	deptNm:"Training"
+ },
+ projects:[
+ 	{
+ 		projectId:1,
+ 		projectTitle:"aaaa"
+ 	},
+ 	{
+ 		projectId:2,
+ 		projectTitle:"bbbb"
+ 	}
+ ]
+}

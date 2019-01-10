@@ -28,7 +28,7 @@ public class ChatEndpoint {
 
 	@OnMessage
 	public void onMessage(Session session, Message message) throws IOException {
-		message.setFrom(message.getFrom());
+		message.setFrom("Server message: " + message.getFrom());
 		System.out.println("Got message " + message.getText());
 		broadcast(message);
 	}

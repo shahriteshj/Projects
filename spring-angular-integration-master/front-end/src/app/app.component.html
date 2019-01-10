@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="col-md-8 col-md-2" *ngIf="employees">
+      <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <td>
+                Name
+              </td>
+              <td>
+                Profile
+              </td>
+              <td>
+                Dept
+              </td>
+              <td>
+                Projects
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let emp of employees">
+              <td>{{emp.empNm}}</td>
+              <td>{{emp.profile.address}} - {{emp.profile.contactno}}</td>
+              <td>{{emp.dept.deptNo}} - {{emp.dept.deptNm}}</td>
+              <td>
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                        <td>Project Id</td>
+                        <td>Project Title</td>
+                    </tr>          
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let proj of emp.projects">
+                      <td>
+                        {{proj.projectId}}
+                      </td>
+                      <td>
+                          {{proj.projectTitle}}
+                        </td>
+          
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+ </div>
+ <hr>
+ <div *ngIf="emp">
+   <h2 class="page-header"> One to One Implementation</h2>
+   <table class="table table-bordered table-striped">
+     
+     <tr>
+        <td>Name</td>
+        <td>{{emp.empNm}}</td>
+      </tr>
+      <tr>
+           <td>Address</td>
+          <td>{{emp.profile.address}}</td>
+      </tr>
+      <tr>
+          <td>ContactNo</td>
+          <td>{{emp.profile.contactNo}}</td>
+      </tr>
+   </table>
+ </div>
+
+
+
+ <div *ngIf="pfl">
+  <h2 class="page-header"> One to One Implementation: Profile</h2>
+  <table class="table table-bordered table-striped">
+    
+    <tr>
+       <td>Name</td>
+       <td>{{pfl.emp.empNm}}</td>
+     </tr>
+     <tr>
+          <td>Address</td>
+         <td>{{pfl.address}}</td>
+     </tr>
+     <tr>
+         <td>ContactNo</td>
+         <td>{{pfl.contactNo}}</td>
+     </tr>
+  </table>
+</div>

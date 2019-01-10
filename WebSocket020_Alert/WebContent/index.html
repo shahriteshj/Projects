@@ -30,16 +30,12 @@
 <body>
 <h2>Web Socket Demo</h2>
 <form >
-	Your name: <input type="text" id="uname"/><br/>
-	Message : <textarea id="text" rows="3" cols="40"></textarea><br/>
-	<input type="button" onclick="send(this.form)" value="send"/>
+	<!-- Your name: <input type="text" id="uname"/><br/>
+	Message : <textarea id="text" rows="3" cols="40"></textarea><br/> -->
+	<input type="button" onclick="send()" value="send"/>
 </form>
-<div id="messagePanel">
 
-</div>
-
-<div id="console">
-</div>
+<div id="console"></div>
 
 </body>
 
@@ -48,29 +44,24 @@ var console = document.getElementById("console");
 var socket;
 
 function print(msg){
-	console.innerHTML +="<p class='chat'><span class='uname'>"+msg.from+" </span> : "+msg.text+"</p>";
+	console.innerHTML +="<p class='chat'>Score : "+msg.number+"</p>";
 }
+
 function log(s){
 	console.innerHTML += "<p class='info'>"+ s +"</p>";
 }
-function send(frm){
-	message = function(usr,txt){
-		this.from = usr;
-		this.text = txt;
-	};
-	msg = new message(frm.uname.value, frm.text.value);
-	log("Sending new message...");
-	socket.send(JSON.stringify(msg));
+
+function send(){
+	socket.send("");
 }
 
 function init(){
-	socket = new WebSocket("ws://localhost:8080/WebSocket010_Simple/chat/ritesh");
-	socket.onopen=function(e){
+	socket = new WebSocket("ws://localhost:8081/WebSocket020_Alert/cricketScore");
+	socket.onopen=function(e){  // Called when WS wants to handshake/open connection.
 		log("Connection Open!");
 	}
 	socket.onmessage= function(e){
 		var msg = JSON.parse(e.data);
-		log("New Message received");
 		print(msg);
 	}
 	socket.onclose = function(e){
