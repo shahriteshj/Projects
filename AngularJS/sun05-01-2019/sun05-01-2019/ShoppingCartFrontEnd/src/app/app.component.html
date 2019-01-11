@@ -1,0 +1,22 @@
+<ul class="nav nav-tabs">
+    <li *ngIf="!(sharedDataService.isUserLoggedIn)">
+        <a routerLink="login" routerLinkActive="active">Login</a>
+    </li>
+    <li *ngIf="sharedDataService.isUserLoggedIn && sharedDataService.isAdminUser">
+        <a routerLink="admin" routerLinkActive="active">Admin</a>
+    </li>
+    <li *ngIf="sharedDataService.isUserLoggedIn && !(sharedDataService.isAdminUser)">
+        <a routerLink="user" routerLinkActive="active">User</a> 
+    </li>
+    <li *ngIf="sharedDataService.isUserLoggedIn && !(sharedDataService.isAdminUser)">
+        <a routerLink="cart" routerLinkActive="active">Cart 
+            <span class="count">{{sharedDataService.noOfCartItems}}</span>
+        </a> 
+    </li>
+    <li *ngIf="sharedDataService.isUserLoggedIn">
+        <button class="btn btn-primary" (click)="logout()">Logout</button>
+    </li>
+</ul>
+<router-outlet></router-outlet>
+<!-- <app-shopping-item></app-shopping-item> -->
+
