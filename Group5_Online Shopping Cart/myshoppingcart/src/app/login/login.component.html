@@ -1,0 +1,53 @@
+<div class="col-md-8 col-md-offset-2">
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- Website CSS style -->
+		<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+		<!-- Website Font style -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		  <!-- <link rel="stylesheet" href="style.css"> -->
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+	<title>Login</title>
+	</head>
+<body>
+  <form #loginFrm="ngForm" method="post" (ngSubmit)="Login(loginFrm)">
+ <!-- <div class="container mt-4">
+  <div class="col-md-4 mb-2"> -->
+      <div class="card indigo form-white">
+          <div class="card-body">
+              <h3 class="text-center white-text py-3"><i class="fa fa-envelope fa"></i> Login:</h3>
+              <!--Body-->
+              <div class="md-form">
+                  <i class="fa fa-envelope prefix white-text"></i>
+                  <input type="text" id="defaultForm-email1" class="form-control" name="email" [(ngModel)]="email">
+                  <label for="defaultForm-email1">Your email</label>
+              </div>
+              <div class="md-form">
+                  <i class="fa fa-lock prefix white-text"></i>
+                  <input type="password" id="defaultForm-pass1" class="form-control" name="password" [(ngModel)]="password">
+                  <label for="defaultForm-pass1">Your password</label>
+              </div>
+              <div class="text-center">
+                  <input type="submit" class="btn btn-primary" value="Login">
+                  <a routerLink="/register" class="btn btn-link">Register Now</a>
+
+                </div>
+
+          </div>
+      </div>
+  <!-- </div>
+</div> -->
+</form>
+</body>
+</html>
+</div>

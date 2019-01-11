@@ -1,0 +1,19 @@
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+    color: White;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: blue;
+}
+
+    /* .nav-pills > li.active > a:hover {
+        background-color: red;
+        color:black;
+
+    } */
+
+    /* .navbar-inverse
+    {
+        background-color;
+        font-color    
+    }
+     */

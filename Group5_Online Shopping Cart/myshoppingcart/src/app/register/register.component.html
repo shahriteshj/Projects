@@ -1,0 +1,112 @@
+<div class="col-md-8 col-md-offset-2">
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- Website CSS style -->
+		<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+		<!-- Website Font style -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		  <!-- <link rel="stylesheet" href="style.css"> -->
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+	<title>Registration</title>
+	</head>
+	<body>
+		<!-- <div class="container">
+			<div class="row main"> -->
+				<div class="main-login main-center"> 
+				<h5>Sign up once to add products to cart.</h5>
+					<!-- <form class="" method="post" action="#"> -->
+            <form #registerFrm="ngForm" method="post" (ngSubmit)="Register(registerFrm)">
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Your Name*</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name" pattern="[a-zA-Z][a-zA-Z ]+"
+                  #NameControl="ngModel" [(ngModel)]="varbind" required/>
+                  <div *ngIf="NameControl?.touched && NameControl?.invalid" class="alert alert-danger">
+                    <div *ngIf="NameControl?.errors?.required">User Name is Mandatory Field</div>
+                    <div *ngIf="NameControl.errors?.pattern">Pls. Enter Valid User Name</div>
+                  </div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email*</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                  <!-- <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/> -->
+                  <input type="text" #emailn="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #emailControl="ngModel" name="email" placeholder="Enter your Email" class="form-control" ngModel required>
+                  <div *ngIf="emailControl?.touched && emailControl?.invalid" class="alert alert-danger">
+                    <div *ngIf="emailControl?.errors?.required">Email is a Mandatory Field</div>
+                    <div *ngIf="emailControl.errors?.pattern">Pls. Enter a Valid Email Address</div>
+                  </div>
+								</div>
+							</div>
+						</div>
+					<div class="form-group">
+							<label for="mobile" class="cols-sm-2 control-label">Mobile*</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+                  <!-- <input type="text" class="form-control" name="mobile" id="mobile"  placeholder="Enter your Mobile No"/> -->
+                  <input type="text" name="mobile" maxlength="10" placeholder="Enter your Mobile No" class="form-control" pattern="[0-9]{10}" #ContactControl="ngModel" ngModel required>
+                  <div *ngIf="ContactControl?.touched && ContactControl?.invalid" class="alert alert-danger">
+                    <div *ngIf="ContactControl?.errors?.required">Mobile Number is a Mandatory Field</div>
+                    <div *ngIf="ContactControl.errors?.pattern">Pls. Enter Valid Mobile Number</div>
+                  </div>
+								</div>
+							</div>
+						</div>
+          <div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password*</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                  <!-- <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/> -->
+                  <input type="password" name="password" id="password" placeholder="Enter your Password" class="form-control" pattern="[a-zA-Z0-9]+" #passwordControl="ngModel" [(ngModel)]="passbind" required>
+                  <div *ngIf="passwordControl?.touched && passwordControl?.invalid" class="alert alert-danger">
+                    <div *ngIf="passwordControl?.errors?.required">Password is Mandatory Field</div>
+                    <div *ngIf="passwordControl.errors?.pattern">Pls. Enter Valid password</div>
+                  </div>
+								</div>
+							</div>
+						</div>
+
+						<!-- <div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+								</div>
+							</div>
+						</div> -->
+
+						<div class="form-group ">
+              <!-- <a href="https://deepak646.blogspot.com/" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</a> -->
+              <button type="submit" id="button" name="button" class="btn btn-primary btn-lg btn-block login-button" [disabled]="registerFrm.invalid">Register</button>
+						</div>
+						
+					</form>
+				</div>
+			<!-- </div>
+		</div> -->
+
+		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
+</div>

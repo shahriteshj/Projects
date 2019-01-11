@@ -1,0 +1,50 @@
+<div class="table-bordered">
+  {{email}}
+  <table class="table table-bordered" >
+    <thead class="bg-primary">
+      <tr>
+      <th>Order Number</th>
+      <th>Product Details</th>
+      <th>Order Date</th>
+      <th>Order Price</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of orderSummary;let i = index">
+
+
+        <td align="center">{{c.orderId}}</td>
+        <td align="center"> 
+          <div class="well">
+          <table class="table table-bordered">
+            <thead>
+                <th>Product Name</th>
+              <th>Ordered Quantity </th>
+                <th>Purchased Price</th>
+            </thead>
+
+            <tr *ngFor="let c1 of c.orderDetails">
+              <td align="center">{{c1.productName}}</td>
+              <td align="center">{{c1.productQuantity}}</td>
+              <td align="center">{{c1.productPrice}}</td>
+
+            </tr>
+          </table>
+        </div>
+
+
+        </td >
+        <td align="center">{{c.orderCreatedAt | date:'MMM d, y, h:mm a'}}</td>
+        <td align="center">{{c.orderAmount}}</td>
+
+
+
+      </tr>
+
+
+
+    </tbody>
+  </table>
+  <!-- <button class="tbody btn btn-danger" [(ngModel)]="getSum()">Remove from Cart</button> -->
+  <div align="center"><button class="tbody btn btn-primary">Print</button></div>
+</div>

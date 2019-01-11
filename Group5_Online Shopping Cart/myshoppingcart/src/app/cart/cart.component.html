@@ -1,0 +1,45 @@
+<div  *ngIf="viewcart.length>0;else some">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                    <th>Product</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                    <th></th>
+            </tr>
+           
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of viewcart;let i = index">
+                <td width="50%"><img src="assets/images/{{c.productPrimaryImage}}" style="width:20%"></td>
+                <td>{{c.productName}}</td>
+                <td>{{c.productPrice}}</td>
+                <td>
+                    <!-- <input type=number name="quantity" min="1" max="10" readonly maxlength="2"
+                     [(ngModel)]="this[c.productId]" (change)="changequantity(i,this[c.productId])"> -->
+                    <button class="btn btn-xs btn-success 	glyphicon glyphicon-plus" (click)="increment(c)"></button>
+                   <span> {{c.productQuantity}}</span>&nbsp;
+                    <button  class="btn btn-xs btn-danger 	glyphicon glyphicon-minus"  (click)="decrement(c)"></button>
+                </td>
+                <!-- <td><button class="tbody btn btn-edit" (click)="editItem(item)">Edit</button></td> -->
+                <td>{{c.productPrice*c.productQuantity}}</td>
+                <td><button class="tbody btn btn-danger glyphicon glyphicon-trash" 
+                    (click)="removefromcart(c)"></button></td>
+            </tr>
+            <tr>
+                <td width="50%"></td>
+                <td></td>
+                <td>Total</td>
+                <td></td>
+                <td>{{this.cartService.getSum()}}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="tbody btn btn-danger" align="center" (click)="topaymentGateway()">Buy</button>
+</div>
+<ng-template #some>
+    <h3 class="alert alert-danger">Cart is Empty</h3>
+</ng-template>
